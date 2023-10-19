@@ -1,0 +1,37 @@
+{% import "components/breadcrumbs/breadcrumbs.njk" as breadcrumbs %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %} {% endblock %}</title>
+        {% include 'pages/_includes/head.njk' %}
+    </head>
+    <body class="{% block bodyclass %}{% endblock %}">
+        <svg
+            width="0"
+            height="0"
+            style="position: absolute"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+        >
+            <defs>
+                <linearGradient
+                    id="Gradient"
+                    x1="-5.74979"
+                    y1="13.797"
+                    x2="47.7914"
+                    y2="17.0622"
+                    gradientUnits="userSpaceOnUse"
+                >
+                    <stop stop-color="#FB8129" />
+                    <stop offset="1" stop-color="#CD380E" />
+                </linearGradient>
+            </defs>
+        </svg>
+        <div class="wrap-page">
+            {% include 'components/header/header.njk' %}
+            <div class="inner">{% block main %}{% endblock %}</div>
+            {% include 'components/footer/footer.njk' %}
+        </div>
+    </body>
+</html>

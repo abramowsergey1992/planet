@@ -1,0 +1,12 @@
+{% macro create(list, current) %}
+<ul class=" breadcrumbs">
+	
+ 	{% for item in list.items %}
+	<li>
+		<a href="{{item.href}}">{{item.text}}</a>
+	</li>
+	{% endfor %}
+	<li>{{current}}
+	</li>
+</ul>{%endmacro %}
+

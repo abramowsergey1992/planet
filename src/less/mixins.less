@@ -1,0 +1,72 @@
+@use "sass:math";
+
+.lh(@fontValue, @heightValue) {
+    @my_width: ((@heightValue / @fontValue) * 100%);
+    line-height: @my_width;
+}
+
+.clampf(@min-fs, @max-fs, @min-w: 375, @max-w: 1440) {
+    @mf: (@max-fs - @min-fs)/ 1;
+    @mw: @max-w - @min-w;
+    @max-w-px: @max-w * 1px;
+    @min-w-px: @min-w * 1px;
+    @min-fs-px: @min-fs * 1px;
+    @max-fs-px: @max-fs * 1px;
+    & {
+        // font-size: $min-fs;
+
+        // @media (min-width: $min-w) {
+        font-size: clamp(
+            @min-fs-px,
+            calc(@min-fs-px + (@mf) * ((100vw - (@min-w-px)) / (@mw))),
+            @max-fs-px
+        );
+        // font-size: clamp(64px, calc(64px + (150 - 64)*((100vw - 375px)/(1920 - 375))), 150px);
+        // }
+
+        // @media (min-width: $max-w) {
+        // 	font-size: $max-fs;
+        // }
+    }
+}
+
+// Default outline for :focus state
+.focused() {
+    // outline: 1px dotted #212121;
+    outline: 1px dotted currentColor;
+    outline: 5px auto -webkit-focus-ring-color;
+}
+
+// Customized native scrollbar
+.scrollbar() {
+    // Firefox
+    scrollbar-width: thin;
+    scrollbar-color: #fff #000;
+
+    // IE
+    // -ms-overflow-style: -ms-autohiding-scrollbar;
+
+    // Webkit
+    &::-webkit-scrollbar {
+        width: 12px;
+        height: 12px;
+        background: #000;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        border-radius: 8px;
+        background-color: #fff;
+    }
+}
+
+// Invisible, but available for keybord and screen readers
+.v-hidden() {
+    position: absolute;
+    overflow: hidden;
+    margin: -1px;
+    width: 1px;
+    height: 1px;
+    top: 0;
+    left: 0;
+    clip: rect(0 0 0 0);
+}

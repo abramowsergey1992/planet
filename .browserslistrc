@@ -1,0 +1,7 @@
+# Supported browsers (for Autoprefixer and Babel)
+chrome >= 117
+ff >= 118
+safari >= 17.0
+edge >= 117
+android >= 117
+ios >= 17.0
