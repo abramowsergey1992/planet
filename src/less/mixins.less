@@ -4,7 +4,9 @@
     @my_width: ((@heightValue / @fontValue) * 100%);
     line-height: @my_width;
 }
-
+.block() {
+    margin-bottom: 60px;
+}
 .clampf(@min-fs, @max-fs, @min-w: 375, @max-w: 1440) {
     @mf: (@max-fs - @min-fs)/ 1;
     @mw: @max-w - @min-w;

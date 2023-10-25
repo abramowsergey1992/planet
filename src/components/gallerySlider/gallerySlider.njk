@@ -1,0 +1,20 @@
+{% macro create(title, list) %}
+<div class="block gallery-slider">
+    <div class="h1">{{ title }}</div>
+    <div class="swiper gallery-slider__swiper">
+        <div class="swiper-wrapper">
+            {% for item in list %}
+            <div class="gallery-slider__slide _br swiper-slide">
+                <img src="img/{{ item }}" alt="" />
+            </div>
+            {% endfor %}
+        </div>
+        <img
+            src="img/galleryCursor.svg"
+            class="gallery-slider__cursor"
+            alt=""
+        />
+    </div>
+</div>
+{%endmacro %}
+

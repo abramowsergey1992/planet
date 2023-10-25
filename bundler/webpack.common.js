@@ -23,6 +23,14 @@ module.exports = {
             filename: "index.html",
         }),
         new HtmlWebpackPlugin({
+            template: path.resolve(__dirname, "../src/pages/ui/ui.njk"),
+            filename: "ui.html",
+        }),
+        new HtmlWebpackPlugin({
+            template: path.resolve(__dirname, "../src/pages/event/event.njk"),
+            filename: "event.html",
+        }),
+        new HtmlWebpackPlugin({
             template: path.resolve(
                 __dirname,
                 "../src/pages/visitor-special-needs/visitor-special-needs.njk"

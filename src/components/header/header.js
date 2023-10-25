@@ -33,7 +33,6 @@ let burger = document.querySelector(".header__burger");
 });
 
 burger.addEventListener("click", function (event) {
-    console.log("sss");
     document.body.classList.toggle("_burder-menu-open");
 });
 

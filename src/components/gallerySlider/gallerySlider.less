@@ -1,0 +1,40 @@
+.gallery-slider {
+    cursor: none;
+
+    &__swiper {
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100vw;
+        @media (max-width: 740px) {
+            max-width: 90%;
+            overflow: visible !important;
+            left: 0;
+            margin-left: 0 !important;
+            transform: none;
+        }
+    }
+
+    .swiper-slide {
+        line-height: 0;
+        img {
+            object-fit: cover;
+            aspect-ratio: 11/6;
+            width: 100%;
+            object-position: center;
+        }
+    }
+    &__cursor {
+        position: absolute;
+        z-index: 50;
+        pointer-events: none;
+        touch-action: none;
+        opacity: 0;
+        transition: opacity 0.5s;
+        transform: translateX(-50%) translateY(-50%);
+        .gallery-slider:hover {
+            opacity: 1;
+        }
+    }
+}
+

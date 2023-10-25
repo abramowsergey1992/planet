@@ -17,8 +17,6 @@ html {
     min-height: 320px;
     min-width: 320px;
     color: #000;
-    background: #fff;
-
     &:not(.mobile) {
         // .scrollbar();
     }
@@ -43,6 +41,7 @@ body {
     position: relative;
     overflow-x: hidden;
     font-size: 18rem;
+    background: var(--body-bg);
     color: #000;
 }
 button {
@@ -90,6 +89,8 @@ a {
 }
 
 ul {
+    padding: 0;
+    margin: 0;
     nav & {
         margin: 0;
         padding: 0;
@@ -179,5 +180,30 @@ color {
 .d-min-760 {
     @media (max-width: 760px) {
         display: none !important;
+    }
+}
+.d-min-1024 {
+    @media (max-width: 1024px) {
+        display: none !important;
+    }
+}
+
+.swiper-pagination-bullets {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 30px;
+    justify-content: center;
+}
+.swiper-pagination-bullet {
+    width: 10px !important;
+    height: 10px !important;
+    background: #fff !important;
+    opacity: 1 !important;
+    .white-block & {
+        background: #e7e4e5 !important;
+    }
+    &.swiper-pagination-bullet-active {
+        background: var(--gradient) !important;
     }
 }
