@@ -1,11 +1,15 @@
-@use "sass:math";
-
 .lh(@fontValue, @heightValue) {
     @my_width: ((@heightValue / @fontValue) * 100%);
     line-height: @my_width;
 }
 .block() {
     margin-bottom: 60px;
+}
+.color() {
+    background: linear-gradient(93deg, #fb8129 -11.01%, #cd380e 109.58%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 .clampf(@min-fs, @max-fs, @min-w: 375, @max-w: 1440) {
     @mf: (@max-fs - @min-fs)/ 1;

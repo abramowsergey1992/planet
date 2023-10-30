@@ -147,10 +147,7 @@ p {
 }
 
 color {
-    background: linear-gradient(93deg, #fb8129 -11.01%, #cd380e 109.58%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    .color();
 }
 .wrap-page {
     display: flex;
@@ -174,6 +171,11 @@ color {
 }
 .d-max-200 {
     @media (min-width: 1200px) {
+        display: none !important;
+    }
+}
+.d-min-700 {
+    @media (max-width: 700px) {
         display: none !important;
     }
 }

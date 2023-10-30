@@ -36,21 +36,6 @@ document.querySelectorAll(".awards-slider").forEach((el) => {
         },
     });
 });
-document.querySelectorAll(".another-program__slider").forEach((el) => {
-    const swiper = new Swiper(el, {
-        slidesPerView: 1,
-        setWrapperSize: true,
-        spaceBetween: 12,
-        pagination: {
-            el: el.querySelector(".another-program__pagi"),
-            type: "bullets",
-        },
-        breakpoints: {
-            600: { spaceBetween: 16 },
-            1024: { slidesPerView: 3, slidesPerView: 2 },
-        },
-    });
-});
 
 document.querySelectorAll(".event-programs").forEach((el) => {
     const swiper = new Swiper(el, {

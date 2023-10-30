@@ -33,6 +33,13 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: path.resolve(
                 __dirname,
+                "../src/pages/exponat/exponat.njk"
+            ),
+            filename: "exponat.html",
+        }),
+        new HtmlWebpackPlugin({
+            template: path.resolve(
+                __dirname,
                 "../src/pages/visitor-special-needs/visitor-special-needs.njk"
             ),
             filename: "visitor-special-needs.html",
