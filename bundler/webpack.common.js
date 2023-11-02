@@ -125,9 +125,6 @@ module.exports = {
                 use: [
                     {
                         loader: MiniCSSExtractPlugin.loader,
-                        options: {
-                            publicPath: "/",
-                        },
                     },
                     "css-loader",
                     "postcss-loader",
