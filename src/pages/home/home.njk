@@ -1,14 +1,30 @@
-<!DOCTYPE html>
-<html lang="en" class="page-home">
-    <head>
-        <meta charset="UTF-8" />
-        <title>Hello, World!</title>
-        {% include 'pages/_includes/head.njk' %}
-    </head>
-    <body>
-        <div class="wrap-page">
-            {% include 'components/header/header.njk' %}
-            <h1>Hello, World!</h1>
-        </div>
-    </body>
-</html>
+{% extends "pages/_includes/layout.njk" %} {% block title %}Планетарий{%
+endblock %} {% block main %}
+
+<div class="top-row">
+    <h1>Список страниц</h1>
+</div>
+
+<div class="text">
+    <ul>
+        <li>
+            <a href="cafe.htmk">Кафе</a>
+        </li>
+        <li>
+            <a href="event.html">Афиша Детальная </a>
+        </li>
+        <li>
+            <a href="visitor-special-needs.html"
+                >Для людей с особыми потребностями</a
+            >
+        </li>
+        <li>
+            <a href="exponat.html">Экспонат Детальная</a>
+        </li>
+        <li>
+            <a href="shop.html">Магазин</a>
+        </li>
+    </ul>
+</div>
+
+{% endblock %}
