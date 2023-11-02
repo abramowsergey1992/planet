@@ -45,6 +45,13 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: path.resolve(
                 __dirname,
+                "../src/pages/vacancies/vacancies.njk"
+            ),
+            filename: "vacancies.html",
+        }),
+        new HtmlWebpackPlugin({
+            template: path.resolve(
+                __dirname,
                 "../src/pages/exponat/exponat.njk"
             ),
             filename: "exponat.html",
@@ -157,7 +164,7 @@ module.exports = {
                         loader: "file-loader",
                         options: {
                             outputPath: "assets/fonts/",
-                            publicPath: '../fonts/'
+                            publicPath: "../fonts/",
                         },
                     },
                 ],
