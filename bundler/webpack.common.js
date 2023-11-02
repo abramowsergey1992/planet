@@ -19,8 +19,12 @@ module.exports = {
             patterns: [{ from: path.resolve(__dirname, "../static") }],
         }),
         new HtmlWebpackPlugin({
-            template: path.resolve(__dirname, "../src/pages/home/home.njk"),
+            template: path.resolve(__dirname, "../src/pages/index/index.njk"),
             filename: "index.html",
+        }),
+        new HtmlWebpackPlugin({
+            template: path.resolve(__dirname, "../src/pages/home/home.njk"),
+            filename: "home.html",
         }),
         new HtmlWebpackPlugin({
             template: path.resolve(__dirname, "../src/pages/ui/ui.njk"),
