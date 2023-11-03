@@ -474,3 +474,64 @@
         }
     }
 }
+.paginator {
+    padding: 4px;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 4px;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 4px;
+    background: #fff;
+    border-radius: 30px;
+    max-width: 266px;
+    position: relative;
+    margin-top: 50px;
+    &__next {
+        right: -40px;
+    }
+    &__prev {
+        left: -40px;
+        &::before {
+            transform: scale(-1, 1);
+        }
+    }
+    &__next,
+    &__prev {
+        top: 50%;
+        margin-top: -12px;
+        position: absolute;
+        transition: transform 0.3s;
+        &:hover {
+            transform: scale(1.2);
+        }
+        &::before {
+            display: block;
+            content: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.73047 19L16.2689 12L8.73047 5' stroke='url(%23paint0_linear_605_32726)' stroke-width='1.4'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear_605_32726' x1='7.69845' y1='9.59899' x2='17.3338' y2='9.9154' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23FB8129'/%3E%3Cstop offset='1' stop-color='%23CD380E'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E%0A");
+        }
+    }
+    &__link {
+        width: 37px;
+        height: 37px;
+        font-family: Unbounded;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 114.286%;
+        letter-spacing: 1.4px;
+        color: #b1b3b2;
+        border-radius: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        &:hover {
+            color: var(--link);
+        }
+        &._active {
+            background: var(--gradient);
+            color: #fff;
+        }
+    }
+}
