@@ -43,6 +43,10 @@ module.exports = {
             filename: "cafe.html",
         }),
         new HtmlWebpackPlugin({
+            template: path.resolve(__dirname, "../src/pages/press/press.njk"),
+            filename: "press.html",
+        }),
+        new HtmlWebpackPlugin({
             template: path.resolve(
                 __dirname,
                 "../src/pages/vacancies/vacancies.njk"

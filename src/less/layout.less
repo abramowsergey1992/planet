@@ -359,3 +359,118 @@
         gap: 10px;
     }
 }
+.overfolow-x {
+    position: relative;
+    overflow: hidden;
+    @media (max-width: 700px) {
+        margin-left: calc(-1 * var(--inner-padding));
+        margin-right: calc(-1 * var(--inner-padding));
+    }
+    &__size {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        white-space: nowrap;
+        @media (max-width: 700px) {
+            padding-left: var(--inner-padding);
+            padding-right: var(--inner-padding);
+        }
+    }
+
+    &__scroll {
+        overflow-x: auto;
+        overflow-y: hidden;
+        max-width: 100%;
+
+        &::-webkit-scrollbar {
+            width: 0;
+            height: 0;
+        }
+    }
+
+    &__prev {
+        @media (max-width: 700px) {
+            display: none;
+        }
+        color: black;
+        svg {
+            position: relative;
+        }
+        &:hover {
+            color: var(--link);
+        }
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        height: 110%;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s;
+        z-index: 111;
+        &._active {
+            pointer-events: initial;
+            opacity: 1;
+        }
+
+        &::before {
+            position: absolute;
+            display: block;
+            content: "";
+            left: -100%;
+            top: 0;
+            width: 400%;
+            height: 100%;
+
+            background: linear-gradient(90deg, var(--body-bg) 50%, transparent);
+        }
+    }
+
+    &__next {
+        position: absolute;
+        right: 0;
+        cursor: pointer;
+        top: 50%;
+        height: 110%;
+        transform: translateY(-50%);
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        opacity: 0;
+        transition: opacity 0.3s;
+        pointer-events: none;
+        z-index: 111;
+        color: black;
+        @media (max-width: 700px) {
+            display: none;
+        }
+        &:hover {
+            color: var(--link);
+        }
+        &._active {
+            pointer-events: initial;
+            opacity: 1;
+        }
+        svg {
+            position: relative;
+        }
+        &::before {
+            position: absolute;
+            display: block;
+            content: "";
+            right: -100%;
+            top: 0;
+            width: 400%;
+            height: 100%;
+
+            background: linear-gradient(
+                270deg,
+                var(--body-bg) 50%,
+                transparent
+            );
+        }
+    }
+}
