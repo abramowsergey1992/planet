@@ -1,0 +1,47 @@
+{% extends "pages/_includes/layout.njk" %} {% block title %}Экскурсоводы{%
+endblock %} {% block main %}
+
+{{
+    breadcrumbs.create(
+        {
+            items: [
+                {
+                    text: "Главная",
+                    href: "home.html"
+                },
+                {
+                    text: "Посетителям",
+                    href: "#.html"
+                }
+            ]
+        },
+        "Руководство Планетария"
+    )
+}}
+
+<h1>Руководство Планетария</h1>
+<div class="text">
+    <p>
+        В Планетарии нет регулярных экскурсий: вы можете заказать их в удобное
+        для вас время
+    </p>
+</div>
+<div class="block">
+    <div class="personal-grid">
+        {{ persona.create({ img: "img/director-1.jpg", name: "Тимофеев Виталий
+        Викторович", desc: "
+        <p>Генеральный директор АО «Планетарий»</p>
+        " } ) }} {{ persona.create({ img: "img/director-2.jpg", name: "Рублева
+        Фаина Борисовна", desc: "
+        <p>
+            Научный директор АО «Планетарий», лауреат премии Правительства
+            Российской Федерации в области образования, 2013 год.
+        </p>
+        " } ) }} {{ persona.create({ img: "img/director-3.jpg", name: "Исаев
+        Никита Ильич", desc: "
+        <p>Технический директор АО «Планетарий»</p>
+        " } ) }}
+    </div>
+</div>
+{% endblock %}
+
