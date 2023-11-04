@@ -1,0 +1,10 @@
+{% macro create(item) %}
+<div class="persona">
+    <div class="persona__img-wrap _br">
+        <img src="{{ item.img }}" class="persona__img" alt="" />
+    </div>
+    <div class="persona__name">{{ item.name }}</div>
+    <div class="persona__desc">{{ item.desc | safe }}</div>
+</div>
+{%endmacro %}
+
