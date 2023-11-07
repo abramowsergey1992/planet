@@ -97,6 +97,9 @@
             transform: translateX(-50%) translateY(-50%);
         }
     }
+    &__logo-light {
+        display: none;
+    }
     &__right {
         display: flex;
         flex-direction: row;
@@ -398,3 +401,25 @@
     }
 }
 
+.theme-dark {
+    .header {
+        --color: #fff;
+        --line: #373737;
+
+        .inner {
+            background: var(--dark);
+        }
+
+        &__logo-dark {
+            display: none;
+        }
+
+        &__logo-light {
+            display: block;
+        }
+    }
+
+    .header__burger span {
+        background: #fff;
+    }
+}

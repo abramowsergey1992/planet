@@ -23,12 +23,20 @@
             </ul>
 
             <a href="/" class="header__logo">
-                <picture>
+                <picture class="header__logo-dark">
                     <source
                         srcset="img/logo-mob.svg"
                         media="(max-width: 1200px)"
                     />
                     <img src="img/logo.svg" alt="Абстрактное изображение" />
+                </picture>
+
+                <picture class="header__logo-light">
+                    <source
+                        srcset="img/logo-mob-white.svg"
+                        media="(max-width: 1200px)"
+                    />
+                    <img src="img/logo-white.svg" alt="Абстрактное изображение" />
                 </picture>
             </a>
             <div class="header__right">
@@ -660,4 +668,3 @@
         </div>
     </div>
 </header>
-
