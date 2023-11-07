@@ -62,6 +62,10 @@ module.exports = {
             filename: "legends.html",
         }),
         new HtmlWebpackPlugin({
+            template: path.resolve(__dirname, "../src/pages/legend/legend.njk"),
+            filename: "legend.html",
+        }),
+        new HtmlWebpackPlugin({
             template: path.resolve(
                 __dirname,
                 "../src/pages/visitors/visitors.njk"
