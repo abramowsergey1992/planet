@@ -16,6 +16,8 @@
     }
 }
 .persona {
+    position: relative;
+    overflow: hidden;
     &__img-wrap {
         aspect-ratio: 604/540;
         position: relative;
@@ -75,6 +77,10 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
+        transition: transform 1s;
+        .persona:has(.persona__more):hover & {
+            transform: scale(1.02);
+        }
     }
 
     &__name {
@@ -85,6 +91,30 @@
         font-weight: 500;
     }
 
+    &__date {
+        padding-left: 34px;
+        position: relative;
+        margin-bottom: 16px;
+        background-repeat: no-repeat;
+        background-position: left center;
+
+        font-weight: 700;
+        line-height: 150%;
+        letter-spacing: -0.16px;
+        background-image: url("data:image/svg+xml,%3Csvg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9 3.85714V9L12.4286 12.4286M9 17C4.58172 17 1 13.4183 1 9C1 4.58172 4.58172 1 9 1C13.4183 1 17 4.58172 17 9C17 13.4183 13.4183 17 9 17Z' stroke='url(%23paint0_linear_1546_25222)' stroke-width='1.4'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear_1546_25222' x1='-1.1904' y1='6.25599' x2='19.2062' y2='7.49987' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23FB8129'/%3E%3Cstop offset='1' stop-color='%23CD380E'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E%0A");
+    }
+    &__more {
+        &::after {
+            width: 100vmax;
+            height: 100vmax;
+            display: block;
+            content: "";
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translateX(-50%) translateY(-50%);
+        }
+    }
     &__desc {
     }
 }
