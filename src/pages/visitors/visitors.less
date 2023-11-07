@@ -1,0 +1,109 @@
+.visitors-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 22px;
+    @media (max-width: 1600px) {
+        gap: 16px;
+    }
+    @media (max-width: 1024px) {
+        gap: 12px;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+.visitors-preview {
+    aspect-ratio: 604/674;
+    grid-column: span 2;
+    position: relative;
+    padding: 30px;
+    display: flex;
+    align-items: flex-end;
+    @media (max-width: 1024px) {
+        padding: 20px;
+    }
+    @media (max-width: 500px) {
+        padding: 12px;
+    }
+    @media (max-width: 1024px) {
+        grid-column: span 1;
+    }
+    @media (max-width: 500px) {
+        grid-column: span 2;
+        aspect-ratio: 351/258 !important;
+    }
+    &._big {
+        grid-column: span 3;
+        aspect-ratio: 924/674;
+        @media (max-width: 1024px) {
+            grid-column: span 2;
+        }
+    }
+    &__link {
+        position: relative;
+        font-family: Unbounded;
+        .clampf(14,24);
+        font-style: normal;
+        font-weight: 500;
+        line-height: 133.333%;
+        color: #fff;
+        display: block;
+        padding-right: 50px;
+        width: 100%;
+        &::before {
+            width: 100vmax;
+            height: 100vmax;
+            display: block;
+            content: "";
+            left: 50%;
+            top: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            position: absolute;
+        }
+        &::after {
+            background-image: url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.3335 22.6654L22.6668 9.33203M22.6668 9.33203V22.132M22.6668 9.33203H9.86683' stroke='white' stroke-width='2'/%3E%3C/svg%3E%0A");
+            display: block;
+            content: "";
+            width: 32px;
+            height: 32px;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            transition: transform 0.3s;
+            .visitors-preview:hover & {
+                transform: rotate(45deg);
+            }
+        }
+    }
+    &__img {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        img {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            transition: transform 1s;
+            .visitors-preview:hover & {
+                transform: scale(1.02);
+            }
+            top: 0;
+        }
+        &::after {
+            background: linear-gradient(
+                0deg,
+                rgba(0, 0, 0, 0.8) 0%,
+                rgba(28, 28, 28, 0) 100%
+            );
+            display: block;
+            content: "";
+            width: 100%;
+            height: 65%;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+        }
+    }
+}
+
