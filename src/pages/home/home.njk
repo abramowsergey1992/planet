@@ -30,5 +30,28 @@ endblock %} {% block main %}
     </div>
 </div>
 
+<div class="hp-video js-hp-video">
+    <div class="hp-video__inner">
+        <h2 class="hp-video__title">О Планетарии</h2>
+        <a href="about.html" class="hp-video__details">
+            <span>Узнать больше о планетарии</span>
+        </a>
+    </div>
+
+    <button class="hp-video__play">
+        <span>Play</span>
+    </button>
+
+    <div class="hp-video__video">
+        <video src="./content/planetarium.mp4"
+               loop
+               preload="metadata"
+               muted
+               poster="./content/video-planetarium-poster.webp"
+        >
+        </video>
+    </div>
+</div>
+
 
 {% endblock %}
