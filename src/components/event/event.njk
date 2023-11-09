@@ -1,0 +1,66 @@
+{% macro create(item) %}
+<div class="event-preview">
+    <div class="event-preview__top _br">
+        <div class="event-preview__img">
+            <img src="{{ item.img }}" alt="" />
+        </div>
+        <div class="event-preview__top-head">
+            <ul class="event-preview__tags">
+                {% for tag in item.topTags %}
+                <li>
+                    <span>{{ tag }}</span>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="event-preview__top-bottom">
+            <ul class="event-preview__tags">
+                {% for tag in item.bottomTags %}
+                <li class="{{ tag.class }}">
+                    {% if tag.icon %}
+                    <span class="icon-{{ tag.icon }}"></span> {% endif %}
+                    <span>{{ tag.text }}</span>
+                </li>
+                {% endfor %}
+            </ul>
+
+            {% if item.awards %}
+
+            <ul class="event-preview__awards">
+                {% for award in item.awards %}
+                <li class="event-preview__award">
+                    <span class="event-preview__award-top">{{
+                        award.top
+                    }}</span>
+                    <span class="event-preview__award-name">{{
+                        award.text
+                    }}</span>
+                    <span class="event-preview__award-year">{{
+                        award.year
+                    }}</span>
+                </li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+        </div>
+    </div>
+    <div class="event-preview__title h2">{{ item.title }}</div>
+    {% if item.info %}
+    <ul class="event-preview__info">
+        {% for inf in item.info %}
+        <li>
+            {% if inf.icon %} <span class="icon-{{ inf.icon }}"></span> {% endif
+            %}
+            <span>{{ inf.text }}</span>
+        </li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    {{ item.desc | safe }}
+    <div class="event-preview__bottom">
+        <a href="{{ item.link }}" class="btn-border">{{ item.btnText }}</a>
+        <a href="{{ item.link }}" class="btn-link">Подробнее</a>
+    </div>
+</div>
+{%endmacro %}
+

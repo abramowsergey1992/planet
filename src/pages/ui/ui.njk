@@ -252,4 +252,62 @@ side! {% endblock %} {% block main %}
     </div>
     {% endblock %}
 </div>
+<div class="block another-programs">
+    <div class="h1">Другие программы</div>
+    <div class="slider-3 swiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                {{ event.create({ img: "img/events.jpg", topTags: ["Эксклюзив",
+                "Создано студией планетария"], bottomTags:[ { text:"6+" }, {
+                text:"Мультиязычный" }, { icon:"time", text:"46 минут" }, {
+                icon:"marker", class:"_bg", text:"+ Музей Урании (1 час)" } ],
+                awards: [{ top:"ПОБЕДИТЕЛЬ", text:"НАЗВАНИЕ КОНКУРСА В&nbsp;ТРИ
+                СТРОЧКИ", year:"2023" },{ top:"ПОБЕДИТЕЛЬ", text:"НАЗВАНИЕ
+                КОНКУРСА В&nbsp;ТРИ СТРОЧКИ", year:"2023" }] , title: "Фильм
+                «Загадка Жизни»", info: [ { icon:"marker", text:"Малый Звёздный
+                зал" }, { icon:"time", text:"60 минут" } ], desc: "
+                <p>
+                    В истории Московского планетария есть имена-легенды, имена
+                    людей, судьбы которых неразрывно переплетены с его судьбой.
+                    Одному из них, Станиславу Васильевичу Широкову, 30 ноября
+                    2012 года исполнилось бы 80 лет.
+                </p>
+                ", btnText:"Купить билет от 750 ₽", link:"event.html" } ) }}
+            </div>
+            <div class="swiper-slide">
+                {{ event.create({ img: "img/gallery-3.jpg", topTags:
+                ["Эксклюзив", "Создано студией планетария"], bottomTags:[ {
+                text:"6+" }, { text:"Мультиязычный" }, { icon:"time", text:"46
+                минут" }, { icon:"marker", class:"_bg", text:"+ Музей Урании (1
+                час)" } ], title: "Звёздная программа «Небо в движении»", info:
+                [ { icon:"marker", text:"Малый Звёздный зал" }, { icon:"time",
+                text:"60 минут" } ], desc: "
+                <p>
+                    Сами того не замечая, мы все время находимся в движении -
+                    даже, когда стоим на месте. Стоит поднять голову и взглянуть
+                    на небо, как мы заметим движение небесных объектов, звезд и
+                    планет. И даже наше собственное!
+                </p>
+                ", btnText:"Купить билет от 750 ₽", link:"event.html" } ) }}
+            </div>
+            <div class="swiper-slide">
+                {{ event.create({ img: "img/event-program.jpg", topTags:
+                ["Эксклюзив", "Создано студией планетария"], bottomTags:[ {
+                text:"6+" }, { text:"Мультиязычный" }, { icon:"time", text:"46
+                минут" }, { icon:"marker", class:"_bg", text:"+ Музей Урании (1
+                час)" } ], title: "Звёздная программа «Путеводные звезды»",
+                info: [ { icon:"marker", text:"Малый Звёздный зал" }, {
+                icon:"time", text:"60 минут" } ], desc: "
+                <p>
+                    Сами того не замечая, мы все время находимся в движении -
+                    даже, когда стоим на месте. Стоит поднять голову и взглянуть
+                    на небо, как мы заметим движение небесных объектов, звезд и
+                    планет.
+                </p>
+                ", btnText:"Купить билет от 750 ₽", link:"event.html" } ) }}
+            </div>
+        </div>
+        <div class="slider-3__pagi"></div>
+    </div>
+</div>
 
