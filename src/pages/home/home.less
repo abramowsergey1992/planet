@@ -1,6 +1,7 @@
 @import './_promo.less';
 @import './_video.less';
 @import './_program.less';
+@import './_blog.less';
 
 @screen-hp-large: 1601px;
 
@@ -10,5 +11,39 @@
 
     .footer {
         z-index: 3;
+    }
+}
+
+.hp-white-bg {
+    margin-left: calc(var(--inner-padding) * -1);
+    margin-right: calc(var(--inner-padding) * -1);
+    background: var(--body-bg);
+    color: var(--dark);
+    border-radius: 50px 50px 0 0;
+    padding-top: 80px;
+    margin-top: 100px;
+    position: relative;
+    z-index: 3;
+
+    @media (min-width: @screen-hp-large) {
+        padding-top: 100px;
+    }
+
+    @media (max-width: @screen-l) {
+        border-radius: 30px 30px 0 0;
+        padding-top: 50px;
+        margin-top: 60px;
+    }
+
+    @media (max-width: @screen-s) {
+        padding-top: 40px;
+        margin-top: 40px;
+    }
+}
+
+.hp-white-bg__inner {
+    
+    > :first-child {
+        margin-top: 0;
     }
 }
