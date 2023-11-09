@@ -55,6 +55,13 @@ module.exports = {
             filename: "press.html",
         }),
         new HtmlWebpackPlugin({
+            template: path.resolve(
+                __dirname,
+                "../src/pages/partners/partners.njk"
+            ),
+            filename: "partners.html",
+        }),
+        new HtmlWebpackPlugin({
             template: path.resolve(__dirname, "../src/pages/sovet/sovet.njk"),
             filename: "sovet.html",
         }),
