@@ -111,6 +111,13 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: path.resolve(
                 __dirname,
+                "../src/pages/private-events/private-events.njk"
+            ),
+            filename: "private-events.html",
+        }),
+        new HtmlWebpackPlugin({
+            template: path.resolve(
+                __dirname,
                 "../src/pages/visitor-special-needs/visitor-special-needs.njk"
             ),
             filename: "visitor-special-needs.html",
