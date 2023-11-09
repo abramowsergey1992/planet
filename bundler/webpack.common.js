@@ -116,6 +116,14 @@ module.exports = {
             filename: "exponats.html",
         }),
         new HtmlWebpackPlugin({
+            template: path.resolve(__dirname, "../src/pages/rules/rules.njk"),
+            filename: "rules.html",
+        }),
+        new HtmlWebpackPlugin({
+            template: path.resolve(__dirname, "../src/pages/rule/rule.njk"),
+            filename: "rule.html",
+        }),
+        new HtmlWebpackPlugin({
             template: path.resolve(
                 __dirname,
                 "../src/pages/private-events/private-events.njk"
