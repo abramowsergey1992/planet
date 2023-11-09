@@ -59,7 +59,9 @@
     {{ item.desc | safe }}
     <div class="event-preview__bottom">
         <a href="{{ item.link }}" class="btn-border">{{ item.btnText }}</a>
+        {% if item.moreBtn %}
         <a href="{{ item.link }}" class="btn-link">Подробнее</a>
+        {% endif %}
     </div>
 </div>
 {%endmacro %}
