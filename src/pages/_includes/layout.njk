@@ -1,9 +1,17 @@
-{% import "components/breadcrumbs/breadcrumbs.njk" as breadcrumbs %} {% import
-"components/gallerySlider/gallerySlider.njk" as gallerySlider %}
+{% import "components/breadcrumbs/breadcrumbs.njk" as breadcrumbs %}
+{% import "components/gallerySlider/gallerySlider.njk" as gallerySlider %} 
+{% import "components/persona/persona.njk" as persona %} 
+{% import "components/event/event.njk" as event %}
+{% import "components/news-card/news-card.njk" as newsCard %}
+{% import "components/card-preview/card-preview.njk" as cardPreview %}
 <!DOCTYPE html>
 <html lang="ru">
     <head>
         <meta charset="UTF-8" />
+        <meta
+            name="csrf-token"
+            content="o2OxEzRnU9cBa11KOLKCKkKUWfTV6wup9GGSAtqp"
+        />
         <title>{% block title %} {% endblock %}</title>
         {% include 'pages/_includes/head.njk' %}
     </head>

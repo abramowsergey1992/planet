@@ -1,0 +1,23 @@
+{% macro create(item) %}
+<div class="persona">
+    <div class="persona__img-wrap _br">
+        <img src="{{ item.img }}" class="persona__img" alt="" />
+        {% if item.tags %}
+        <ul class="persona__tags">
+            {% for tag in item.tags %}
+            <li>{{ tag.icon | safe }}{{ tag.text }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+    </div>
+    <div class="persona__name">{{ item.name }}</div>
+    {% if item.date %}
+    <div class="persona__date">{{ item.date }}</div>
+    {% endif %}
+    <div class="persona__desc">{{ item.desc | safe }}</div>
+    {% if item.link %}
+    <a class="persona__more btn-border" href="{{ item.link }}">Подробнее</a>
+    {% endif %}
+</div>
+{%endmacro %}
+

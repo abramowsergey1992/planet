@@ -1,0 +1,227 @@
+{% extends "pages/_includes/layout.njk" %} {% block title %}Пресса о
+Планетарии{% endblock %} {% block main %}
+
+{{
+    breadcrumbs.create(
+        {
+            items: [
+                {
+                    text: "Главная",
+                    href: "home.html"
+                },
+                {
+                    text: "О планетарии",
+                    href: "#.html"
+                }
+            ]
+        },
+        "Пресса о Планетарии"
+    )
+}}
+<div class="top-row">
+    <h1>Пресса о Планетарии</h1>
+</div>
+<div class="block press">
+    <form
+        id="pressfilter"
+        method="GET"
+        class="press__filters"
+        action="json/press.json"
+    >
+        <div class="press__years overfolow-x">
+            <label class="press__year">
+                <input value="2023" checked type="radio" name="years" />
+                <span>2023</span>
+            </label>
+            <label class="press__year">
+                <input value="2022" type="radio" name="years" />
+                <span>2022</span>
+            </label>
+            <label class="press__year">
+                <input value="2021" type="radio" name="years" />
+                <span>2021</span>
+            </label>
+            <label class="press__year">
+                <input value="2020" type="radio" name="years" />
+                <span>2020</span>
+            </label>
+            <label class="press__year">
+                <input value="2019" type="radio" name="years" />
+                <span>2019</span>
+            </label>
+        </div>
+        <div class="press__months overfolow-x">
+            <label class="press__month">
+                <input value="Январь" type="radio" name="month" />
+                <span>Январь</span>
+            </label>
+            <label class="press__month">
+                <input value="Февраль" type="radio" name="month" />
+                <span>Февраль</span>
+            </label>
+            <label class="press__month">
+                <input value="Март" type="radio" name="month" />
+                <span>Март</span>
+            </label>
+            <label class="press__month">
+                <input value="Апрель" type="radio" name="month" />
+                <span>Апрель</span>
+            </label>
+            <label class="press__month">
+                <input value="Май" type="radio" name="month" />
+                <span>Май</span>
+            </label>
+            <label class="press__month">
+                <input value="Июнь" type="radio" name="month" />
+                <span>Июнь</span>
+            </label>
+            <label class="press__month">
+                <input value="Июль" type="radio" name="month" />
+                <span>Июль</span>
+            </label>
+            <label class="press__month">
+                <input value="Август" type="radio" name="month" />
+                <span>Август</span>
+            </label>
+            <label class="press__month">
+                <input value="Сентябрь" checked type="radio" name="month" />
+                <span>Сентябрь</span>
+            </label>
+            <label class="press__month">
+                <input value="Октябрь" type="radio" name="month" />
+                <span>Октябрь</span>
+            </label>
+            <label class="press__month">
+                <input value="Ноябрь" type="radio" name="month" />
+                <span>Ноябрь</span>
+            </label>
+            <label class="press__month">
+                <input value="Декабрь" type="radio" name="month" />
+                <span>Декабрь</span>
+            </label>
+        </div>
+    </form>
+    <div id="press-template">
+        <div class="press-item">
+            <div class="press-item__date"></div>
+            <div class="press-item__info">
+                <div class="press-item__name"></div>
+                <div class="press-item__type"></div>
+            </div>
+            <div class="press-item__link-wrap">
+                <a href="#" class="press-item__link"> </a>
+            </div>
+        </div>
+        <div class="press-empty">
+            <p>Ничего не найденно</p>
+        </div>
+    </div>
+    <div class="press__list" id="presslist">
+        <div class="press-item">
+            <div class="press-item__date">04.09.2023</div>
+            <div class="press-item__info">
+                <div class="press-item__name">ТАСС Наука</div>
+                <div class="press-item__type">интернет ресурс</div>
+            </div>
+            <div class="press-item__link-wrap">
+                <a href="#" class="press-item__link">
+                    <color
+                        >Московский планетарий организует наблюдения звездного
+                        неба по вечерам с 7 сентября</color
+                    >
+                </a>
+            </div>
+        </div>
+        <div class="press-item">
+            <div class="press-item__date">05.09.2023</div>
+            <div class="press-item__info">
+                <div class="press-item__name">КП Афиша</div>
+                <div class="press-item__type">интернет ресурс</div>
+            </div>
+            <div class="press-item__link-wrap">
+                <a href="#" class="press-item__link"
+                    ><color
+                        >Акция «100 часов астрономии» стартует 7 сентября 2023
+                        года в Московском Планетарии</color
+                    ></a
+                >
+            </div>
+        </div>
+        <div class="press-item">
+            <div class="press-item__date">07.09.2023</div>
+            <div class="press-item__info">
+                <div class="press-item__name">ТАСС Наука</div>
+                <div class="press-item__type">интернет ресурс</div>
+            </div>
+            <div class="press-item__link-wrap">
+                <a href="#" class="press-item__link"
+                    ><color
+                        >Астроном рассказала, как увидеть приближающуюся к Земле
+                        комету Нишимура</color
+                    ></a
+                >
+            </div>
+        </div>
+        <div class="press-item">
+            <div class="press-item__date">15.09.2023</div>
+            <div class="press-item__info">
+                <div class="press-item__name">
+                    Вечерняя Москва, № 173 (29528)
+                </div>
+                <div class="press-item__type">печатное издание</div>
+            </div>
+            <div class="press-item__link-wrap">
+                <a href="#" class="press-item__link"
+                    ><color>Созвездия собраны под куполом зонтика</color></a
+                >
+            </div>
+        </div>
+        <div class="press-item">
+            <div class="press-item__date">18.09.2023</div>
+            <div class="press-item__info">
+                <div class="press-item__name">Аргументы и Факты aif.ru</div>
+                <div class="press-item__type">интернет ресурс</div>
+            </div>
+            <div class="press-item__link-wrap">
+                <a href="#" class="press-item__link"
+                    ><color
+                        >«Выбор Первых». Выйдет список лучших площадок для
+                        развития молодёжи</color
+                    ></a
+                >
+            </div>
+        </div>
+        <div class="press-item">
+            <div class="press-item__date">19.09.2023</div>
+            <div class="press-item__info">
+                <div class="press-item__name">Аргументы и Факты aif.ru</div>
+                <div class="press-item__type">интернет ресурс</div>
+            </div>
+            <div class="press-item__link-wrap">
+                <a href="#" class="press-item__link"
+                    ><color
+                        >Солнце волнуется — раз. В Подмосковье можно видеть
+                        северное сияние</color
+                    ></a
+                >
+            </div>
+        </div>
+        <div class="press-item">
+            <div class="press-item__date">21.09.2023</div>
+            <div class="press-item__info">
+                <div class="press-item__name">ТАСС Наука</div>
+                <div class="press-item__type">интернет ресурс</div>
+            </div>
+            <div class="press-item__link-wrap">
+                <a href="#" class="press-item__link"
+                    ><color
+                        >В Северном полушарии 23 сентября наступит
+                        астрономическая осень</color
+                    ></a
+                >
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+

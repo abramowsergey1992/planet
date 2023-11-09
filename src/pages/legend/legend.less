@@ -1,0 +1,30 @@
+.legend-page {
+    display: grid;
+    max-width: 1643px;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: 909px auto;
+    gap: 34px;
+    @media (max-width: 1300px) {
+        grid-template-columns: auto 350px;
+    }
+    @media (max-width: 1024px) {
+        grid-template-columns: 1fr;
+    }
+    &__sidebar {
+        display: flex;
+        flex-direction: column;
+    }
+    &__sidebar-scroll-wrap {
+        flex: 1;
+    }
+    &__sidebar-fixed {
+        position: sticky;
+        top: 180px;
+    }
+    &__img {
+        max-width: 100%;
+    }
+}
+

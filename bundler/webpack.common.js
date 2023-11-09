@@ -23,12 +23,20 @@ module.exports = {
             filename: "index.html",
         }),
         new HtmlWebpackPlugin({
+            template: path.resolve(__dirname, "../src/pages/about/about.njk"),
+            filename: "about.html",
+        }),
+        new HtmlWebpackPlugin({
             template: path.resolve(__dirname, "../src/pages/home/home.njk"),
             filename: "home.html",
         }),
         new HtmlWebpackPlugin({
             template: path.resolve(__dirname, "../src/pages/ui/ui.njk"),
             filename: "ui.html",
+        }),
+        new HtmlWebpackPlugin({
+            template: path.resolve(__dirname, "../src/pages/events/events.njk"),
+            filename: "events.html",
         }),
         new HtmlWebpackPlugin({
             template: path.resolve(__dirname, "../src/pages/event/event.njk"),
@@ -43,11 +51,76 @@ module.exports = {
             filename: "cafe.html",
         }),
         new HtmlWebpackPlugin({
+            template: path.resolve(__dirname, "../src/pages/press/press.njk"),
+            filename: "press.html",
+        }),
+        new HtmlWebpackPlugin({
+            template: path.resolve(
+                __dirname,
+                "../src/pages/partners/partners.njk"
+            ),
+            filename: "partners.html",
+        }),
+        new HtmlWebpackPlugin({
+            template: path.resolve(__dirname, "../src/pages/sovet/sovet.njk"),
+            filename: "sovet.html",
+        }),
+        new HtmlWebpackPlugin({
+            template: path.resolve(__dirname, "../src/pages/guides/guides.njk"),
+            filename: "guides.html",
+        }),
+        new HtmlWebpackPlugin({
+            template: path.resolve(
+                __dirname,
+                "../src/pages/legends/legends.njk"
+            ),
+            filename: "legends.html",
+        }),
+        new HtmlWebpackPlugin({
+            template: path.resolve(__dirname, "../src/pages/legend/legend.njk"),
+            filename: "legend.html",
+        }),
+        new HtmlWebpackPlugin({
+            template: path.resolve(
+                __dirname,
+                "../src/pages/visitors/visitors.njk"
+            ),
+            filename: "visitors.html",
+        }),
+        new HtmlWebpackPlugin({
+            template: path.resolve(
+                __dirname,
+                "../src/pages/directors/directors.njk"
+            ),
+            filename: "directors.html",
+        }),
+        new HtmlWebpackPlugin({
+            template: path.resolve(
+                __dirname,
+                "../src/pages/vacancies/vacancies.njk"
+            ),
+            filename: "vacancies.html",
+        }),
+        new HtmlWebpackPlugin({
             template: path.resolve(
                 __dirname,
                 "../src/pages/exponat/exponat.njk"
             ),
             filename: "exponat.html",
+        }),
+        new HtmlWebpackPlugin({
+            template: path.resolve(
+                __dirname,
+                "../src/pages/exponats/exponats.njk"
+            ),
+            filename: "exponats.html",
+        }),
+        new HtmlWebpackPlugin({
+            template: path.resolve(
+                __dirname,
+                "../src/pages/private-events/private-events.njk"
+            ),
+            filename: "private-events.html",
         }),
         new HtmlWebpackPlugin({
             template: path.resolve(
@@ -157,7 +230,7 @@ module.exports = {
                         loader: "file-loader",
                         options: {
                             outputPath: "assets/fonts/",
-                            publicPath: '../fonts/'
+                            publicPath: "../fonts/",
                         },
                     },
                 ],

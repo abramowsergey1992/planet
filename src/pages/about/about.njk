@@ -1,0 +1,152 @@
+{% extends "pages/_includes/layout.njk" %} {% block title %}О Планетарии{%
+endblock %} {% block main %}
+
+{{
+    breadcrumbs.create(
+        {
+            items: [
+                {
+                    text: "Главная",
+                    href: "home.html"
+                }
+            ]
+        },
+        "О Планетарии"
+    )
+}}
+<div class="top-row">
+    <h1>О Планетарии</h1>
+</div>
+<div class="block">
+	
+    <div class="cards-preview-grid">
+		{{ cardPreview.create({ 
+			img: "about-1.jpg", 
+			link: "history.html", 
+			title: "История Планетария" }) 
+		}}
+		{{ cardPreview.create({ 
+			img: "about-2.jpg", 
+			link: "#", 
+			title: "Залы" }) 
+		}}
+		{{ cardPreview.create({ 
+			img: "about-3.jpg", 
+			link: "exponats.html", 
+			title: "Экспонаты" }) 
+		}}
+		{{ cardPreview.create({ 
+			img: "about-4.jpg", 
+			link: "legends.html", 
+			title: "Легенды планетария" }) 
+		}}
+		{{ cardPreview.create({ 
+			img: "about-5.jpg", 
+			link: "sovet.html", 
+			title: "Учёный совет" }) 
+		}}
+		{{ cardPreview.create({ 
+			img: "about-6.jpg", 
+			link: "directors.html", 
+			title: "Руководство" }) 
+		}}
+		{{ cardPreview.create({ 
+			img: "about-7.jpg", 
+			link: "guides.html", 
+			title: "Экскурсоводы" }) 
+		}}
+		{{ cardPreview.create({ 
+			img: "about-8.jpg", 
+			link: "vacancies.html", 
+			title: "Вакансии" }) 
+		}}
+    </div>
+</div>
+<div class="block">
+	<div class="top-row">
+
+
+    <a class="h1 title-link" href="@">Научный блог </a></div>
+    <div class="slider-3 swiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+				{{ newsCard.create({ 
+					img: "about-9.jpg", 
+					date: "29 мая 2023", 
+					title: "Венера: неожиданные открытия",
+					desc:"Астрономы обнаружили необычные явления на одной из лун Юпитера" 
+					}) 
+				}}
+			</div>
+            <div class="swiper-slide">
+				{{ newsCard.create({ 
+					img: "about-10.jpg", 
+					date: "29 мая 2023", 
+					title: "Новый способ изучения Марса",
+					desc:"Астрономы обнаружили необычные явления на одной из лун Юпитера" 
+					}) 
+				}}
+			</div>
+            <div class="swiper-slide">
+				{{ newsCard.create({ 
+					img: "about-11.jpg", 
+					date: "29 мая 2023", 
+					title: "Тайны Юпитеровых лун",
+					desc:"Астрономы обнаружили необычные явления на одной из лун Юпитера" 
+					}) 
+				}}
+			</div>
+        </div>
+    </div>
+</div>
+<div class="white-block">
+	<div class="block">
+    	<a class="h1 title-link" href="@">Новости</a>
+		<div class="slider-3 swiper">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					{{ newsCard.create({ 
+						img: "about-9.jpg", 
+						date: "29 мая 2023", 
+						title: "Венера: неожиданные открытия",
+						desc:"Астрономы обнаружили необычные явления на одной из лун Юпитера" 
+						}) 
+					}}
+				</div>
+				<div class="swiper-slide">
+					{{ newsCard.create({ 
+						img: "about-10.jpg", 
+						date: "29 мая 2023", 
+						title: "Новый способ изучения Марса",
+						desc:"Астрономы обнаружили необычные явления на одной из лун Юпитера" 
+						}) 
+					}}
+				</div>
+				<div class="swiper-slide">
+					{{ newsCard.create({ 
+						img: "about-11.jpg", 
+						date: "29 мая 2023", 
+						title: "Тайны Юпитеровых лун",
+						desc:"Астрономы обнаружили необычные явления на одной из лун Юпитера" 
+						}) 
+					}}
+				</div>
+			</div>
+		</div>
+	</div><div class="block">
+<div class="cards-preview-grid">
+		{{ cardPreview.create({ 
+			img: "about-1.jpg", 
+			link: "history.html", 
+			title: "История Планетария" }) 
+		}}
+		{{ cardPreview.create({ 
+			img: "about-2.jpg", 
+			link: "#", 
+			title: "Залы" }) 
+		}}
+</div>
+</div>
+</div>
+{% endblock %}
+

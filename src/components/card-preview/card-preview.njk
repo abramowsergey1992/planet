@@ -1,0 +1,9 @@
+{% macro create(item) %}
+<div class="card-preiview _br">
+    <div class="card-preiview__img-wrap">
+        <img src="img/{{ item.img }}" class="card-preiview__img" alt="" />
+    </div>
+    <a class="card-preiview__link" href="{{ item.link }}">{{ item.title }}</a>
+</div>
+{%endmacro %}
+

@@ -1,0 +1,77 @@
+{% extends "pages/_includes/layout.njk" %} {% block title %}Магазин Планетария{%
+endblock %} {% block main %}
+
+{{
+    breadcrumbs.create(
+        {
+            items: [
+                {
+                    text: "Главная",
+                    href: "home.html"
+                }
+            ]
+        },
+        "Посетителям"
+    )
+}}
+<div class="top-row">
+    <h1>Посетителям</h1>
+</div>
+<div class="visitors-grid block">
+    <div class="visitors-preview _br _big">
+        <div class="visitors-preview__img">
+            <img src="img/visitors-1.jpg" alt="" />
+        </div>
+        <a href="#" class="visitors-preview__link"
+            >Общая информация и часы работы</a
+        >
+    </div>
+    <div class="visitors-preview _br _big">
+        <div class="visitors-preview__img">
+            <img src="img/visitors-2.jpg" alt="" />
+        </div>
+        <a href="#" class="visitors-preview__link">Цены и система скидок</a>
+    </div>
+    <div class="visitors-preview _br">
+        <div class="visitors-preview__img">
+            <img src="img/visitors-3.jpg" alt="" />
+        </div>
+        <a href="#" class="visitors-preview__link"
+            >Общая информация и часы работы</a
+        >
+    </div>
+    <div class="visitors-preview _br">
+        <div class="visitors-preview__img">
+            <img src="img/visitors-4.jpg" alt="" />
+        </div>
+        <a href="#" class="visitors-preview__link">Магазин Планетария</a>
+    </div>
+    <div class="visitors-preview _br">
+        <div class="visitors-preview__img">
+            <img src="img/visitors-5.jpg" alt="" />
+        </div>
+        <a href="#" class="visitors-preview__link"
+            >Для людей с особыми потребностями</a
+        >
+    </div>
+    <div class="visitors-preview _br">
+        <div class="visitors-preview__img">
+            <img src="img/visitors-6.jpg" alt="" />
+        </div>
+        <a href="#" class="visitors-preview__link">Вопросы и ответы</a>
+    </div>
+    <div class="visitors-preview _br">
+        <div class="visitors-preview__img">
+            <img src="img/visitors-7.jpg" alt="" />
+        </div>
+        <a href="#" class="visitors-preview__link">Правила</a>
+    </div>
+    <div class="visitors-preview _br">
+        <div class="visitors-preview__img">
+            <img src="img/visitors-8.jpg" alt="" />
+        </div>
+        <a href="#" class="visitors-preview__link">Кафе Планетария</a>
+    </div>
+</div>
+{% endblock %}
+

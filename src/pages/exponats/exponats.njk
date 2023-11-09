@@ -1,0 +1,138 @@
+{% extends "pages/_includes/layout.njk" %} {% block title %}Вращающийся стул{%
+endblock %} {% block main %}
+
+{{
+    breadcrumbs.create(
+        {
+            items: [
+                {
+                    text: "Главная",
+                    href: "home.html"
+                },
+                {
+                    text: "О планетарии",
+                    href: "#.html"
+                },
+                {
+                    text: "Экспонаты",
+                    href: "#.html"
+                }
+            ]
+        },
+        "Вращающийся стул"
+    )
+}}
+<div class="top-row">
+    <h1>Вращающийся стул</h1>
+    <ul class="top-row__filters overfolow-x">
+        <li>
+            <a href="#" class="_active">Все экспонаты</a>
+        </li>
+        <li>
+            <a href="#">Экспонаты Лунариума</a>
+        </li>
+        <li>
+            <a href="#">Экспонаты Музея Урании</a>
+        </li>
+        <li>
+            <a href="#">Экспонаты Парка Неба</a>
+        </li>
+    </ul>
+</div>
+<div class="block">
+    <div class="events-grid">
+        {{
+            event.create({
+                img: "img/exp-1.jpg",
+                bottomTags: [{ icon: "marker", text: "Лунариум" }],
+                title: "Вращающийся стул",
+                btnText: "Подробнее",
+                link: "exponat.html"
+            })
+        }}
+        {{
+            event.create({
+                img: "img/exp-2.jpg",
+                bottomTags: [{ icon: "marker", text: "Парк неба" }],
+                title: "Глобус гиппарха",
+                btnText: "Подробнее",
+                link: "exponat.html"
+            })
+        }}
+        {{
+            event.create({
+                img: "img/exp-3.jpg",
+                bottomTags: [{ icon: "marker", text: "Лунариум" }],
+                title: "Воздушная ракета",
+                btnText: "Подробнее",
+                link: "exponat.html"
+            })
+        }}
+        {{
+            event.create({
+                img: "img/exp-4.jpg",
+                bottomTags: [{ icon: "marker", text: "Лунариум" }],
+                title: "Сделай облако",
+                btnText: "Подробнее",
+                link: "exponat.html"
+            })
+        }}
+        {{
+            event.create({
+                img: "img/exp-5.jpg",
+                bottomTags: [{ icon: "marker", text: "Парк неба" }],
+                title: "Гагаринский планетарий",
+                btnText: "Подробнее",
+                link: "exponat.html"
+            })
+        }}
+        {{
+            event.create({
+                img: "img/exp-6.jpg",
+                bottomTags: [{ icon: "marker", text: "Лунариум" }],
+                title: "Макет автоматической межпланетной станции Луна-1",
+                btnText: "Подробнее",
+                link: "exponat.html"
+            })
+        }}{{
+            event.create({
+                img: "img/exp-1.jpg",
+                bottomTags: [{ icon: "marker", text: "Лунариум" }],
+                title: "Вращающийся стул",
+                btnText: "Подробнее",
+                link: "exponat.html"
+            })
+        }}
+        {{
+            event.create({
+                img: "img/exp-2.jpg",
+                bottomTags: [{ icon: "marker", text: "Парк неба" }],
+                title: "Глобус гиппарха",
+                btnText: "Подробнее",
+                link: "exponat.html"
+            })
+        }}
+        {{
+            event.create({
+                img: "img/exp-3.jpg",
+                bottomTags: [{ icon: "marker", text: "Лунариум" }],
+                title: "Воздушная ракета",
+                btnText: "Подробнее",
+                link: "exponat.html"
+            })
+        }}
+    </div>
+    <div class="paginator">
+        <a href="#" class="paginator__prev"></a>
+        <a href="#" class="paginator__link _active">1</a>
+        <a href="#" class="paginator__link">2</a>
+        <a href="#" class="paginator__link">3</a>
+        <a href="#" class="paginator__link">4</a>
+        <a href="#" class="paginator__link">5</a>
+        <a href="#" class="paginator__link">6</a>
+        <a href="#" class="paginator__next"></a>
+    </div>
+</div>
+
+{% endblock %}
+
