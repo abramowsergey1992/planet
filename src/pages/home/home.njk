@@ -172,6 +172,26 @@ endblock %} {% block main %}
 
 <div class="hp-white-bg">
     <div class="inner hp-white-bg__inner">
+        {# Квиз #}
+        <div class="hp-quiz">
+            <div class="hp-quiz__inner">
+                <svg class="hp-quiz__logo">
+                    <use xlink:href="/img/symbols.svg#sym-logo-simple"></use>
+                </svg>
+                <div class="h1 hp-quiz__title">Какую программу выбрать?</div>
+                <div class="hp-quiz__text">Ответьте на&nbsp;5&nbsp;вопросов и&nbsp;узнайте,<br/>какая программа вам больше всего подходит</div>
+                <a class="hp-quiz__btn" href="/about.html">
+                    <svg>
+                        <use xlink:href="/img/symbols.svg#sym-icon-quiz"></use>
+                    </svg>
+                    <span>Пройти квиз</span>
+                </a>
+            </div>
+
+            <div class="hp-quiz__img" style="background-image: url('./content/quiz-poster.webp')"></div>
+        </div>
+
+        {# Блог #}
         <div class="hp-blog">
             <div class="top-row">
                 <a class="h1 title-link" href="@">Научный блог </a>
