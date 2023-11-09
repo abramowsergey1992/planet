@@ -31,6 +31,10 @@ module.exports = {
             filename: "ui.html",
         }),
         new HtmlWebpackPlugin({
+            template: path.resolve(__dirname, "../src/pages/events/events.njk"),
+            filename: "events.html",
+        }),
+        new HtmlWebpackPlugin({
             template: path.resolve(__dirname, "../src/pages/event/event.njk"),
             filename: "event.html",
         }),

@@ -11,7 +11,8 @@
     flex-direction: row;
     align-items: flex-end;
     margin-bottom: 32px;
-    gap: 10px;
+    flex-wrap: wrap;
+    gap: 20px 10px;
     .h1,
     h1 {
         margin: 0;
@@ -40,6 +41,27 @@
                 &:hover {
                     color: var(--link);
                 }
+            }
+        }
+    }
+    &__filters {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        list-style: none;
+        a {
+            padding: 11px 20px;
+            border-radius: 30px;
+            color: var(--text);
+            font-family: Circe;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 150%;
+            letter-spacing: -0.16px;
+            &._active {
+                background: var(--gradient);
+                color: #fff;
             }
         }
     }
