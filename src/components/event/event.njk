@@ -33,7 +33,7 @@
                         award.top
                     }}</span>
                     <span class="event-preview__award-name">{{
-                        award.text
+                        award.text | safe
                     }}</span>
                     <span class="event-preview__award-year">{{
                         award.year
@@ -44,25 +44,28 @@
             {% endif %}
         </div>
     </div>
-    <div class="event-preview__title h2">{{ item.title }}</div>
-    {% if item.info %}
-    <ul class="event-preview__info">
-        {% for inf in item.info %}
-        <li>
-            {% if inf.icon %} <span class="icon-{{ inf.icon }}"></span> {% endif
-            %}
-            <span>{{ inf.text }}</span>
-        </li>
-        {% endfor %}
-    </ul>
-    {% endif %}
-    {{ item.desc | safe }}
-    <div class="event-preview__bottom">
-        <a href="{{ item.link }}" class="btn-border">{{ item.btnText }}</a>
-        {% if item.moreBtn %}
-        <a href="{{ item.link }}" class="btn-link">Подробнее</a>
+    <div class="event-preview__middle">
+        <div class="event-preview__title h2">{{ item.title }}</div>
+        {% if item.info %}
+        <ul class="event-preview__info">
+            {% for inf in item.info %}
+            <li>
+                {% if inf.icon %} <span class="icon-{{ inf.icon }}"></span> {% endif
+                %}
+                <span>{{ inf.text }}</span>
+            </li>
+            {% endfor %}
+        </ul>
         {% endif %}
+    </div>
+    <div class="event-preview__bottom-wrap">
+        {{ item.desc | safe }}
+        <div class="event-preview__bottom">
+            <a href="{{ item.link }}" class="btn-border">{{ item.btnText }}</a>
+            {% if item.moreBtn %}
+            <a href="{{ item.link }}" class="btn-link">Подробнее</a>
+            {% endif %}
+        </div>
     </div>
 </div>
 {%endmacro %}
-
