@@ -7,4 +7,5 @@ import "../components/sliders/sliders.js";
 import "../pages/event/event.js";
 import "../pages/home/home.js";
 import "../pages/press/press.js";
+import "../pages/faq/faq.js";
 import "../pages/vacancies/vacancies.js";
