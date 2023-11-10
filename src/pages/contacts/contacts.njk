@@ -1,0 +1,231 @@
+{% extends "pages/_includes/layout.njk" %} {% block title %}Общая информация и
+режим работы{% endblock %} {% block main %}
+
+{{
+    breadcrumbs.create(
+        {
+            items: [
+                {
+                    text: "Главная",
+                    href: "home.html"
+                },
+                {
+                    text: "Посетителям",
+                    href: "visitors.html"
+                }
+            ]
+        },
+        "Общая информация и режим работы"
+    )
+}}
+<div class="top-row">
+    <h1>Общая информация и режим работы</h1>
+</div>
+<div class="block">
+    <div class="contact-block-1 _br">
+        <div class="contact-block-1__content">
+            <div class="contact-block-1__item _full">
+                <div class="contact-block-1__item-title">Адрес:</div>
+                <div class="h2">
+                    123242, г. Москва, улица Садовая-Кудринская, д. 5, стр. 1
+                </div>
+            </div>
+            <div class="contact-block-1__item">
+                <div class="contact-block-1__item-title">Часы работы:</div>
+                <p>
+                    Понедельник - Воскресенье <br />
+                    (с 10:00 до 21:00)
+                </p>
+                <p><color>Вторник – технический день</color></p>
+            </div>
+            <div class="contact-block-1__item">
+                <div class="contact-block-1__item-title">Контакты:</div>
+                <p>
+                    <a href="tel:+74952217690">+7 (495) 221-76-90</a>
+                </p>
+                <p>
+                    <a href="tel:+74952217692">+7 (495) 221-76-92</a>
+                </p>
+            </div>
+            <div class="contact-block-1__item">
+                <div class="contact-block-1__item-title">
+                    Для общих вопросов:
+                </div>
+                <p>
+                    <a href="mailto:info@planetarium-moscow.ru"
+                        ><color>info@planetarium-moscow.ru</color></a
+                    >
+                </p>
+            </div>
+            <div class="contact-block-1__item">
+                <div class="contact-block-1__item-title">
+                    Вопросы по работе кафе:
+                </div>
+                <p>
+                    <a href="mailto:info@planetarium-moscow.ru"
+                        ><color>cafe@planetarium-moscow.ru</color></a
+                    >
+                </p>
+            </div>
+        </div>
+        <div class="contact-block-1__map-wrap _br">
+            <div
+                class="contact-block-1__map"
+                data-map='{"center":["55.761411","37.583661"],"zoom":10, "marker":{"icon":"img/marker.svg", "coord":["55.761411","37.583661"]}}'
+            ></div>
+        </div>
+    </div>
+    <div class="contact-block-2">
+        <div class="contact-block-2__item _br">
+            <div class="contact-block-2__item-img-wrap">
+                <img src="img/contact-1.svg" alt="" />
+            </div>
+            <div class="contact-block-2__item-title">Большой Звездный зал</div>
+            <div class="contact-block-2__item-desc">
+                <p>Ежедневно (кроме вторника) с 10:00 до 21:00</p>
+            </div>
+        </div>
+        <div class="contact-block-2__item _br">
+            <div class="contact-block-2__item-img-wrap">
+                <img src="img/contact-2.svg" alt="" />
+            </div>
+            <div class="contact-block-2__item-title">
+                Интерактивный музей «Лунариум»
+            </div>
+            <div class="contact-block-2__item-desc">
+                <p>Ежедневно (кроме вторника) с 10:00 до 21:00</p>
+                <p>
+                    Ваши отзывы и предложения о работе интерактивного
+                    пространства «Лунариум» просим направлять на почту:
+                    <a href="mailto:lunarium@planetarium-moscow.ru"
+                        >lunarium@planetarium-moscow.ru</a
+                    >
+                </p>
+            </div>
+        </div>
+        <div class="contact-block-2__item _br">
+            <div class="contact-block-2__item-img-wrap">
+                <img src="img/contact-3.svg" alt="" />
+            </div>
+            <div class="contact-block-2__item-title">
+                Классический музей Урании
+            </div>
+            <div class="contact-block-2__item-desc">
+                <p>Ежедневно (кроме вторника) с 10:00 до 21:00</p>
+            </div>
+        </div>
+        <div class="contact-block-2__item _br">
+            <div class="contact-block-2__item-img-wrap">
+                <img src="img/contact-4.svg" alt="" />
+            </div>
+            <div class="contact-block-2__item-title">
+                Парк неба <br />
+                и Обсерватория
+            </div>
+            <div class="contact-block-2__item-desc">
+                <p>
+                    Астроплощадка работает с мая по сентябрь с 11:00 до 21:00.
+                    Посетить большую обсерваторию можно по сеансам, в выходные
+                    дни.
+                </p>
+                <p>*После сеанса 20:00 выход на Астроплощадку закрыт.</p>
+            </div>
+        </div>
+        <div class="contact-block-2__item _br">
+            <div class="contact-block-2__item-img-wrap">
+                <img src="img/contact-5.svg" alt="" />
+            </div>
+            <div class="contact-block-2__item-title">Малый Звездный зал</div>
+            <div class="contact-block-2__item-desc">
+                <p>Ежедневно (кроме вторника) с 10:00 до 21:00</p>
+            </div>
+        </div>
+        <div class="contact-block-2__item _br">
+            <div class="contact-block-2__item-img-wrap">
+                <img src="img/contact-6.svg" alt="" />
+            </div>
+            <div class="contact-block-2__item-title">4D кинотеатр</div>
+            <div class="contact-block-2__item-desc">
+                <p>Ежедневно (кроме вторника) с 10:00 до 21:00</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="block">
+    <div class="top-row">
+        <div class="h1">Как добраться</div>
+    </div>
+    <div class="contact-block-3 _br">
+        <div class="contact-block-3__left">
+            <h2>Общественный транспорт</h2>
+            <div class="contact-block-3__grid">
+                <div class="contact-block-3__item">
+                    <div class="h2">Метро</div>
+                    <p>
+                        ст. Баррикадная - 520 м., <br />
+                        ст. Краснопресненская - 750 м, <br />
+                        ст. Маяковская - 1,2 км
+                    </p>
+                </div>
+                <div class="contact-block-3__item">
+                    <div class="h2">Автобус</div>
+                    <p>ост. «Малая Никитская улица» 239, Б, с369</p>
+                </div>
+            </div>
+        </div>
+        <div class="contact-block-3__right _br">
+            <svg
+                width="60"
+                height="60"
+                viewBox="0 0 60 60"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+            >
+                <path
+                    d="M25.5 9C25.5 28.1282 27.753 32.247 34.5121 25.4878C27.753 32.247 31.8718 34.5 51 34.5C31.8718 34.5 27.753 36.753 34.5121 43.5121C27.753 36.753 25.5 40.8718 25.5 60C25.5 40.8718 23.247 36.753 16.4878 43.5121C23.247 36.753 19.1282 34.5 0 34.5C19.1282 34.5 23.247 32.247 16.4878 25.4878C23.247 32.247 25.5 28.1282 25.5 9Z"
+                    fill="white"
+                />
+                <path
+                    d="M50.5 0C50.5 7.1262 51.3394 8.66063 53.8575 6.14253C51.3394 8.66063 52.8738 9.5 60 9.5C52.8738 9.5 51.3394 10.3394 53.8575 12.8575C51.3394 10.3394 50.5 11.8738 50.5 19C50.5 11.8738 49.6606 10.3394 47.1425 12.8575C49.6606 10.3394 48.1262 9.5 41 9.5C48.1262 9.5 49.6606 8.66063 47.1425 6.14253C49.6606 8.66063 50.5 7.1262 50.5 0Z"
+                    fill="white"
+                />
+            </svg>
+            <div class="h2">Важная информация!</div>
+            <p>
+                Уважаемые посетители! Информируем вас, что на территории
+                Планетария нет парковок для автомобилей.
+            </p>
+            <p>
+                Пользуйтесь городскими парковками и заранее планируйте свое
+                время!
+            </p>
+        </div>
+    </div>
+    <div class="contact-block-4 _br">
+        <div class="contact-block-4__left">
+            <h2>Как пройти от ближайшей станции метро «Баррикадная»</h2>
+            <p>
+                Выходить из метро удобнее из последнего вагона по направлению из
+                центра. Из стеклянных дверей направо, перед Вами «Дом
+                авиаторов», или высотка на Баррикадной. Поворачивайте налево и
+                идите вдоль дороги по улице Баррикадная до пересечения с широкой
+                дорогой (это Садовое кольцо), на перекрестке у светофора
+                поверните налево (дорогу не переходите). Продолжайте движение
+                вперед. После подземного перехода (для ориентира Бургер Кинг)
+                будет вход в зоопарк с кованными воротами. Вам нужно пройти
+                дальше вдоль дома №3, а затем повернуть налево. Перед Вами будет
+                железная ограда с воротами и постом охраны - это вход на
+                территорию Планетария. Добро пожаловать!
+            </p>
+        </div>
+        <div class="contact-block-4__map-wrap _br">
+            <div
+                class="contact-block-4__map"
+                data-map='{"center":["55.761411","37.583661"],"zoom":10, "marker":{"icon":"img/marker.svg", "coord":["55.761411","37.583661"]}}'
+            ></div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
