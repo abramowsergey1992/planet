@@ -1,0 +1,98 @@
+{% extends "pages/_includes/layout.njk" %} {% block title %}Правила{% endblock
+%} {% block main %}
+
+{{
+    breadcrumbs.create(
+        {
+            items: [
+                {
+                    text: "Главная",
+                    href: "home.html"
+                },
+                {
+                    text: "Посетителям",
+                    href: "visitors.html"
+                }
+            ]
+        },
+        "Правила"
+    )
+}}
+<div class="top-row">
+    <h1>Правила</h1>
+</div>
+<div class="block">
+    <div class="rules-grid">
+        <div class="rule-preview _br">
+            <a href="rule.html" class="rule-preview__link"
+                >Правила бронирования экскурсии</a
+            >
+        </div>
+        <div class="rule-preview _br">
+            <a href="rule.html" class="rule-preview__link"
+                >Политика конфиденциальности</a
+            >
+        </div>
+        <div class="rule-preview _br">
+            <a href="rule.html" class="rule-preview__link"
+                >Политика конфиденциальности</a
+            >
+        </div>
+        <div class="rule-preview _br">
+            <a href="rule.html" class="rule-preview__link"
+                >Правила бронирования школьных экскурсий</a
+            >
+        </div>
+        <div class="rule-preview _br">
+            <a href="rule.html" class="rule-preview__link"
+                >Соглашение о продаже электронных билетов на сайте Планетария</a
+            >
+        </div>
+        <div class="rule-preview _br">
+            <a href="rule.html" class="rule-preview__link"
+                >Правила использования сертификатов</a
+            >
+        </div>
+        <div class="rule-preview _br">
+            <a href="rule.html" class="rule-preview__link"
+                >Правила продажи билетов</a
+            >
+        </div>
+        <div class="rule-preview _br">
+            <a href="rule.html" class="rule-preview__link"
+                >Правила покупки и возврата билетов на занятия циклов Театра
+                увлекательной науки, купленных в рамках абонемента</a
+            >
+        </div>
+        <div class="rule-preview _br">
+            <a href="rule.html" class="rule-preview__link"
+                >Правила покупки и возврата билетов на занятия циклов Популярной
+                астрономии для начинающих, купленных в рамках абонемента</a
+            >
+        </div>
+        <div class="rule-preview _br">
+            <a href="rule.html" class="rule-preview__link"
+                >Правила официальных групп Московского Планетария ВКонтакте и
+                Телеграмм</a
+            >
+        </div>
+        <div class="rule-preview _br">
+            <a href="rule.html" class="rule-preview__link"
+                >Правила посещения Планетария</a
+            >
+        </div>
+        <div class="rule-preview _br">
+            <a href="rule.html" class="rule-preview__link"
+                >Правила бронирования лекции "Астрономия на сфере"</a
+            >
+        </div>
+        <div class="rule-preview _br">
+            <a href="rule.html" class="rule-preview__link"
+                >Правила бронирования цикла лекций «Звездные уроки»</a
+            >
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
