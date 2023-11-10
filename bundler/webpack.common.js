@@ -57,6 +57,13 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: path.resolve(
                 __dirname,
+                "../src/pages/contacts/contacts.njk"
+            ),
+            filename: "contacts.html",
+        }),
+        new HtmlWebpackPlugin({
+            template: path.resolve(
+                __dirname,
                 "../src/pages/partners/partners.njk"
             ),
             filename: "partners.html",
@@ -102,6 +109,10 @@ module.exports = {
             filename: "vacancies.html",
         }),
         new HtmlWebpackPlugin({
+            template: path.resolve(__dirname, "../src/pages/faq/faq.njk"),
+            filename: "faq.html",
+        }),
+        new HtmlWebpackPlugin({
             template: path.resolve(
                 __dirname,
                 "../src/pages/exponat/exponat.njk"
@@ -114,6 +125,14 @@ module.exports = {
                 "../src/pages/exponats/exponats.njk"
             ),
             filename: "exponats.html",
+        }),
+        new HtmlWebpackPlugin({
+            template: path.resolve(__dirname, "../src/pages/rules/rules.njk"),
+            filename: "rules.html",
+        }),
+        new HtmlWebpackPlugin({
+            template: path.resolve(__dirname, "../src/pages/rule/rule.njk"),
+            filename: "rule.html",
         }),
         new HtmlWebpackPlugin({
             template: path.resolve(
