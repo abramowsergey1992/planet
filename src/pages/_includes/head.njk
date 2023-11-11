@@ -1,8 +1,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-{# Default styles #}
-<style>
-    html {
-        font-size: 1px; {# FIX font-size blinking #}
-    }
-</style>
+{# Force hide preloader if there is a JS error #}
+<script>
+    setTimeout(() => {
+        document.getElementsByTagName('html')[0].classList.add('_is-preloaded');
+    }, 5000);
+</script>
