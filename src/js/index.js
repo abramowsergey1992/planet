@@ -11,3 +11,6 @@ import "../pages/press/press.js";
 import "../pages/faq/faq.js";
 import "../pages/contacts/contacts.js";
 import "../pages/vacancies/vacancies.js";
+
+// Must be the last
+import "../components/preloader/preloader.js";
