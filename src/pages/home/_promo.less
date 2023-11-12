@@ -36,6 +36,12 @@
         font-size: 36px;
         .clampf(32, 64, 360, 720);
     }
+
+    span {
+        display: block;
+        position: relative;
+        will-change: opacity, transform;
+    }
 }
 
 .hp-promo__subtitle {
@@ -50,6 +56,12 @@
     @media (max-width: @screen-s) {
         margin-top: 12px;
         max-width: 400px;
+    }
+
+    span {
+        display: block;
+        position: relative;
+        will-change: opacity, transform;
     }
 }
 
@@ -277,15 +289,32 @@
     }
 }
 
+.hp-space__shadows {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
 .hp-space__shadow-1,
 .hp-space__shadow-2 {
     background: var(--dark);
-    border-radius: 50%;
     position: absolute;
     left: 50%;
     top: 0;
-    overflow: hidden;
     z-index: 1;
+    will-change: transform, opacity;
+}
+
+.hp-space__shadow-inner {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+    border-radius: 50%;
 
     &:before {
         content: '';
@@ -298,6 +327,7 @@
         background: url('/static/img/planet-shadow.png') no-repeat center center;
         background-size: 100% 100%;
         mix-blend-mode: exclusion;
+        
     }
 }
 
@@ -334,7 +364,7 @@
         margin-top: -216px;
     }
     
-    &:before {
+    .hp-space__shadow-inner:before {
         transform: rotate(34.639deg);
     }
 }
@@ -375,7 +405,7 @@
         margin-left: 90px;
     }
     
-    &:before {
+    .hp-space__shadow-inner:before {
         transform: rotate(-160.826deg);;
     }
 }

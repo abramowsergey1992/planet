@@ -10,6 +10,9 @@
     text-align: center;
     position: relative;
     margin-top: 80px;
+    opacity: 0;
+    // transform: scale(1.02);
+    transition: all 0.6s ease;
 
     @media (max-width: @screen-l) {
         aspect-ratio: 1.12;
@@ -19,6 +22,11 @@
 
     @media (max-width: @screen-s) {
         aspect-ratio: 0.58;
+    }
+
+    &._is-animated {
+        // transform: scale(1);
+        opacity: 1;
     }
 }
 
@@ -129,4 +137,10 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top center;
+    transform: scale(1.1);
+    transition: transform 6s ease-out;
+
+    .hp-quiz._is-animated & {
+        transform: scale(1);
+    }
 }

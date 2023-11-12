@@ -6,8 +6,8 @@ endblock %} {% block main %}
 
 <div class="hp-promo js-hp-promo">
     <div class="inner hp-promo__titles js-hp-promo-titles">
-        <h1 class="hp-promo__title">Московский планетарий</h1>
-        <h2 class="hp-promo__subtitle">Мультиформатный научно&#8209;просветительский центр</h2>
+        <h1 class="hp-promo__title"><span>Московский планетарий</span></h1>
+        <h2 class="hp-promo__subtitle"><span>Мультиформатный научно&#8209;просветительский центр</span></h2>
     </div>
 
     <div class="hp-space _show-sun">
@@ -29,8 +29,14 @@ endblock %} {% block main %}
             </div>
         </div>
 
-        <div class="hp-space__shadow-1 js-hp-promo-shadow-1"></div>
-        <div class="hp-space__shadow-2 js-hp-promo-shadow-2"></div>
+        <div class="hp-space__shadows">
+            <div class="hp-space__shadow-1 js-hp-promo-shadow-1">
+                <div class="hp-space__shadow-inner"></div>
+            </div>
+            <div class="hp-space__shadow-2 js-hp-promo-shadow-2">
+                <div class="hp-space__shadow-inner"></div>
+            </div>
+        </div>
     </div>
 </div>
 
@@ -58,8 +64,8 @@ endblock %} {% block main %}
 </div>
 
 <div class="hp-program">
-    <div class="hp-program__inner">
-        <div class="hp-program__cell">
+    <div class="hp-program__inner js-trigger-animate">
+        <div class="hp-program__cell js-trigger-animate">
             <a href="shop.html" class="hp-program__card hp-program__load">
                 <div class="hp-program__card-inner">
                     <div class="hp-program__load-title">График загрузки</div>
@@ -76,7 +82,7 @@ endblock %} {% block main %}
                 </div>
             </a>
         </div>
-        <div class="hp-program__cell">
+        <div class="hp-program__cell js-trigger-animate">
             <a href="shop.html" class="hp-program__card hp-program__tickets">
                 <div class="hp-program__card-inner">
                     <div class="hp-program__tickets-title">Купить билет</div>
@@ -97,14 +103,14 @@ endblock %} {% block main %}
                 </div>
             </a>
         </div>
-        <div class="hp-program__cell">
+        <div class="hp-program__cell js-trigger-animate">
             <a href="event.html" class="hp-program__card hp-program__events">
                 <div class="hp-program__card-inner">
                     <div class="hp-program__events-title">Афиша</div>
                 </div>
             </a>
         </div>
-        <div class="hp-program__cell">
+        <div class="hp-program__cell js-trigger-animate">
             <div class="hp-program__card hp-program__program js-hp-hover">
                 {%
                     set list = [
@@ -179,7 +185,7 @@ endblock %} {% block main %}
          {% include 'pages/home/_schedule.njk' %}
 
         {# Квиз #}
-        <div class="hp-quiz">
+        <div class="hp-quiz js-trigger-animate">
             <div class="hp-quiz__inner">
                 <svg class="hp-quiz__logo">
                     <use xlink:href="/img/symbols.svg#sym-logo-simple"></use>
@@ -203,7 +209,7 @@ endblock %} {% block main %}
                 <a class="h1 title-link" href="@">Научный блог </a>
             </div>
 
-            <div class="slider-3 swiper">
+            <div class="slider-3 swiper js-trigger-animate">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         {{ newsCard.create({ 

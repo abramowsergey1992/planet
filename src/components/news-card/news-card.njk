@@ -1,13 +1,14 @@
 {% macro create(item) %}
 <div class="news-card">
-    <div class="news-card__img-wrap _br">
-        <img src="img/{{ item.img }}" class="news-card__img" alt="" />
-    </div>
-    <div class="news-card__date">{{ item.date }}</div>
-    <div class="news-card__title h2">{{ item.title }}</div>
-    <div class="news-card__desc">
-        <p>{{ item.desc }}</p>
-    </div>
+    <a href="event.html" class="news-card__link">
+        <div class="news-card__img-wrap _br">
+            <img src="img/{{ item.img }}" class="news-card__img" alt="" />
+        </div>
+        <div class="news-card__date">{{ item.date }}</div>
+        <div class="news-card__title h2">{{ item.title }}</div>
+        <div class="news-card__desc">
+            <p>{{ item.desc }}</p>
+        </div>
+    </a>
 </div>
 {%endmacro %}
-

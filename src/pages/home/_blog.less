@@ -9,4 +9,33 @@
     .title-link {
         color: var(--dark);
     }
+
+    .swiper {
+        overflow: visible;
+
+        &._is-animated {
+
+            .news-card {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .swiper-slide {
+
+            &:nth-child(2) .news-card {
+                transition-delay: 0.2s;
+            }
+    
+            &:nth-child(3) .news-card {
+                transition-delay: 0.4s;
+            }
+        }
+    }
+
+    .news-card {
+        opacity: 0;
+        transform: scale(1.04);
+        transition: all 0.6s ease;
+    }
 }

@@ -1,8 +1,12 @@
 .news-card {
+    &__link {
+        display: block;
+    }
     &__img-wrap {
         aspect-ratio: 1/1;
         position: relative;
         margin-bottom: 20px;
+        overflow: hidden;
     }
     &__img {
         width: 100%;
@@ -11,6 +15,8 @@
         left: 0;
         top: 0;
         object-fit: cover;
+        display: block;
+        transition: transform 1s ease-out;
     }
     &__date {
         font-size: 16px;
@@ -24,5 +30,16 @@
         margin-top: 7px;
         margin-bottom: 7px;
     }
-}
+    
+    html.desktop & {
+        &__link:hover {
+            .news-card__img {
+                transform: scale(1.04);
+            }
 
+            .news-card__title {
+                .color();
+            }
+        }
+    }
+}

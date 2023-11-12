@@ -1,6 +1,7 @@
 import "../less/index.less";
 import "./identifyDevice.js";
 import "./layout.js";
+import "./scrollTriggers.js";
 import "../components/map/map.js";
 import "../components/header/header.js";
 import "../components/gallerySlider/gallerySlider.js";

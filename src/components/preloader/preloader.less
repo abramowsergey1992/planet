@@ -1,3 +1,7 @@
+html {
+    --preloader-animation-f: cubic-bezier(.25,.46,.45,.94);
+}
+
 .preloader {
     position: fixed;
     width: 100%;
@@ -65,4 +69,66 @@ html._is-preloaded {
     .preloader__svg g {
         opacity: 1;
     }
+
+    .hp-promo__title span,
+    .hp-promo__subtitle span {
+        opacity: 1 !important;
+        transform: translateY(0) !important;
+    }
+
+    .hp-space__sun,
+    .hp-space__earth,
+    .hp-space__moon,
+    .hp-space__shadow-inner {
+        opacity: 1;
+        transform: translateY(0) scale(1) !important;
+    }
+}
+
+
+// Main page
+.hp-promo__title span {
+    opacity: 0;
+    transform: translateY(0.5em);
+    transition: opacity 1.8s var(--preloader-animation-f) 4s,
+                transform 1.8s var(--preloader-animation-f) 4s;
+
+    @media (max-width: @screen-l) {
+        transform: translateY(30px);
+    }
+
+    @media (max-width: @screen-s) {
+        transform: translateY(20px);
+    }
+}
+
+.hp-promo__subtitle span {
+    opacity: 0;
+    transform: translateY(0.9em);
+    transition: opacity 1.8s var(--preloader-animation-f) 4.3s,
+                transform 1.8s var(--preloader-animation-f) 4.3s;
+
+    @media (max-width: @screen-l) {
+        transform: translateY(20px);
+    }
+
+    @media (max-width: @screen-s) {
+        transform: translateY(15px);
+    }
+}
+
+.hp-space__sun,
+.hp-space__earth,
+.hp-space__moon {
+    opacity: 0;
+    transform: translateY(0) scale(0.8);
+    transition: opacity 2.0s var(--preloader-animation-f) 3.7s,
+                transform 2.0s var(--preloader-animation-f) 3.7s;
+}
+
+.hp-space__shadow-inner {
+    opacity: 0;
+    transform: scale(0.9) translateY(0);
+    transition: opacity 2.0s var(--preloader-animation-f) 4.5s,
+                transform 2.0s var(--preloader-animation-f) 4.5s;
 }

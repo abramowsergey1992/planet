@@ -8,6 +8,53 @@
         display: flex;
     }
 
+    .event-preview__top {
+        // transform: translateY(5%);
+        transition: all 0.6s ease;
+    }
+
+    .event-preview__img {
+        transform: scale(1.1);
+        transition: transform 6s ease-out;
+    }
+
+    .event-preview {
+        opacity: 0;
+        transition: all 0.6s ease;
+
+        &._is-animated {
+            opacity: 1;
+
+            .event-preview__top {
+                transform: translateY(0);
+            }
+
+            .event-preview__img {
+                transform: scale(1);
+            }
+        }
+    }
+
+    .swiper {
+
+        .swiper-slide {
+
+            &:nth-child(2) {
+                .event-preview,
+                .event-preview__img {
+                    transition-delay: 0.2s;
+                }
+            }
+    
+            &:nth-child(3) {
+                .event-preview,
+                .event-preview__img {
+                    transition-delay: 0.4s;
+                }
+            }
+        }
+    }
+
     @media (min-width: 1025px) {
 
         .swiper {
