@@ -3,6 +3,7 @@ let submenu = document.querySelectorAll(".main-menu__sub");
 let overlay = document.querySelector(".header__overlay");
 let header = document.querySelector(".header");
 let burger = document.querySelector(".header__burger");
+let clock = document.querySelectorAll(".js-moscow-time");
 
 document.querySelectorAll(".js-close-menu").forEach((el) => {
     el.addEventListener("click", function (event) {
@@ -36,3 +37,23 @@ burger.addEventListener("click", function (event) {
     document.body.classList.toggle("_burger-menu-open");
 });
 
+// Current Moscow time
+function updateClock() {
+    const string = new Date().toLocaleTimeString("ru-RU", {
+        timeZone: "Europe/Moscow",
+        hour: "2-digit",
+        minute: "2-digit"
+    });
+
+    clock.forEach(el => {
+        el.innerHTML = string;
+    });
+
+    setTimeout(() => {
+        updateClock();
+    }, 1000);
+}
+
+if (clock.length) {
+    updateClock();
+}
