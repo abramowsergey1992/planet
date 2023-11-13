@@ -148,6 +148,10 @@ module.exports = {
             ),
             filename: "visitor-special-needs.html",
         }),
+        new HtmlWebpackPlugin({
+            template: path.resolve(__dirname, "../src/pages/afisha/afisha.njk"),
+            filename: "afisha.html",
+        }),
         // new HtmlWebpackPlugin({
         //     template: path.resolve(__dirname, '../src/pages/styles/styles.njk'),
         //     filename: 'styles.html'
@@ -157,14 +161,17 @@ module.exports = {
         }),
 
         // Using svg symbols: <svg><use xlink:href="/img/symbols.svg#sym-name"></use></svg>
-        new SVGSpritemapPlugin(path.resolve(__dirname, '../static/img/symbols/**/*.svg'), {
-            output: {
-                filename: 'img/symbols.svg'
-            },
-            sprite: {
-                prefix: 'sym-'
+        new SVGSpritemapPlugin(
+            path.resolve(__dirname, "../static/img/symbols/**/*.svg"),
+            {
+                output: {
+                    filename: "img/symbols.svg",
+                },
+                sprite: {
+                    prefix: "sym-",
+                },
             }
-        })
+        ),
     ],
     module: {
         rules: [
