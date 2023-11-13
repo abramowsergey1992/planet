@@ -1,5 +1,3 @@
-import * as ymaps3 from "ymaps3";
-
 async function initMap() {
     await ymaps3.ready;
     const {
@@ -50,4 +48,3 @@ async function initMap() {
     });
 }
 initMap();
-

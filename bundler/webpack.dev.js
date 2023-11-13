@@ -33,13 +33,5 @@ module.exports = merge(commonConfiguration, {
                 )}\n  - ${infoColor(domain2)}`
             );
         },
-    },
-    externalsType: "script",
-    externals: {
-        ymaps3: [
-            "https://api-maps.yandex.ru/v3/?apikey=a15d01f0-c384-40dd-b217-1263afbd663f&lang=ru_RU",
-            "ymaps3",
-        ],
-    },
+    }
 });
-
