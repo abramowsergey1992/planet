@@ -48,7 +48,7 @@ endblock %} {% block main %}
         </a>
     </div>
 
-    <button class="hp-video__play">
+    <button class="hp-video__play js-open-video" data-src="./content/planetarium_full.mp4">
         <span>Play</span>
     </button>
 
@@ -62,6 +62,8 @@ endblock %} {% block main %}
         </video>
     </div>
 </div>
+
+{% include 'components/video-popup/video-popup.njk' %}
 
 <div class="hp-program">
     <div class="hp-program__inner js-trigger-animate">
