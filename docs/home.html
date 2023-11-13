@@ -13,8 +13,8 @@
 
         </script>
         <script src="https://api-maps.yandex.ru/v3/?apikey=a15d01f0-c384-40dd-b217-1263afbd663f&lang=ru_RU"></script>
-        <script defer="defer" src="/planet/assets/js/bundle.78eb2114e6d2355a100d.js"></script>
-        <link href="/planet/assets/css/main.32b338ab983c179f87c5.css" rel="stylesheet">
+        <script defer="defer" src="/planet/assets/js/bundle.1e33cb34ddd8cf2e6fd0.js"></script>
+        <link href="/planet/assets/css/main.cd9f01001a046aac8fe4.css" rel="stylesheet">
     </head>
 
     <body class="page-home theme-dark"><svg width="0" height="0" style="position: absolute" xmlns="http://www.w3.org/2000/svg" fill="none">
@@ -269,7 +269,7 @@
                         <h1 class="hp-promo__title"><span>Московский планетарий</span></h1>
                         <h2 class="hp-promo__subtitle"><span>Мультиформатный научно&#8209;просветительский центр</span></h2>
                     </div>
-                    <div class="hp-space _show-sun">
+                    <div class="hp-space js-hp-promo-space _show-sun">
                         <div class="hp-space__central-objects js-hp-promo-central">
                             <div class="hp-space__sun">
                                 <div class="hp-space__sun-inner"></div>
@@ -299,8 +299,11 @@
                 <div class="hp-video js-hp-video">
                     <div class="hp-video__inner">
                         <h2 class="hp-video__title">О Планетарии</h2><a href="about.html" class="hp-video__details"><span>Узнать больше о планетарии</span></a>
-                    </div><button class="hp-video__play"><span>Play</span></button>
+                    </div><button class="hp-video__play js-open-video" data-src="./content/planetarium_full.mp4"><span>Play</span></button>
                     <div class="hp-video__video"><video src="./content/planetarium.mp4" loop preload="metadata" muted poster="./content/video-planetarium-poster.webp"></video></div>
+                </div>
+                <div class="video-popup js-video-popup">
+                    <div class="video-popup__inner js-video-popup-inner"></div><button class="video-popup__btn-close js-video-popup-close"><span>Закрыть</span></button>
                 </div>
                 <div class="hp-program">
                     <div class="hp-program__inner js-trigger-animate">
