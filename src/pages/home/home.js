@@ -84,3 +84,25 @@ document.querySelectorAll('.js-hp-promo').forEach(el => {
 
     document.addEventListener('scroll', update);
 });
+
+
+// Switch Sun/Earth/Moon
+document.querySelectorAll('.js-hp-promo-central').forEach(el => {
+    let mode = 'sun';
+    const container = document.querySelector('.js-hp-promo-space');
+    const hours = +new Date().toLocaleTimeString('ru-RU', {
+        timeZone: 'Europe/Moscow',
+        hour: '2-digit'
+    });
+
+    if (hours >= 18 || hours < 6) {
+        mode = 'moon'
+    }
+
+    if (hours >= 12 && hours < 18) {
+        mode = 'earth'
+    }
+
+    container?.classList.remove('_show-sun', '_show-moon', '_show-earth');
+    container?.classList.add(`_show-${mode}`);
+});
