@@ -1,5 +1,8 @@
 {% macro create(item) %}
 <div class="event-preview js-trigger-animate">
+    <a href="{{ item.link }}" class="event-preview__hover-link">
+        <span>{{ item.title }}</span>
+    </a>
     <div class="event-preview__top _br">
         <div class="event-preview__img">
             <img src="{{ item.img }}" alt="" />
