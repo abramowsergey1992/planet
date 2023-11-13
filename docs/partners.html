@@ -1,19 +1,20 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
 
     <head>
         <meta charset="UTF-8" />
         <meta name="csrf-token" content="o2OxEzRnU9cBa11KOLKCKkKUWfTV6wup9GGSAtqp" />
         <title>О Планетарии</title>
         <meta name="viewport" content="width=device-width,initial-scale=1" />
-        <style>
-            html {
-                font-size: 1px;
-            }
+        <script>
+            setTimeout(() => {
+                document.getElementsByTagName('html')[0].classList.add('_is-preloaded');
+            }, 5000);
 
-        </style>
-        <script defer="defer" src="/planet/assets/js/bundle.2055e8031fa2f4a66a51.js"></script>
-        <link href="/planet/assets/css/main.27ad8c71e6bc40afe1b0.css" rel="stylesheet">
+        </script>
+        <script src="https://api-maps.yandex.ru/v3/?apikey=a15d01f0-c384-40dd-b217-1263afbd663f&lang=ru_RU"></script>
+        <script defer="defer" src="/planet/assets/js/bundle.78eb2114e6d2355a100d.js"></script>
+        <link href="/planet/assets/css/main.32b338ab983c179f87c5.css" rel="stylesheet">
     </head>
 
     <body class=""><svg width="0" height="0" style="position: absolute" xmlns="http://www.w3.org/2000/svg" fill="none">
@@ -29,20 +30,23 @@
                 <div class="header__overlay"></div>
                 <div class="inner">
                     <div class="header__top">
-                        <ul class="header__left-menu d-max-200">
+                        <ul class="header__left-menu d-max-1200">
                             <li class="search"><a href="#"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M20 20L15.4286 15.4286M10.8571 17.7143C7.07005 17.7143 4 14.6442 4 10.8571C4 7.07005 7.07005 4 10.8571 4C14.6442 4 17.7143 7.07005 17.7143 10.8571C17.7143 14.6442 14.6442 17.7143 10.8571 17.7143Z" stroke="currentColor" stroke-width="1.4" />
                                     </svg></a></li>
                         </ul><a href="/" class="header__logo">
-                            <picture>
+                            <picture class="header__logo-dark">
                                 <source srcset="img/logo-mob.svg" media="(max-width: 1200px)" /><img src="img/logo.svg" alt="Абстрактное изображение" />
+                            </picture>
+                            <picture class="header__logo-light">
+                                <source srcset="img/logo-mob-white.svg" media="(max-width: 1200px)" /><img src="img/logo-white.svg" alt="Абстрактное изображение" />
                             </picture>
                         </a>
                         <div class="header__right">
                             <ul class="header__menu">
                                 <li class="d-min-1200"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M12 6.85714V12L15.4286 15.4286M12 20C7.58172 20 4 16.4183 4 12C4 7.58172 7.58172 4 12 4C16.4183 4 20 7.58172 20 12C20 16.4183 16.4183 20 12 20Z" stroke="currentColor" stroke-width="1.4" />
-                                    </svg> <span>12:00 по Москве</span></li>
+                                    </svg> <span><span class="js-moscow-time">12:00</span> по Москве</span></li>
                                 <li class="d-min-1200 divider">|</li>
                                 <li class="d-min-1200"><a href="#"><span>Контакты</span></a></li>
                                 <li class="d-min-1200"><a href="#"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

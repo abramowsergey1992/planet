@@ -1,19 +1,20 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
 
     <head>
         <meta charset="UTF-8" />
         <meta name="csrf-token" content="o2OxEzRnU9cBa11KOLKCKkKUWfTV6wup9GGSAtqp" />
         <title>Вращающийся стул</title>
         <meta name="viewport" content="width=device-width,initial-scale=1" />
-        <style>
-            html {
-                font-size: 1px;
-            }
+        <script>
+            setTimeout(() => {
+                document.getElementsByTagName('html')[0].classList.add('_is-preloaded');
+            }, 5000);
 
-        </style>
-        <script defer="defer" src="/planet/assets/js/bundle.2055e8031fa2f4a66a51.js"></script>
-        <link href="/planet/assets/css/main.27ad8c71e6bc40afe1b0.css" rel="stylesheet">
+        </script>
+        <script src="https://api-maps.yandex.ru/v3/?apikey=a15d01f0-c384-40dd-b217-1263afbd663f&lang=ru_RU"></script>
+        <script defer="defer" src="/planet/assets/js/bundle.78eb2114e6d2355a100d.js"></script>
+        <link href="/planet/assets/css/main.32b338ab983c179f87c5.css" rel="stylesheet">
     </head>
 
     <body class=""><svg width="0" height="0" style="position: absolute" xmlns="http://www.w3.org/2000/svg" fill="none">
@@ -29,20 +30,23 @@
                 <div class="header__overlay"></div>
                 <div class="inner">
                     <div class="header__top">
-                        <ul class="header__left-menu d-max-200">
+                        <ul class="header__left-menu d-max-1200">
                             <li class="search"><a href="#"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M20 20L15.4286 15.4286M10.8571 17.7143C7.07005 17.7143 4 14.6442 4 10.8571C4 7.07005 7.07005 4 10.8571 4C14.6442 4 17.7143 7.07005 17.7143 10.8571C17.7143 14.6442 14.6442 17.7143 10.8571 17.7143Z" stroke="currentColor" stroke-width="1.4" />
                                     </svg></a></li>
                         </ul><a href="/" class="header__logo">
-                            <picture>
+                            <picture class="header__logo-dark">
                                 <source srcset="img/logo-mob.svg" media="(max-width: 1200px)" /><img src="img/logo.svg" alt="Абстрактное изображение" />
+                            </picture>
+                            <picture class="header__logo-light">
+                                <source srcset="img/logo-mob-white.svg" media="(max-width: 1200px)" /><img src="img/logo-white.svg" alt="Абстрактное изображение" />
                             </picture>
                         </a>
                         <div class="header__right">
                             <ul class="header__menu">
                                 <li class="d-min-1200"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M12 6.85714V12L15.4286 15.4286M12 20C7.58172 20 4 16.4183 4 12C4 7.58172 7.58172 4 12 4C16.4183 4 20 7.58172 20 12C20 16.4183 16.4183 20 12 20Z" stroke="currentColor" stroke-width="1.4" />
-                                    </svg> <span>12:00 по Москве</span></li>
+                                    </svg> <span><span class="js-moscow-time">12:00</span> по Москве</span></li>
                                 <li class="d-min-1200 divider">|</li>
                                 <li class="d-min-1200"><a href="#"><span>Контакты</span></a></li>
                                 <li class="d-min-1200"><a href="#"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -242,7 +246,7 @@
                 </div>
                 <div class="block">
                     <div class="events-grid">
-                        <div class="event-preview">
+                        <div class="event-preview js-trigger-animate">
                             <div class="event-preview__top _br">
                                 <div class="event-preview__img"><img src="img/pe-1.jpg" alt="" /></div>
                                 <div class="event-preview__top-head">
@@ -252,15 +256,19 @@
                                     <ul class="event-preview__tags"></ul>
                                 </div>
                             </div>
-                            <div class="event-preview__title h2">Свидание в Музее Урании</div>
-                            <ul class="event-preview__info">
-                                <li><span class="icon-heart"></span> <span>Романтическое свидание</span></li>
-                                <li><span class="icon-time"></span> <span>Экскурсия проходит с 21:00 до 23:00 ежедневно кроме вторника</span></li>
-                            </ul>
-                            <p>Это индивидуальная программа по ночному музею Урании после закрытия Планетария.</p>
-                            <div class="event-preview__bottom"><a href="exponat.html" class="btn-border">Подробнее</a></div>
+                            <div class="event-preview__middle">
+                                <div class="event-preview__title h2">Свидание в Музее Урании</div>
+                                <ul class="event-preview__info">
+                                    <li><span class="icon-heart"></span> <span>Романтическое свидание</span></li>
+                                    <li><span class="icon-time"></span> <span>Экскурсия проходит с 21:00 до 23:00 ежедневно кроме вторника</span></li>
+                                </ul>
+                            </div>
+                            <div class="event-preview__bottom-wrap">
+                                <p>Это индивидуальная программа по ночному музею Урании после закрытия Планетария.</p>
+                                <div class="event-preview__bottom"><a href="exponat.html" class="btn-border">Подробнее</a></div>
+                            </div>
                         </div>
-                        <div class="event-preview">
+                        <div class="event-preview js-trigger-animate">
                             <div class="event-preview__top _br">
                                 <div class="event-preview__img"><img src="img/pe-2.jpg" alt="" /></div>
                                 <div class="event-preview__top-head">
@@ -270,17 +278,21 @@
                                     <ul class="event-preview__tags"></ul>
                                 </div>
                             </div>
-                            <div class="event-preview__title h2">Свидание под куполом Планетария</div>
-                            <ul class="event-preview__info">
-                                <li><span class="icon-heart"></span> <span>Романтическое свидание</span></li>
-                                <li><span class="icon-time"></span> <span>Экскурсия проходит с 21:00 до 23:00 ежедневно кроме вторника</span></li>
-                                <li><span class="icon-time"></span> <span>Начало вечера в 21:00</span></li>
-                                <li><span class="icon-time"></span> <span>Начало программы в Большом Звёздном зале в 22:00</span></li>
-                            </ul>
-                            <p>Индивидуальная программа в Московском Планетарии только для вас двоих – это погружение в атмосферу загадочности Вселенной и ошеломляющая информация о космосе.</p>
-                            <div class="event-preview__bottom"><a href="exponat.html" class="btn-border">Подробнее</a></div>
+                            <div class="event-preview__middle">
+                                <div class="event-preview__title h2">Свидание под куполом Планетария</div>
+                                <ul class="event-preview__info">
+                                    <li><span class="icon-heart"></span> <span>Романтическое свидание</span></li>
+                                    <li><span class="icon-time"></span> <span>Экскурсия проходит с 21:00 до 23:00 ежедневно кроме вторника</span></li>
+                                    <li><span class="icon-time"></span> <span>Начало вечера в 21:00</span></li>
+                                    <li><span class="icon-time"></span> <span>Начало программы в Большом Звёздном зале в 22:00</span></li>
+                                </ul>
+                            </div>
+                            <div class="event-preview__bottom-wrap">
+                                <p>Индивидуальная программа в Московском Планетарии только для вас двоих – это погружение в атмосферу загадочности Вселенной и ошеломляющая информация о космосе.</p>
+                                <div class="event-preview__bottom"><a href="exponat.html" class="btn-border">Подробнее</a></div>
+                            </div>
                         </div>
-                        <div class="event-preview">
+                        <div class="event-preview js-trigger-animate">
                             <div class="event-preview__top _br">
                                 <div class="event-preview__img"><img src="img/pe-3.jpg" alt="" /></div>
                                 <div class="event-preview__top-head">
@@ -290,17 +302,21 @@
                                     <ul class="event-preview__tags"></ul>
                                 </div>
                             </div>
-                            <div class="event-preview__title h2">Космические следопыты (премьера)</div>
-                            <ul class="event-preview__info">
-                                <li><span class="icon-child"></span> <span>Детский праздник</span></li>
-                                <li><span class="icon-person"></span> <span>Для детей от 6 лет</span></li>
-                                <li><span class="icon-persons"></span> <span>Группа от 15 человек</span></li>
-                                <li><span class="icon-person"></span> <span>1 экскурсовод на группу</span></li>
-                            </ul>
-                            <p>Юные следопыты на примере экспонатов Залов Урании познакомятся с планетами Солнечной системы, в игровом формате исследуют условия жизни на разных планетах.</p>
-                            <div class="event-preview__bottom"><a href="exponat.html" class="btn-border">Подробнее</a></div>
+                            <div class="event-preview__middle">
+                                <div class="event-preview__title h2">Космические следопыты (премьера)</div>
+                                <ul class="event-preview__info">
+                                    <li><span class="icon-child"></span> <span>Детский праздник</span></li>
+                                    <li><span class="icon-person"></span> <span>Для детей от 6 лет</span></li>
+                                    <li><span class="icon-persons"></span> <span>Группа от 15 человек</span></li>
+                                    <li><span class="icon-person"></span> <span>1 экскурсовод на группу</span></li>
+                                </ul>
+                            </div>
+                            <div class="event-preview__bottom-wrap">
+                                <p>Юные следопыты на примере экспонатов Залов Урании познакомятся с планетами Солнечной системы, в игровом формате исследуют условия жизни на разных планетах.</p>
+                                <div class="event-preview__bottom"><a href="exponat.html" class="btn-border">Подробнее</a></div>
+                            </div>
                         </div>
-                        <div class="event-preview">
+                        <div class="event-preview js-trigger-animate">
                             <div class="event-preview__top _br">
                                 <div class="event-preview__img"><img src="img/pe-4.jpg" alt="" /></div>
                                 <div class="event-preview__top-head">
@@ -310,17 +326,21 @@
                                     <ul class="event-preview__tags"></ul>
                                 </div>
                             </div>
-                            <div class="event-preview__title h2">Спецотряд Космос</div>
-                            <ul class="event-preview__info">
-                                <li><span class="icon-child"></span> <span>Детский праздник</span></li>
-                                <li><span class="icon-person"></span> <span>Для детей от 6 лет</span></li>
-                                <li><span class="icon-persons"></span> <span>Группа от 15 человек</span></li>
-                                <li><span class="icon-person"></span> <span>1 экскурсовод на группу</span></li>
-                            </ul>
-                            <p>Индивидуальная программа в Московском Планетарии только для вас двоих – это погружение в атмосферу загадочности Вселенной и ошеломляющая информация о космосе.</p>
-                            <div class="event-preview__bottom"><a href="exponat.html" class="btn-border">Подробнее</a></div>
+                            <div class="event-preview__middle">
+                                <div class="event-preview__title h2">Спецотряд Космос</div>
+                                <ul class="event-preview__info">
+                                    <li><span class="icon-child"></span> <span>Детский праздник</span></li>
+                                    <li><span class="icon-person"></span> <span>Для детей от 6 лет</span></li>
+                                    <li><span class="icon-persons"></span> <span>Группа от 15 человек</span></li>
+                                    <li><span class="icon-person"></span> <span>1 экскурсовод на группу</span></li>
+                                </ul>
+                            </div>
+                            <div class="event-preview__bottom-wrap">
+                                <p>Индивидуальная программа в Московском Планетарии только для вас двоих – это погружение в атмосферу загадочности Вселенной и ошеломляющая информация о космосе.</p>
+                                <div class="event-preview__bottom"><a href="exponat.html" class="btn-border">Подробнее</a></div>
+                            </div>
                         </div>
-                        <div class="event-preview">
+                        <div class="event-preview js-trigger-animate">
                             <div class="event-preview__top _br">
                                 <div class="event-preview__img"><img src="img/pe-5.jpg" alt="" /></div>
                                 <div class="event-preview__top-head">
@@ -330,15 +350,19 @@
                                     <ul class="event-preview__tags"></ul>
                                 </div>
                             </div>
-                            <div class="event-preview__title h2">Квест в Планетарии</div>
-                            <ul class="event-preview__info">
-                                <li><span class="icon-heart"></span> <span>Романтическое свидание</span></li>
-                                <li><span class="icon-time"></span> <span>Экскурсия проходит с 21:00 до 23:00 ежедневно кроме вторника</span></li>
-                            </ul>
-                            <p>Это индивидуальная программа по ночному музею Урании после закрытия Планетария.</p>
-                            <div class="event-preview__bottom"><a href="exponat.html" class="btn-border">Подробнее</a></div>
+                            <div class="event-preview__middle">
+                                <div class="event-preview__title h2">Квест в Планетарии</div>
+                                <ul class="event-preview__info">
+                                    <li><span class="icon-heart"></span> <span>Романтическое свидание</span></li>
+                                    <li><span class="icon-time"></span> <span>Экскурсия проходит с 21:00 до 23:00 ежедневно кроме вторника</span></li>
+                                </ul>
+                            </div>
+                            <div class="event-preview__bottom-wrap">
+                                <p>Это индивидуальная программа по ночному музею Урании после закрытия Планетария.</p>
+                                <div class="event-preview__bottom"><a href="exponat.html" class="btn-border">Подробнее</a></div>
+                            </div>
                         </div>
-                        <div class="event-preview">
+                        <div class="event-preview js-trigger-animate">
                             <div class="event-preview__top _br">
                                 <div class="event-preview__img"><img src="img/pe-6.jpg" alt="" /></div>
                                 <div class="event-preview__top-head">
@@ -348,15 +372,19 @@
                                     <ul class="event-preview__tags"></ul>
                                 </div>
                             </div>
-                            <div class="event-preview__title h2">Квест в Планетарии</div>
-                            <ul class="event-preview__info">
-                                <li><span class="icon-heart"></span> <span>Романтическое свидание</span></li>
-                                <li><span class="icon-time"></span> <span>Экскурсия проходит с 21:00 до 23:00 ежедневно кроме вторника</span></li>
-                            </ul>
-                            <p>Юные следопыты на примере экспонатов Залов Урании познакомятся с планетами Солнечной системы, в игровом формате исследуют условия жизни на разных планетах.</p>
-                            <div class="event-preview__bottom"><a href="exponat.html" class="btn-border">Подробнее</a></div>
+                            <div class="event-preview__middle">
+                                <div class="event-preview__title h2">Квест в Планетарии</div>
+                                <ul class="event-preview__info">
+                                    <li><span class="icon-heart"></span> <span>Романтическое свидание</span></li>
+                                    <li><span class="icon-time"></span> <span>Экскурсия проходит с 21:00 до 23:00 ежедневно кроме вторника</span></li>
+                                </ul>
+                            </div>
+                            <div class="event-preview__bottom-wrap">
+                                <p>Юные следопыты на примере экспонатов Залов Урании познакомятся с планетами Солнечной системы, в игровом формате исследуют условия жизни на разных планетах.</p>
+                                <div class="event-preview__bottom"><a href="exponat.html" class="btn-border">Подробнее</a></div>
+                            </div>
                         </div>
-                        <div class="event-preview">
+                        <div class="event-preview js-trigger-animate">
                             <div class="event-preview__top _br">
                                 <div class="event-preview__img"><img src="img/pe-7.jpg" alt="" /></div>
                                 <div class="event-preview__top-head">
@@ -366,14 +394,18 @@
                                     <ul class="event-preview__tags"></ul>
                                 </div>
                             </div>
-                            <div class="event-preview__title h2">КСвидание в Музее Урании</div>
-                            <ul class="event-preview__info">
-                                <li><span class="icon-persons"></span> <span>Для компаний</span></li>
-                            </ul>
-                            <p>Юные следопыты на примере экспонатов Залов Урании познакомятся с планетами Солнечной системы, в игровом формате исследуют условия жизни на разных планетах.</p>
-                            <div class="event-preview__bottom"><a href="exponat.html" class="btn-border">Подробнее</a></div>
+                            <div class="event-preview__middle">
+                                <div class="event-preview__title h2">КСвидание в Музее Урании</div>
+                                <ul class="event-preview__info">
+                                    <li><span class="icon-persons"></span> <span>Для компаний</span></li>
+                                </ul>
+                            </div>
+                            <div class="event-preview__bottom-wrap">
+                                <p>Юные следопыты на примере экспонатов Залов Урании познакомятся с планетами Солнечной системы, в игровом формате исследуют условия жизни на разных планетах.</p>
+                                <div class="event-preview__bottom"><a href="exponat.html" class="btn-border">Подробнее</a></div>
+                            </div>
                         </div>
-                        <div class="event-preview">
+                        <div class="event-preview js-trigger-animate">
                             <div class="event-preview__top _br">
                                 <div class="event-preview__img"><img src="img/pe-1.jpg" alt="" /></div>
                                 <div class="event-preview__top-head">
@@ -383,15 +415,19 @@
                                     <ul class="event-preview__tags"></ul>
                                 </div>
                             </div>
-                            <div class="event-preview__title h2">Свидание в Музее Урании</div>
-                            <ul class="event-preview__info">
-                                <li><span class="icon-heart"></span> <span>Романтическое свидание</span></li>
-                                <li><span class="icon-time"></span> <span>Экскурсия проходит с 21:00 до 23:00 ежедневно кроме вторника</span></li>
-                            </ul>
-                            <p>Это индивидуальная программа по ночному музею Урании после закрытия Планетария.</p>
-                            <div class="event-preview__bottom"><a href="exponat.html" class="btn-border">Подробнее</a></div>
+                            <div class="event-preview__middle">
+                                <div class="event-preview__title h2">Свидание в Музее Урании</div>
+                                <ul class="event-preview__info">
+                                    <li><span class="icon-heart"></span> <span>Романтическое свидание</span></li>
+                                    <li><span class="icon-time"></span> <span>Экскурсия проходит с 21:00 до 23:00 ежедневно кроме вторника</span></li>
+                                </ul>
+                            </div>
+                            <div class="event-preview__bottom-wrap">
+                                <p>Это индивидуальная программа по ночному музею Урании после закрытия Планетария.</p>
+                                <div class="event-preview__bottom"><a href="exponat.html" class="btn-border">Подробнее</a></div>
+                            </div>
                         </div>
-                        <div class="event-preview">
+                        <div class="event-preview js-trigger-animate">
                             <div class="event-preview__top _br">
                                 <div class="event-preview__img"><img src="img/pe-2.jpg" alt="" /></div>
                                 <div class="event-preview__top-head">
@@ -401,15 +437,19 @@
                                     <ul class="event-preview__tags"></ul>
                                 </div>
                             </div>
-                            <div class="event-preview__title h2">Свидание под куполом Планетария</div>
-                            <ul class="event-preview__info">
-                                <li><span class="icon-heart"></span> <span>Романтическое свидание</span></li>
-                                <li><span class="icon-time"></span> <span>Экскурсия проходит с 21:00 до 23:00 ежедневно кроме вторника</span></li>
-                                <li><span class="icon-time"></span> <span>Начало вечера в 21:00</span></li>
-                                <li><span class="icon-time"></span> <span>Начало программы в Большом Звёздном зале в 22:00</span></li>
-                            </ul>
-                            <p>Индивидуальная программа в Московском Планетарии только для вас двоих – это погружение в атмосферу загадочности Вселенной и ошеломляющая информация о космосе.</p>
-                            <div class="event-preview__bottom"><a href="exponat.html" class="btn-border">Подробнее</a></div>
+                            <div class="event-preview__middle">
+                                <div class="event-preview__title h2">Свидание под куполом Планетария</div>
+                                <ul class="event-preview__info">
+                                    <li><span class="icon-heart"></span> <span>Романтическое свидание</span></li>
+                                    <li><span class="icon-time"></span> <span>Экскурсия проходит с 21:00 до 23:00 ежедневно кроме вторника</span></li>
+                                    <li><span class="icon-time"></span> <span>Начало вечера в 21:00</span></li>
+                                    <li><span class="icon-time"></span> <span>Начало программы в Большом Звёздном зале в 22:00</span></li>
+                                </ul>
+                            </div>
+                            <div class="event-preview__bottom-wrap">
+                                <p>Индивидуальная программа в Московском Планетарии только для вас двоих – это погружение в атмосферу загадочности Вселенной и ошеломляющая информация о космосе.</p>
+                                <div class="event-preview__bottom"><a href="exponat.html" class="btn-border">Подробнее</a></div>
+                            </div>
                         </div>
                     </div>
                     <div class="paginator"><a href="#" class="paginator__prev"></a> <a href="#" class="paginator__link _active">1</a> <a href="#" class="paginator__link">2</a> <a href="#" class="paginator__link">3</a> <a href="#" class="paginator__link">4</a> <a href="#" class="paginator__link">5</a> <a href="#" class="paginator__link">6</a> <a href="#" class="paginator__next"></a></div>
