@@ -1,0 +1,231 @@
+{% extends "pages/_includes/layout.njk" %} {% block title %}Экскурсии{% endblock
+%} {% block main %}
+
+{{
+    breadcrumbs.create(
+        {
+            items: [
+                {
+                    text: "Главная",
+                    href: "home.html"
+                }
+            ]
+        },
+        "Экскурсии"
+    )
+}}
+<div class="top-row">
+    <h1>Экскурсии</h1>
+</div>
+<div id="afisha-template">
+    {{
+        event.create({
+            img: "_",
+            topTags: ["_"],
+            bottomTags: [{ icon: "marker", class: "_bg", text: "_" }],
+            awards: [{ top: "_", text: "_", year: "_" }],
+            title: "_",
+            info: [{ icon: "marker", text: "_" }],
+            desc: "_",
+            btnText: "_",
+            link: "_",
+            moreBtn: "true"
+        })
+    }}
+</div>
+<div class="afisha">
+    <div class="afisha__filters">
+        <button class="btn-border filter-menu-open">
+            <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+            >
+                <path
+                    d="M5 8L12.5 8M12.5 8C12.5 6.89543 13.3954 6 14.5 6C15.6046 6 16.5 6.89543 16.5 8M12.5 8C12.5 9.10457 13.3954 10 14.5 10C15.6046 10 16.5 9.10457 16.5 8M16.5 8L19 8M5 16L7.5 16M7.5 16C7.5 14.8954 8.39543 14 9.5 14C10.6046 14 11.5 14.8954 11.5 16M7.5 16C7.5 17.1046 8.39543 18 9.5 18C10.6046 18 11.5 17.1046 11.5 16M11.5 16H19"
+                    stroke="url(#Gradient)"
+                    stroke-width="1.4"
+                />
+            </svg>
+
+            <span>Фильтры</span>
+        </button>
+        <div class="filter-popup">
+            <div class="filter-popup__head">
+                <div class="filter-popup__title h2">Фильтры</div>
+                <button class="filter-popup__close">
+                    <svg
+                        width="40"
+                        height="40"
+                        viewBox="0 0 40 40"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            d="M13 13L27 27M13 27L27 13"
+                            stroke="#0F0F0F"
+                            stroke-width="1.6"
+                        />
+                    </svg>
+                </button>
+            </div>
+            <form
+                action="json/events.json"
+                method="POST"
+                id="afishafilter"
+                class="filter-popup__body"
+            >
+                <ul class="filter-popup__categories">
+                    <li>
+                        <a class="_active" href="excursions.html"
+                            >Все экскурсии</a
+                        >
+                    </li>
+                    <li>
+                        <a class="" href="excursions.html">Для школьников</a>
+                    </li>
+                    <li>
+                        <a class="" href="excursions.html">Для взрослых</a>
+                    </li>
+                    <li>
+                        <a class="" href="excursions.html">Индивидуальные</a>
+                    </li>
+                </ul>
+                <div class="filter-popup__columns">
+                    <div class="filter-popup__block _open">
+                        <div class="filter-popup__block-title">Язык</div>
+                        <div class="filter-popup__block-body">
+                            <label class="checkbox">
+                                <input
+                                    name="language[]"
+                                    value="Русский"
+                                    type="checkbox"
+                                />
+                                <span class="checkbox__indicator"></span>
+                                <span class="checkbox__text">Русский</span>
+                            </label>
+                            <label class="checkbox">
+                                <input
+                                    name="language[]"
+                                    value="Английский"
+                                    type="checkbox"
+                                />
+                                <span class="checkbox__indicator"></span>
+                                <span class="checkbox__text">Английский</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="filter-popup__block _open">
+                        <div class="filter-popup__block-title">
+                            Кол-во человек
+                        </div>
+                        <div class="filter-popup__block-body">
+                            <label class="checkbox">
+                                <input
+                                    name="count[]"
+                                    value="1-3 человек"
+                                    type="checkbox"
+                                />
+                                <span class="checkbox__indicator"></span>
+                                <span class="checkbox__text">1-3 человек</span>
+                            </label>
+                            <label class="checkbox">
+                                <input
+                                    name="count[]"
+                                    value="4-7 человек"
+                                    type="checkbox"
+                                />
+                                <span class="checkbox__indicator"></span>
+                                <span class="checkbox__text">4-7 человек</span>
+                            </label>
+                            <label class="checkbox">
+                                <input
+                                    name="count[]"
+                                    value="8-15 человек"
+                                    type="checkbox"
+                                />
+                                <span class="checkbox__indicator"></span>
+                                <span class="checkbox__text">8-15 человек</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="filter-popup__btns">
+                    <button type="submit" class="filter-popup__sbmt">
+                        Применить
+                    </button>
+                    <button type="button" class="filter-popup__clear">
+                        Сбросить все
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="afisha__grid" id="afishalist">
+        {{ event.create({ img: "img/excursions-1.jpg", title: "Обзорные
+        экскурсии в музее «Урании»", info: [ { icon:"marker", text:"Малый
+        Звёздный зал" }, { icon:"time", text:"60 минут" } ], desc: "
+        <p>Обзорная экскурсия по классическому музею Урании</p>
+        ", btnText:"Подробнее", link:"event.html" } ) }} {{ event.create({ img:
+        "img/excursions-2.jpg", title: "Тематические экскурсии в музее
+        «Урании»", info: [ { icon:"marker", text:"Малый Звёздный зал" }, {
+        icon:"time", text:"60 минут" } ], desc: "
+        <p>
+            Тематические школьные экскурсии в соответствии со школьными
+            программами в музее Урании
+        </p>
+        ", btnText:"Подробнее", link:"event.html" } ) }} {{ event.create({ img:
+        "img/excursions-3.jpg", title: "Тематические экскурсии в музее
+        «Лунариум»", info: [ { icon:"marker", text:"Малый Звёздный зал" }, {
+        icon:"time", text:"60 минут" } ], desc: "
+        <p>
+            Тематические школьные экскурсии в соответствии со школьными
+            программами в интерактивном пространства «Лунариум»
+        </p>
+        ", btnText:"Подробнее", link:"event.html" } ) }} {{ event.create({ img:
+        "img/excursions-4.jpg", topTags: ["Эксклюзив", "Создано студией
+        планетария"], bottomTags:[ { text:"6+" }, { text:"Мультиязычный" }, {
+        icon:"time", text:"46 минут" }, { icon:"marker", text:"Большой Звёздный
+        зал" } ] , title: "Обзорные экскурсиив музее «Лунариум» ", info: [ {
+        icon:"marker", text:"Малый Звёздный зал" }, { icon:"time", text:"60
+        минут" } ], desc: "
+        <p>Обзорная экскурсия в интерактивном пространства «Лунариум»</p>
+        ", btnText:"Подробнее", link:"event.html" } ) }} {{ event.create({ img:
+        "img/excursions-5.jpg", topTags: ["Эксклюзив", "Создано студией
+        планетария"], bottomTags:[ { text:"6+" }, { text:"Мультиязычный" }, {
+        icon:"time", text:"46 минут" }, { icon:"marker", text:"Большой Звёздный
+        зал" } ] , title: "Звездный классик ", info: [ { icon:"marker",
+        text:"Малый Звёздный зал" }, { icon:"time", text:"60 минут" } ], desc: "
+        <p>
+            Экскурсия по классическому музею Урании (Зал №1, Зал №2), просмотр
+            программы в Большом Звездном зале
+        </p>
+        ", btnText:"Подробнее", link:"event.html" } ) }} {{ event.create({ img:
+        "img/excursions-6.jpg", topTags: ["Эксклюзив", "Создано студией
+        планетария"], bottomTags:[ { text:"6+" }, { text:"Мультиязычный" }, {
+        icon:"time", text:"46 минут" }, { icon:"marker", text:"Большой Звёздный
+        зал" } ] , title: "Интерактив» ", info: [ { icon:"marker", text:"Малый
+        Звёздный зал" }, { icon:"time", text:"60 минут" } ], desc: "
+        <p>
+            Увлекательная звёздная программа о том, как меняется движение неба в
+            зависимости от места наблюдения.
+        </p>
+        ", btnText:"Подробнее", link:"event.html" } ) }}
+    </div>
+</div>
+<div class="block">
+    <div class="paginator">
+        <a href="#" class="paginator__prev"></a>
+        <a href="#" class="paginator__link _active">1</a>
+        <a href="#" class="paginator__link">2</a>
+        <a href="#" class="paginator__link">3</a>
+        <a href="#" class="paginator__link">4</a>
+        <a href="#" class="paginator__link">5</a>
+        <a href="#" class="paginator__link">6</a>
+        <a href="#" class="paginator__next"></a>
+    </div>
+</div>
+{% endblock %}
+
