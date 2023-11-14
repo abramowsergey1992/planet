@@ -17,6 +17,22 @@ endblock %} {% block main %}
 <div class="top-row">
     <h1>Афиша</h1>
 </div>
+<div id="afisha-template">
+    {{
+        event.create({
+            img: "_",
+            topTags: ["_"],
+            bottomTags: [{ icon: "marker", class: "_bg", text: "_" }],
+            awards: [{ top: "_", text: "_", year: "_" }],
+            title: "_",
+            info: [{ icon: "marker", text: "_" }],
+            desc: "_",
+            btnText: "_",
+            link: "_",
+            moreBtn: "true"
+        })
+    }}
+</div>
 <div class="afisha">
     <div class="afisha__filters">
         <button class="btn-border filter-menu-open">
@@ -56,8 +72,9 @@ endblock %} {% block main %}
                 </button>
             </div>
             <form
-                action="json/afisha.json"
-                method="GET"
+                action="json/events.json"
+                method="POST"
+                id="afishafilter"
                 class="filter-popup__body"
             >
                 <ul class="filter-popup__categories">
@@ -96,7 +113,7 @@ endblock %} {% block main %}
                         <div class="filter-popup__block-body">
                             <label class="checkbox">
                                 <input
-                                    name="for_whom"
+                                    name="for_whom[]"
                                     value="Для детей"
                                     type="checkbox"
                                 />
@@ -105,7 +122,7 @@ endblock %} {% block main %}
                             </label>
                             <label class="checkbox">
                                 <input
-                                    name="for_whom"
+                                    name="for_whom[]"
                                     value="Для взрослых"
                                     type="checkbox"
                                 />
@@ -114,7 +131,7 @@ endblock %} {% block main %}
                             </label>
                             <label class="checkbox">
                                 <input
-                                    name="for_whom"
+                                    name="for_whom[]"
                                     value="Для романтиков"
                                     type="checkbox"
                                 />
@@ -125,7 +142,7 @@ endblock %} {% block main %}
                             </label>
                             <label class="checkbox">
                                 <input
-                                    name="for_whom"
+                                    name="for_whom[]"
                                     value="Для любителей космоса"
                                     type="checkbox"
                                 />
@@ -136,7 +153,7 @@ endblock %} {% block main %}
                             </label>
                             <label class="checkbox">
                                 <input
-                                    name="for_whom"
+                                    name="for_whom[]"
                                     value="Для туристических групп"
                                     type="checkbox"
                                 />
@@ -147,7 +164,7 @@ endblock %} {% block main %}
                             </label>
                             <label class="checkbox">
                                 <input
-                                    name="for_whom"
+                                    name="for_whom[]"
                                     value="Для одиночного посещения"
                                     type="checkbox"
                                 />
@@ -165,7 +182,7 @@ endblock %} {% block main %}
                         <div class="filter-popup__block-body">
                             <label class="checkbox">
                                 <input
-                                    name="type"
+                                    name="type[]"
                                     value="Экскурсии"
                                     type="checkbox"
                                 />
@@ -174,7 +191,7 @@ endblock %} {% block main %}
                             </label>
                             <label class="checkbox">
                                 <input
-                                    name="type"
+                                    name="type[]"
                                     value="Курсы и лекции"
                                     type="checkbox"
                                 />
@@ -185,7 +202,7 @@ endblock %} {% block main %}
                             </label>
                             <label class="checkbox">
                                 <input
-                                    name="for_typehom"
+                                    name="type[]"
                                     value="Частные мероприятия"
                                     type="checkbox"
                                 />
@@ -201,7 +218,7 @@ endblock %} {% block main %}
                         <div class="filter-popup__block-body">
                             <label class="checkbox">
                                 <input
-                                    name="language"
+                                    name="language[]"
                                     value="Русский"
                                     type="checkbox"
                                 />
@@ -210,7 +227,7 @@ endblock %} {% block main %}
                             </label>
                             <label class="checkbox">
                                 <input
-                                    name="language"
+                                    name="language[]"
                                     value="Английский"
                                     type="checkbox"
                                 />
@@ -221,28 +238,34 @@ endblock %} {% block main %}
                     </div>
                     <div class="filter-popup__block _open">
                         <div class="filter-popup__block-body">
-                            <label class="tags-checkbox">
-                                <input
-                                    name="type"
-                                    value="Эксклюзив"
-                                    type="checkbox"
-                                />
-                                <span class="tags-checkbox__indicator"></span>
-                                <span class="tags-checkbox__text"
-                                    >Эксклюзив</span
-                                >
-                            </label>
-                            <label class="tags-checkbox">
-                                <input
-                                    name="tags"
-                                    value="Создано студией планетария"
-                                    type="checkbox"
-                                />
-                                <span class="tags-checkbox__indicator"></span>
-                                <span class="tags-checkbox__text"
-                                    >Создано студией планетария</span
-                                >
-                            </label>
+                            <div class="filter-popup__block-tags">
+                                <label class="tags-checkbox">
+                                    <input
+                                        name="tags[]"
+                                        value="Эксклюзив"
+                                        type="checkbox"
+                                    />
+                                    <span
+                                        class="tags-checkbox__indicator"
+                                    ></span>
+                                    <span class="tags-checkbox__text"
+                                        >Эксклюзив</span
+                                    >
+                                </label>
+                                <label class="tags-checkbox">
+                                    <input
+                                        name="tags[]"
+                                        value="Создано студией планетария"
+                                        type="checkbox"
+                                    />
+                                    <span
+                                        class="tags-checkbox__indicator"
+                                    ></span>
+                                    <span class="tags-checkbox__text"
+                                        >Создано студией планетария</span
+                                    >
+                                </label>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -250,14 +273,14 @@ endblock %} {% block main %}
                     <button type="submit" class="filter-popup__sbmt">
                         Применить
                     </button>
-                    <button type="type" class="filter-popup__clear">
+                    <button type="button" class="filter-popup__clear">
                         Сбросить все
                     </button>
                 </div>
             </form>
         </div>
     </div>
-    <div class="afisha__grid">
+    <div class="afisha__grid" id="afishalist">
         {{ event.create({ img: "img/e-1.jpg", title: "Звёздная программа «Небо в
         движении»", info: [ { icon:"marker", text:"Малый Звёздный зал" }, {
         icon:"time", text:"60 минут" } ], desc: "

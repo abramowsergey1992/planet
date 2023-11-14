@@ -12,7 +12,7 @@ module.exports = merge(commonConfiguration, {
     devServer: {
         host: "0.0.0.0",
         port: portFinderSync.getPort(8080),
-        contentBase: "./dist",
+        contentBase: "./docs",
         watchContentBase: true,
         open: true,
         https: false,
@@ -26,12 +26,15 @@ module.exports = merge(commonConfiguration, {
             const localIp = ip.v4.sync();
             const domain1 = `http${https}://${localIp}:${port}`;
             const domain2 = `http${https}://localhost:${port}`;
-
+            app.post("*", (req, res) => {
+                res.redirect(req.originalUrl);
+            });
             console.log(
                 `Project running at:\n  - ${infoColor(
                     domain1
                 )}\n  - ${infoColor(domain2)}`
             );
         },
-    }
+    },
 });
+

@@ -11,17 +11,29 @@
         gap: 22px;
     }
 }
+#afisha-template {
+    display: none;
+}
 .filter-popup {
+    &__block-tags {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
     @media (max-width: 1024px) {
         position: fixed;
         left: 0;
         z-index: 111;
         top: 0;
+        display: none;
         width: 100%;
         height: 100%;
         background: var(--body-bg);
         padding-left: var(--inner-padding);
         padding-right: var(--inner-padding);
+        &._open {
+            display: block;
+        }
         .filter-popup__body {
             max-height: calc(100svh - 160px);
             overflow-x: hidden;
