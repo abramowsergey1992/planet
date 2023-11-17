@@ -2,14 +2,12 @@ import { GLOBALS } from '../../js/globals';
 import gsap from 'gsap';
 
 // Video
-document.querySelectorAll('.js-hp-video').forEach(el => {
-    const container = el;
-
+if (!GLOBALS.mobile) {
     // Autoplay for desktop devices only
-    if (!GLOBALS.mobile) {
-        container.querySelector('video')?.play();
-    }
-});
+    document.querySelectorAll('.js-hp-video video').forEach(video => {
+        video.play();
+    });
+}
 
 
 // Hovers with images

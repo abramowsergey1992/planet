@@ -1,0 +1,37 @@
+<div class="hp-blog">
+    <div class="top-row">
+        <a class="h1 title-link" href="@">Научный блог </a>
+    </div>
+
+    <div class="slider-3 swiper js-trigger-animate">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                {{ newsCard.create({ 
+                    img: "about-9.jpg", 
+                    date: "29 мая 2023", 
+                    title: "Венера: неожиданные открытия",
+                    desc:"Астрономы обнаружили необычные явления на одной из лун Юпитера" 
+                    }) 
+                }}
+            </div>
+            <div class="swiper-slide">
+                {{ newsCard.create({ 
+                    img: "about-10.jpg", 
+                    date: "29 мая 2023", 
+                    title: "Новый способ изучения Марса",
+                    desc:"Астрономы обнаружили необычные явления на одной из лун Юпитера" 
+                    }) 
+                }}
+            </div>
+            <div class="swiper-slide">
+                {{ newsCard.create({ 
+                    img: "about-11.jpg", 
+                    date: "29 мая 2023", 
+                    title: "Тайны Юпитеровых лун",
+                    desc:"Астрономы обнаружили необычные явления на одной из лун Юпитера" 
+                    }) 
+                }}
+            </div>
+        </div>
+    </div>
+</div>
