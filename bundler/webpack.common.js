@@ -134,6 +134,13 @@ module.exports = {
             filename: "excursions.html",
         }),
         new HtmlWebpackPlugin({
+            template: path.resolve(
+                __dirname,
+                "../src/pages/excursion/excursion.njk"
+            ),
+            filename: "excursion.html",
+        }),
+        new HtmlWebpackPlugin({
             template: path.resolve(__dirname, "../src/pages/rules/rules.njk"),
             filename: "rules.html",
         }),
