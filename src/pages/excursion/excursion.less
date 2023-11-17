@@ -1,0 +1,88 @@
+.sidebar-cards,
+.guides-swiper {
+    overflow: visible !important;
+    max-width: calc(100vw - var(--inner-padding) * 2);
+    .swiper-slide {
+        max-width: 223px;
+    }
+}
+
+.guide-preview {
+    max-width: 223px;
+    &__img {
+        object-fit: cover;
+        aspect-ratio: 215/260;
+        margin-bottom: 10px;
+    }
+    &__name {
+        font-family: Unbounded;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 23px;
+    }
+}
+
+.excursion-prices {
+    padding-top: 30px;
+    border-bottom: 1px #cfcfcf solid;
+    padding-bottom: 30px;
+    &__form-selects {
+        display: flex;
+        flex-direction: row;
+        gap: 15px;
+        @media (max-width: 700px) {
+            flex-direction: column;
+            width: 100%;
+        }
+    }
+    &__form-quantity {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        white-space: nowrap;
+        gap: 10px;
+    }
+    &__form-title {
+        font-family: Unbounded;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+    }
+    &__form-row {
+        display: flex;
+        flex-wrap: wrap;
+
+        gap: 10px 50px;
+        padding-top: 30px;
+        border-top: 1px #cfcfcf solid;
+    }
+
+    &__links {
+        list-style: none;
+        margin-top: 25px;
+        gap: 8px;
+        display: flex;
+        flex-direction: column;
+        a {
+            color: var(--link);
+            text-decoration: underline;
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+    &__info {
+        border-bottom: 1px #cfcfcf solid;
+        padding-bottom: 20px;
+        margin-bottom: 25px;
+        h2,
+        .h2 {
+            margin-top: 38px;
+        }
+    }
+    &__form {
+        margin-top: 25px;
+    }
+}
+
