@@ -13,8 +13,8 @@
 
         </script>
         <script src="https://api-maps.yandex.ru/v3/?apikey=a15d01f0-c384-40dd-b217-1263afbd663f&lang=ru_RU"></script>
-        <script defer="defer" src="/planet/assets/js/bundle.1e33cb34ddd8cf2e6fd0.js"></script>
-        <link href="/planet/assets/css/main.c0c8d5860de7d48fdbb4.css" rel="stylesheet">
+        <script defer="defer" src="/planet/assets/js/bundle.169b41b61014f7b917b5.js"></script>
+        <link href="/planet/assets/css/main.9d8c5c9f5bdf68d03241.css" rel="stylesheet">
     </head>
 
     <body class=""><svg width="0" height="0" style="position: absolute" xmlns="http://www.w3.org/2000/svg" fill="none">
@@ -236,6 +236,34 @@
                 <div class="top-row">
                     <h1>Афиша</h1>
                 </div>
+                <div id="afisha-template">
+                    <div class="event-preview js-trigger-animate"><a href="_" class="event-preview__hover-link"><span>_</span></a>
+                        <div class="event-preview__top _br">
+                            <div class="event-preview__img"><img src="_" alt="" /></div>
+                            <div class="event-preview__top-head">
+                                <ul class="event-preview__tags">
+                                    <li><span>_</span></li>
+                                </ul>
+                            </div>
+                            <div class="event-preview__top-bottom">
+                                <ul class="event-preview__tags">
+                                    <li class="_bg"><span class="icon-marker"></span> <span>_</span></li>
+                                </ul>
+                                <ul class="event-preview__awards">
+                                    <li class="event-preview__award"><span class="event-preview__award-top">_</span> <span class="event-preview__award-name">_</span> <span class="event-preview__award-year">_</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="event-preview__middle">
+                            <div class="event-preview__title h2">_</div>
+                            <ul class="event-preview__info">
+                                <li><span class="icon-marker"></span> <span>_</span></li>
+                            </ul>
+                        </div>
+                        <div class="event-preview__bottom-wrap">_<div class="event-preview__bottom"><a href="_" class="btn-border">_</a> <a href="_" class="btn-link">Подробнее</a></div>
+                        </div>
+                    </div>
+                </div>
                 <div class="afisha">
                     <div class="afisha__filters"><button class="btn-border filter-menu-open"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M5 8L12.5 8M12.5 8C12.5 6.89543 13.3954 6 14.5 6C15.6046 6 16.5 6.89543 16.5 8M12.5 8C12.5 9.10457 13.3954 10 14.5 10C15.6046 10 16.5 9.10457 16.5 8M16.5 8L19 8M5 16L7.5 16M7.5 16C7.5 14.8954 8.39543 14 9.5 14C10.6046 14 11.5 14.8954 11.5 16M7.5 16C7.5 17.1046 8.39543 18 9.5 18C10.6046 18 11.5 17.1046 11.5 16M11.5 16H19" stroke="url(#Gradient)" stroke-width="1.4" />
@@ -246,7 +274,7 @@
                                         <path d="M13 13L27 27M13 27L27 13" stroke="#0F0F0F" stroke-width="1.6" />
                                     </svg></button>
                             </div>
-                            <form action="json/afisha.json" class="filter-popup__body">
+                            <form action="json/events.json" method="POST" id="afishafilter" class="filter-popup__body">
                                 <ul class="filter-popup__categories">
                                     <li><a class="_active" href="afisha.html">Все залы</a></li>
                                     <li><a class="" href="afisha.html">Большой Звёздный зал</a></li>
@@ -260,25 +288,27 @@
                                 <div class="filter-popup__columns">
                                     <div class="filter-popup__block _open">
                                         <div class="filter-popup__block-title">Для кого подходит программа</div>
-                                        <div class="filter-popup__block-body"><label class="checkbox"><input name="for_whom" value="Для детей" type="checkbox" /> <span class="checkbox__indicator"></span> <span class="checkbox__text">Для детей</span></label> <label class="checkbox"><input name="for_whom" value="Для взрослых" type="checkbox" /> <span class="checkbox__indicator"></span> <span class="checkbox__text">Для взрослых</span></label> <label class="checkbox"><input name="for_whom" value="Для романтиков" type="checkbox" /> <span class="checkbox__indicator"></span> <span class="checkbox__text">Для романтиков</span></label> <label class="checkbox"><input name="for_whom" value="Для любителей космоса" type="checkbox" /> <span class="checkbox__indicator"></span> <span class="checkbox__text">Для любителей космоса</span></label> <label class="checkbox"><input name="for_whom" value="Для туристических групп" type="checkbox" /> <span class="checkbox__indicator"></span> <span class="checkbox__text">Для туристических групп</span></label> <label class="checkbox"><input name="for_whom" value="Для одиночного посещения" type="checkbox" /> <span class="checkbox__indicator"></span> <span class="checkbox__text">Для одиночного посещения</span></label></div>
+                                        <div class="filter-popup__block-body"><label class="checkbox"><input name="for_whom[]" value="Для детей" type="checkbox" /> <span class="checkbox__indicator"></span> <span class="checkbox__text">Для детей</span></label> <label class="checkbox"><input name="for_whom[]" value="Для взрослых" type="checkbox" /> <span class="checkbox__indicator"></span> <span class="checkbox__text">Для взрослых</span></label> <label class="checkbox"><input name="for_whom[]" value="Для романтиков" type="checkbox" /> <span class="checkbox__indicator"></span> <span class="checkbox__text">Для романтиков</span></label> <label class="checkbox"><input name="for_whom[]" value="Для любителей космоса" type="checkbox" /> <span class="checkbox__indicator"></span> <span class="checkbox__text">Для любителей космоса</span></label> <label class="checkbox"><input name="for_whom[]" value="Для туристических групп" type="checkbox" /> <span class="checkbox__indicator"></span> <span class="checkbox__text">Для туристических групп</span></label> <label class="checkbox"><input name="for_whom[]" value="Для одиночного посещения" type="checkbox" /> <span class="checkbox__indicator"></span> <span class="checkbox__text">Для одиночного посещения</span></label></div>
                                     </div>
                                     <div class="filter-popup__block _open">
                                         <div class="filter-popup__block-title">Тип программы</div>
-                                        <div class="filter-popup__block-body"><label class="checkbox"><input name="type" value="Экскурсии" type="checkbox" /> <span class="checkbox__indicator"></span> <span class="checkbox__text">Экскурсии</span></label> <label class="checkbox"><input name="type" value="Курсы и лекции" type="checkbox" /> <span class="checkbox__indicator"></span> <span class="checkbox__text">Курсы и лекции</span></label> <label class="checkbox"><input name="for_typehom" value="Частные мероприятия" type="checkbox" /> <span class="checkbox__indicator"></span> <span class="checkbox__text">Частные мероприятия</span></label></div>
+                                        <div class="filter-popup__block-body"><label class="checkbox"><input name="type[]" value="Экскурсии" type="checkbox" /> <span class="checkbox__indicator"></span> <span class="checkbox__text">Экскурсии</span></label> <label class="checkbox"><input name="type[]" value="Курсы и лекции" type="checkbox" /> <span class="checkbox__indicator"></span> <span class="checkbox__text">Курсы и лекции</span></label> <label class="checkbox"><input name="type[]" value="Частные мероприятия" type="checkbox" /> <span class="checkbox__indicator"></span> <span class="checkbox__text">Частные мероприятия</span></label></div>
                                     </div>
                                     <div class="filter-popup__block _open">
                                         <div class="filter-popup__block-title">Язык</div>
-                                        <div class="filter-popup__block-body"><label class="checkbox"><input name="language" value="Русский" type="checkbox" /> <span class="checkbox__indicator"></span> <span class="checkbox__text">Русский</span></label> <label class="checkbox"><input name="language" value="Английский" type="checkbox" /> <span class="checkbox__indicator"></span> <span class="checkbox__text">Английский</span></label></div>
+                                        <div class="filter-popup__block-body"><label class="checkbox"><input name="language[]" value="Русский" type="checkbox" /> <span class="checkbox__indicator"></span> <span class="checkbox__text">Русский</span></label> <label class="checkbox"><input name="language[]" value="Английский" type="checkbox" /> <span class="checkbox__indicator"></span> <span class="checkbox__text">Английский</span></label></div>
                                     </div>
                                     <div class="filter-popup__block _open">
-                                        <div class="filter-popup__block-body"><label class="tags-checkbox"><input name="type" value="Эксклюзив" type="checkbox" /> <span class="tags-checkbox__indicator"></span> <span class="tags-checkbox__text">Эксклюзив</span></label> <label class="tags-checkbox"><input name="tags" value="Создано студией планетария" type="checkbox" /> <span class="tags-checkbox__indicator"></span> <span class="tags-checkbox__text">Создано студией планетария</span></label></div>
+                                        <div class="filter-popup__block-body">
+                                            <div class="filter-popup__block-tags"><label class="tags-checkbox"><input name="tags[]" value="Эксклюзив" type="checkbox" /> <span class="tags-checkbox__indicator"></span> <span class="tags-checkbox__text">Эксклюзив</span></label> <label class="tags-checkbox"><input name="tags[]" value="Создано студией планетария" type="checkbox" /> <span class="tags-checkbox__indicator"></span> <span class="tags-checkbox__text">Создано студией планетария</span></label></div>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="filter-popup__btns"><button type="submit" class="filter-popup__sbmt">Применить</button> <button type="type" class="filter-popup__clear">Сбросить все</button></div>
+                                <div class="filter-popup__btns"><button type="submit" class="filter-popup__sbmt">Применить</button> <button type="button" class="filter-popup__clear">Сбросить все</button></div>
                             </form>
                         </div>
                     </div>
-                    <div class="afisha__grid">
+                    <div class="afisha__grid" id="afishalist">
                         <div class="event-preview js-trigger-animate"><a href="event.html" class="event-preview__hover-link"><span>Звёздная программа «Небо в движении»</span></a>
                             <div class="event-preview__top _br">
                                 <div class="event-preview__img"><img src="img/e-1.jpg" alt="" /></div>
