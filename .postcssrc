@@ -6,7 +6,7 @@
         },
         "postcss-url": {
             "url": "inline",
-            "maxSize": 5
+            "maxSize": 15
         }
     }
 }

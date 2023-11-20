@@ -300,9 +300,9 @@
 }
 
 .hp-program__events {
-    background: #686868 url('../../../static/img/hp-planets.webp') no-repeat center center;
-    background-size: cover;
+    background: transparent;
     padding-top: 125%;
+    overflow: hidden;
 
     @media (max-width: @screen-s) {
         padding-top: 120%;
@@ -317,6 +317,60 @@
             padding-right: 20px;
         }
     }
+}
+
+.hp-program__events-animation {
+    position: absolute;
+    left: 50%;
+    bottom: -4%;
+    height: 126%;
+    width: auto;
+    aspect-ratio: 1;
+    transform: translateX(-50%);
+    background: url('../../../static/img/orbits-bg.webp') no-repeat center center;
+    background-size: 100% 100%;
+
+    @media (max-width: @screen-s) {
+        bottom: -5%;
+        height: 130%;
+    }
+}
+
+.hp-program__events-animation-1 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../../../static/img/orbits-1.webp') no-repeat center center;
+    background-size: 100% 100%;
+    animation: orbitSpin 15s linear infinite;
+    animation-play-state: paused;
+
+    html.desktop .hp-program__events:hover & {
+        animation-play-state: running;
+    }
+}
+
+.hp-program__events-animation-2 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../../../static/img/orbits-2.webp') no-repeat center center;
+    background-size: 100% 100%;
+    animation: orbitSpin 30s linear infinite;
+    animation-play-state: paused;
+
+    html.desktop .hp-program__events:hover & {
+        animation-play-state: running;
+    }
+}
+
+@keyframes orbitSpin {
+    0% { transform: rotate(0deg) }
+    100% { transform: rotate(360deg) }
 }
 
 .hp-program__program {
