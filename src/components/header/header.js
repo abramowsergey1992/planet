@@ -12,6 +12,7 @@ document.querySelectorAll(".js-close-menu").forEach((el) => {
         document
             .querySelector(".main-menu__sub._active")
             .classList.remove("_active");
+        links.forEach(el => el.classList.remove("_active"));
     });
 });
 
