@@ -12,14 +12,13 @@ document.querySelectorAll(".lections-prices").forEach((el) => {
         autoHeight: true,
     });
     el.querySelectorAll(".lections-prices__filter").forEach((filter) => {
-        filter.addEventListener("click", (btn) => {
+        filter.addEventListener("click", (event) => {
             el.querySelectorAll(".lections-prices__filter").forEach((btn) => {
                 btn.classList.remove("_active");
             });
 
-            swiper.slideTo(btn.dataSet.slide);
-            console.log("sss", btn);
-            btn.classList.add("_active");
+            filter.classList.add("_active");
+            swiper.slideTo(filter.dataset.slide);
         });
     });
 });
