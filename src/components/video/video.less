@@ -1,0 +1,116 @@
+.video {
+    background: #000;
+    border-radius: 50px;
+    position: relative;
+    z-index: 2;
+    height: 0;
+    padding-top: 56.6%;
+    overflow: hidden;
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+    &__play {
+        display: block;
+        width: 124px;
+        height: 124px;
+        box-sizing: border-box;
+        border: 1px solid rgba(166, 166, 166, 0.3);
+        background: transparent url("../../../static/img/icon-play.svg")
+            no-repeat center center;
+        border-radius: 50%;
+        position: absolute;
+        z-index: 3;
+        top: 50%;
+        left: 50%;
+        margin: -62px 0 0 -62px;
+        transition: all 0.3s;
+
+        @media (max-width: @screen-s) {
+            width: 88px;
+            height: 88px;
+            margin: -44px 0 0 -44px;
+        }
+
+        html.desktop &:hover {
+            border-color: rgba(166, 166, 166, 1);
+            &:before {
+                opacity: 0;
+                animation: playPulse 1.4s ease-in-out infinite;
+            }
+
+            &:after {
+                opacity: 0;
+                animation: playPulse 1.4s ease-in-out infinite 0.5s;
+            }
+        }
+
+        &:before,
+        &:after {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            will-change: transform;
+            box-sizing: border-box;
+            border: 1px solid rgba(166, 166, 166, 0.5);
+            border-radius: 50%;
+            pointer-events: none;
+            opacity: 0;
+        }
+
+        &:before {
+            transform: scale(1.3);
+
+            @media (max-width: @screen-s) {
+                width: 114px;
+                height: 114px;
+            }
+        }
+
+        &:after {
+            transform: scale(1.56);
+
+            @media (max-width: @screen-s) {
+                width: 138px;
+                height: 138px;
+            }
+        }
+
+        span {
+            color: transparent;
+        }
+    }
+
+    &__video {
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        &::after {
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            background: linear-gradient(
+                0deg,
+                rgba(0, 0, 0, 0.6) 0%,
+                rgba(0, 0, 0, 0.6) 100%
+            );
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center center;
+        }
+    }
+}
+

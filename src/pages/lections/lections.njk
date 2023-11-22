@@ -1,0 +1,106 @@
+{% extends "pages/_includes/layout.njk" %} {% block title %}Курсы и лекции{%
+endblock %} {% block main %}
+
+{{
+    breadcrumbs.create(
+        {
+            items: [
+                {
+                    text: "Главная",
+                    href: "home.html"
+                }
+            ]
+        },
+        "Курсы и лекции"
+    )
+}}
+<div class="top-row">
+    <h1>Курсы и лекции</h1>
+    <ul class="top-row__filters overfolow-x w-100">
+        <li>
+            <a href="#" class="_active">Все курсы и лекции</a>
+        </li>
+        <li>
+            <a href="#">Учебные лекции по астрономии для 9-11 классов</a>
+        </li>
+        <li>
+            <a href="#">Театр увлекательной науки</a>
+        </li>
+        <li>
+            <a href="#">Астрономические кружки</a>
+        </li>
+        <li>
+            <a href="#">Трибуна ученого</a>
+        </li>
+    </ul>
+</div>
+<div class="block">
+    <div class="events-grid">
+        {{ event.create({ img: "content/lection-1.jpg", title: "Театр
+        увлекательной науки", info:[ { "text":"Школьникам", "icon":"person" } ],
+        desc: "
+        <p>
+            Для юных посетителей Московский Планетарий подготовил программы,
+            которые в увлекательной, доступной, игровой форме расскажут ребятам
+            о законах природы и их проявлениях.
+        </p>
+        ", link: "lection.html","btnText":"Подробнее" }) }} {{ event.create({
+        img: "content/lection-2.jpg", title: "Учебные лекции по астрономии для
+        9-11 классов", info:[ { "text":"Школьникам", "icon":"person" } ], desc:
+        "
+        <p>
+            С 1 сентября 2017 года предмет «Астрономия» включен в обязательную
+            школьную программу.
+        </p>
+        ", link: "lection.html","btnText":"Подробнее" }) }} {{ event.create({
+        img: "content/lection-3.jpg", title: "Цикл лекций «Звездные уроки»",
+        info:[ { "text":"Школьникам", "icon":"person" } ], desc: "
+        <p>
+            Цикл лекций «Звёздные уроки» для тех, кто неравнодушен к
+            завораживающей красоте ночного неба, кто хочет познать мир
+            Вселенной, кто только увлекся или уже увлечен астрономией или
+            телескопостроением.
+        </p>
+        ", link: "lection.html","btnText":"Подробнее" }) }} {{ event.create({
+        img: "content/lection-3.jpg", title: "Цикл лекций «Звездные уроки»",
+        info:[ { "text":"Школьникам", "icon":"person" } ], desc: "
+        <p>
+            Цикл лекций «Звёздные уроки» для тех, кто неравнодушен к
+            завораживающей красоте ночного неба, кто хочет познать мир
+            Вселенной, кто только увлекся или уже увлечен астрономией или
+            телескопостроением.
+        </p>
+        ", link: "lection.html" ,"btnText":"Подробнее"}) }} {{ event.create({
+        img: "content/lection-5j.jpg", title: "Астрономические кружки", info:[ {
+        "text":"Школьникам", "icon":"person" } ], desc: "
+        <p>
+            Цикл лекций «Звёздные уроки» для тех, кто неравнодушен к
+            завораживающей красоте ночного неба, кто хочет познать мир
+            Вселенной, кто только увлекся или уже увлечен астрономией или
+            телескопостроением.
+        </p>
+        ", link: "lection.html","btnText":"Подробнее" }) }} {{ event.create({
+        img: "content/lection-6.jpg", title: "Курсы для взрослых", info:[ {
+        "text":"Школьникам", "icon":"person" } ], desc: "
+        <p>
+            Цикл лекций «Звёздные уроки» для тех, кто неравнодушен к
+            завораживающей красоте ночного неба, кто хочет познать мир
+            Вселенной, кто только увлекся или уже увлечен астрономией или
+            телескопостроением.
+        </p>
+        ", link: "lection.html","btnText":"Подробнее" }) }}
+    </div>
+    <div class="paginator">
+        <a href="#" class="paginator__prev"></a>
+        <a href="#" class="paginator__link _active">1</a>
+        <a href="#" class="paginator__link">2</a>
+        <a href="#" class="paginator__link">3</a>
+        <a href="#" class="paginator__link">4</a>
+        <a href="#" class="paginator__link">5</a>
+        <a href="#" class="paginator__link">6</a>
+        <a href="#" class="paginator__next"></a>
+    </div>
+</div>
+
+{% endblock %}
+

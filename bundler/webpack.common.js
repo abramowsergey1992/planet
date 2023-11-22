@@ -151,6 +151,20 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: path.resolve(
                 __dirname,
+                "../src/pages/lections/lections.njk"
+            ),
+            filename: "lections.html",
+        }),
+        new HtmlWebpackPlugin({
+            template: path.resolve(
+                __dirname,
+                "../src/pages/lection/lection.njk"
+            ),
+            filename: "lection.html",
+        }),
+        new HtmlWebpackPlugin({
+            template: path.resolve(
+                __dirname,
                 "../src/pages/private-events/private-events.njk"
             ),
             filename: "private-events.html",

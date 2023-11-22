@@ -14,6 +14,10 @@ document.querySelectorAll(".guides-swiper").forEach((el) => {
         //     type: "bullets",
         // },
         breakpoints: {
+            1400: {
+                slidesPerView: 4,
+                spaceBetween: 16,
+            },
             1024: {
                 slidesPerView: 4,
                 spaceBetween: 16,
