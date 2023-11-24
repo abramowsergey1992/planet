@@ -48,6 +48,9 @@
         </div>
     </div>
     <div class="event-preview__middle">
+        {% if item.date %}
+        <div class="event-preview__date">{{ item.date }}</div>
+        {% endif %}
         <div class="event-preview__title h2">{{ item.title }}</div>
         {% if item.info %}
         <ul class="event-preview__info">

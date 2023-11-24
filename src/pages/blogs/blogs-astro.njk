@@ -1,0 +1,174 @@
+{% extends "pages/_includes/layout.njk" %} {% block title %} Астрономические
+новости{% endblock %} {% block main %}
+
+{{
+    breadcrumbs.create(
+        {
+            items: [
+                {
+                    text: "Главная",
+                    href: "home.html"
+                },
+                {
+                    text: "Научный блог",
+                    href: "blogs.html"
+                }
+            ]
+        },
+        "Астрономические новости"
+    )
+}}
+<div class="top-row">
+    <h1>Астрономические новости</h1>
+</div>
+<div class="block">
+    <div class="slider-3 swiper js-trigger-animate">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                {{ event.create({ img: "img/about-9.jpg", date: "29 мая 2023",
+                title: "Венера: неожиданные открытия", info: [ { icon:"date",
+                text:"15 мая 2023" }, { icon:"load", text:"Сложность 1" } ],
+                desc: "
+                <p>
+                    Астрономы обнаружили необычные явления на одной из лун
+                    Юпитера
+                </p>
+                ", btnText:"Подробнее", link:"blog.html" } ) }}
+            </div>
+            <div class="swiper-slide">
+                {{ event.create({ img: "img/about-10.jpg", date: "29 мая 2023",
+                title: "Марс: обнаружены следы воды!", info: [ { icon:"date",
+                text:"15 мая 2023" }, { icon:"load", text:"Сложность 1" } ],
+                desc: "
+                <p>
+                    Астрономы обнаружили необычные явления на одной из лун
+                    Юпитера
+                </p>
+                ", btnText:"Подробнее", link:"blog.html" } ) }}
+            </div>
+            <div class="swiper-slide">
+                {{ event.create({ img: "img/about-11.jpg", date: "29 мая 2023",
+                title: "Квантовая механика в астрофизике", info: [ {
+                icon:"date", text:"15 мая 2023" }, { icon:"load",
+                text:"Сложность 1" } ], desc: "
+                <p>
+                    Астрономы обнаружили необычные явления на одной из лун
+                    Юпитера
+                </p>
+                ", btnText:"Подробнее", link:"blog.html" } ) }}
+            </div>
+        </div>
+    </div>
+    <div class="podcast-big _br">
+        <div class="podcast-big__bg-wrap">
+            <div class="video">
+                <button
+                    class="video__play js-open-video"
+                    data-src="./content/planetarium_full.mp4"
+                >
+                    <span>Play</span>
+                </button>
+
+                <div class="video__video">
+                    <video
+                        src="./content/planetarium.mp4"
+                        loop
+                        preload="metadata"
+                        muted
+                        poster="./content/video-planetarium-poster.webp"
+                    ></video>
+                </div>
+            </div>
+        </div>
+        <div class="podcast-big__bottom">
+            <a class="h1 podcast-big__title" href="blog.html"
+                >Необитаемый Марс и ракета российского стартапа</a
+            >
+            <div class="podcast-big__btns">
+                <a href="podcast.html" class="btn-border">Слушать подкаст</a>
+                <a href="podcasts.html" class="btn-border _white-style"
+                    >Все подкасты</a
+                >
+            </div>
+        </div>
+    </div>
+
+    <div class="events-grid">
+        {{ event.create({ img: "img/about-9.jpg", date: "img/about-9.jpg",
+        title: "Звёздная программа «Небо в движении»", info: [ { icon:"marker",
+        text:"Малый Звёздный зал" }, { icon:"time", text:"60 минут" } ], desc: "
+        <p>
+            Сами того не замечая, мы все время находимся в движении - даже,
+            когда стоим на месте. Стоит поднять голову и взглянуть на небо, как
+            мы заметим движение небесных объектов, звезд и планет. И даже наше
+            собственное!
+        </p>
+        ", btnText:"Купить билет от 750 ₽", link:"event.html" ,moreBtn:"true" }
+        ) }} {{ event.create({ img: "img/e-2.jpg", title: "Звёздная программа
+        «Путеводные звезды»", info: [ { icon:"marker", text:"Малый Звёздный зал"
+        }, { icon:"time", text:"60 минут" } ], desc: "
+        <p>
+            Сами того не замечая, мы все время находимся в движении - даже,
+            когда стоим на месте. Стоит поднять голову и взглянуть на небо, как
+            мы заметим движение небесных объектов, звезд и планет.
+        </p>
+        ", btnText:"Купить билет от 750 ₽", link:"event.html" ,moreBtn:"true" }
+        ) }} {{ event.create({ img: "img/e-3.jpg", title: "Фильм «Динозавры.
+        История выживших»", info: [ { icon:"marker", text:"Малый Звёздный зал"
+        }, { icon:"time", text:"60 минут" } ], desc: "
+        <p>
+            Как многие дети, Селеста очарована динозаврами. Однажды, когда она
+            готовилась к докладу об их вымирании, в её комнате появилось
+            волшебное и мудрое существо – Лунч. Он задал ей загадочный вопрос: а
+            что, если среди нас всё ещё есть динозавры?
+        </p>
+        ", btnText:"Купить билет от 750 ₽", link:"event.html" ,moreBtn:"true" }
+        ) }} {{ event.create({ img: "img/e-4.jpg", topTags: ["Эксклюзив",
+        "Создано студией планетария"], bottomTags:[ { text:"6+" }, {
+        text:"Мультиязычный" }, { icon:"time", text:"46 минут" }, {
+        icon:"marker", text:"Большой Звёздный зал" } ] , title: "Фильм «Буран.
+        Освоение космоса» ", info: [ { icon:"marker", text:"Малый Звёздный зал"
+        }, { icon:"time", text:"60 минут" } ], desc: "
+        <p>
+            Как человек покорял космос? Как менялись представления жителей Земли
+            об устройстве окружающего мира? Об этом и многом другом
+            рассказывается в фильме «Буран».
+        </p>
+        ", btnText:"Купить билет от 750 ₽", link:"event.html" ,moreBtn:"true" }
+        ) }} {{ event.create({ img: "img/e-5.jpg", topTags: ["Эксклюзив",
+        "Создано студией планетария"], bottomTags:[ { text:"6+" }, {
+        text:"Мультиязычный" }, { icon:"time", text:"46 минут" }, {
+        icon:"marker", text:"Большой Звёздный зал" } ] , title: "Фильм «Буран.
+        Освоение космоса» ", info: [ { icon:"marker", text:"Малый Звёздный зал"
+        }, { icon:"time", text:"60 минут" } ], desc: "
+        <p>
+            Увлекательная звёздная программа о том, как меняется движение неба в
+            зависимости от места наблюдения.
+        </p>
+        ", btnText:"Купить билет от 750 ₽", link:"event.html" ,moreBtn:"true" }
+        ) }} {{ event.create({ img: "img/e-6.jpg", topTags: ["Эксклюзив",
+        "Создано студией планетария"], bottomTags:[ { text:"6+" }, {
+        text:"Мультиязычный" }, { icon:"time", text:"46 минут" }, {
+        icon:"marker", text:"Большой Звёздный зал" } ] , title: "Фильм «Мышата и
+        Луна» ", info: [ { icon:"marker", text:"Малый Звёздный зал" }, {
+        icon:"time", text:"60 минут" } ], desc: "
+        <p>
+            Увлекательная звёздная программа о том, как меняется движение неба в
+            зависимости от места наблюдения.
+        </p>
+        ", btnText:"Купить билет от 750 ₽", link:"event.html" ,moreBtn:"true" }
+        ) }}
+    </div>
+    <div class="paginator">
+        <a href="#" class="paginator__prev"></a>
+        <a href="#" class="paginator__link _active">1</a>
+        <a href="#" class="paginator__link">2</a>
+        <a href="#" class="paginator__link">3</a>
+        <a href="#" class="paginator__link">4</a>
+        <a href="#" class="paginator__link">5</a>
+        <a href="#" class="paginator__link">6</a>
+        <a href="#" class="paginator__next"></a>
+    </div>
+</div>
+{% endblock %}
+

@@ -18,8 +18,18 @@
 }
 .event-preview {
     position: relative;
-
-    .icon-child,
+    &__date {
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 133.333%;
+        margin-bottom: 7px;
+        letter-spacing: -0.16px;
+        margin-top: 16px;
+        margin-bottom: 16px;
+    }
+    .icon-date,
+    .icon-load,
     .icon-persons,
     .icon-person,
     .icon-heart,
@@ -28,11 +38,15 @@
         line-height: 0;
     }
     &__title {
-        margin-top: 26px;
-        margin-bottom: 15px;
-        @media (max-width: 1024px) {
-            margin-top: 20px;
-        }
+        margin-top: 16px;
+        margin-bottom: 16px;
+    }
+    &__bottom {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 10px 0px;
     }
     &__top {
         aspect-ratio: 112/125;
@@ -42,6 +56,10 @@
         padding: 30px;
         color: #fff;
         z-index: 1;
+        margin-bottom: 26px;
+        @media (max-width: 1024px) {
+            margin-bottom: 20px;
+        }
     }
     &__tags {
         display: flex;
@@ -100,6 +118,7 @@
         left: 0;
         top: 0;
         position: absolute;
+
         img {
             width: 100%;
             height: 100%;
@@ -235,13 +254,12 @@
 }
 
 html.desktop .event-preview__hover-link:hover {
-
     ~ .event-preview__top {
         .event-preview__img img {
             transform: scale(1.04);
         }
     }
-    
+
     ~ .event-preview__middle {
         .event-preview__title {
             .color();
@@ -254,3 +272,4 @@ html.desktop .event-preview__hover-link:hover {
         }
     }
 }
+

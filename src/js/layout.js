@@ -51,6 +51,21 @@ document.querySelectorAll(".icon-web").forEach((el) => {
 
 `;
 });
+document.querySelectorAll(".icon-date").forEach((el) => {
+    el.innerHTML = `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M8 4V9.17241M16 4V9.17241M7.5 11.7586H10.5M16.5 11.7586H13.5M7.5 14.8621H10.5M13.5 14.8621H16.5M6 6.58621H18C18.5523 6.58621 19 7.04936 19 7.62069V17.9655C19 18.5368 18.5523 19 18 19H6C5.44772 19 5 18.5368 5 17.9655V7.62069C5 7.04936 5.44772 6.58621 6 6.58621Z" stroke="currentColor" stroke-width="1.4"/>
+</svg>
+
+
+`;
+});
+document.querySelectorAll(".icon-load").forEach((el) => {
+    el.innerHTML = `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M11.2 5V4.2H12.8V5H11.2ZM12.8 8.76923V9.56923H11.2V8.76923H12.8ZM11.2 15.2308V14.4308H12.8V15.2308H11.2ZM12.8 19V19.8H11.2V19H12.8ZM15.2308 12.7951H14.4308V11.1951H15.2308V12.7951ZM19 11.1951H19.8V12.7951H19V11.1951ZM5.00103 12.8L4.20103 12.801L4.19897 11.201L4.99897 11.2L5.00103 12.8ZM8.7682 11.1951L9.5682 11.1941L9.57026 12.7941L8.77026 12.7951L8.7682 11.1951ZM12.8 5V8.76923H11.2V5H12.8ZM12.8 15.2308V19H11.2V15.2308H12.8ZM15.2308 11.1951H19V12.7951H15.2308V11.1951ZM4.99897 11.2L8.7682 11.1951L8.77026 12.7951L5.00103 12.8L4.99897 11.2ZM17.9503 7.18107L14.7195 10.4118L13.5882 9.28047L16.8189 6.0497L17.9503 7.18107ZM7.18107 6.0497L10.4118 9.28047L9.28047 10.4118L6.0497 7.18107L7.18107 6.0497ZM16.8189 17.9503L13.5882 14.7195L14.7195 13.5882L17.9503 16.8189L16.8189 17.9503ZM10.4118 14.7195L7.18107 17.9503L6.0497 16.8189L9.28047 13.5882L10.4118 14.7195Z" fill="currentColor"/>
+</svg>
+
+`;
+});
 document.querySelectorAll(".overfolow-x").forEach((el) => {
     el.innerHTML = `<div class="overfolow-x__scroll"><div><div class="overfolow-x__size">${el.innerHTML}</div></div></div>
     <div class="overfolow-x__prev"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11.0446 17L6 12M6 12L11.0446 6.99998M6 12H18" stroke="currentColor" stroke-width="1.4"/></svg></div>

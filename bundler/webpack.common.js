@@ -165,6 +165,21 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: path.resolve(
                 __dirname,
+                "../src/pages/blogs/blogs-astro.njk"
+            ),
+            filename: "blogs-astro.html",
+        }),
+        new HtmlWebpackPlugin({
+            template: path.resolve(__dirname, "../src/pages/blog/blog.njk"),
+            filename: "blog.html",
+        }),
+        new HtmlWebpackPlugin({
+            template: path.resolve(__dirname, "../src/pages/blogs/blogs.njk"),
+            filename: "blogs.html",
+        }),
+        new HtmlWebpackPlugin({
+            template: path.resolve(
+                __dirname,
                 "../src/pages/private-events/private-events.njk"
             ),
             filename: "private-events.html",

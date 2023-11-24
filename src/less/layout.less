@@ -82,34 +82,80 @@
     }
 }
 .btn-border {
-    border: 0px solid;
-    line-height: 0;
     display: inline-block;
-    padding: 2px;
+    flex-shrink: 0;
+    height: 50px;
     border-radius: 50px;
-    background: var(--gradient);
+    background: transparent;
+    box-sizing: border-box;
+    padding: 0 22px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: -0.16px;
+    position: relative;
+    backdrop-filter: blur(10px);
+
+    &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border: 2px solid transparent;
+        border-radius: inherit;
+        z-index: 0;
+        background: var(--gradient) border-box;
+        -webkit-mask: linear-gradient(#fff 0 0) padding-box,
+            linear-gradient(#fff 0 0);
+        -webkit-mask-composite: destination-out;
+        mask-composite: exclude;
+    }
+
+    &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-radius: inherit;
+        z-index: 1;
+        background: var(--gradient);
+        opacity: 0;
+        transition: opacity 0.2s ease;
+    }
+
     &__content {
-        display: flex;
-        height: 44px;
-        justify-content: center;
-        align-items: center;
-        border-radius: 50px;
-        gap: 10px;
-        padding: 10px 20px 10px 16px;
-        background: var(--body-bg);
-        text-align: center;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 150%;
-        letter-spacing: -0.16px;
-        transition: background 0.3s, color 0.3s;
-        .white-block & {
+        position: relative;
+        z-index: 2;
+    }
+
+    html.desktop &:hover {
+        color: #fff;
+        &:after {
+            opacity: 1;
+        }
+    }
+    &._white-style {
+        &::before {
             background: #fff;
         }
-        .btn-border:hover & {
-            background: transparent;
+        &::after {
+            background: #fff;
+        }
+        .btn-border__content {
             color: #fff;
+        }
+        html.desktop &:hover {
+            .btn-border__content {
+                color: #000;
+            }
         }
     }
 }
@@ -127,10 +173,12 @@
     width: 100%;
 }
 .content-inner {
-    padding: 0 4%;
+    padding: 0 8%;
     display: grid;
     grid-template-columns: auto 289px;
-
+    @media (max-width: 1300px) {
+        padding: 0 4%;
+    }
     gap: 30px;
     .block();
     min-width: 0;
@@ -151,6 +199,7 @@
         min-width: 0;
     }
     &__sidebar {
+        position: relative;
         display: flex;
         flex-direction: column;
         gap: 16px;

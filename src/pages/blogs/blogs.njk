@@ -1,0 +1,279 @@
+{% extends "pages/_includes/layout.njk" %} {% block title %}Научный блог{%
+endblock %} {% block main %}
+
+{{
+    breadcrumbs.create(
+        {
+            items: [
+                {
+                    text: "Главная",
+                    href: "home.html"
+                }
+            ]
+        },
+        "Научный блог"
+    )
+}}
+<div class="top-row">
+    <h1>Научный блог</h1>
+    <ul class="top-row__filters overfolow-x w-100">
+        <li>
+            <a href="#" class="_active">Все статьи</a>
+        </li>
+        <li>
+            <a href="#">Сложность 1</a>
+        </li>
+        <li>
+            <a href="#">Сложность 2</a>
+        </li>
+        <li>
+            <a href="#">Сложность 3</a>
+        </li>
+    </ul>
+</div>
+<div class="block">
+    <div class="slider-3 swiper js-trigger-animate">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                {{ event.create({ img: "img/about-9.jpg", date: "29 мая 2023",
+                title: "Венера: неожиданные открытия", info: [ { icon:"date",
+                text:"15 мая 2023" }, { icon:"load", text:"Сложность 1" } ],
+                desc: "
+                <p>
+                    Астрономы обнаружили необычные явления на одной из лун
+                    Юпитера
+                </p>
+                ", btnText:"Подробнее", link:"blog.html" } ) }}
+            </div>
+            <div class="swiper-slide">
+                {{ event.create({ img: "img/about-10.jpg", date: "29 мая 2023",
+                title: "Марс: обнаружены следы воды!", info: [ { icon:"date",
+                text:"15 мая 2023" }, { icon:"load", text:"Сложность 1" } ],
+                desc: "
+                <p>
+                    Астрономы обнаружили необычные явления на одной из лун
+                    Юпитера
+                </p>
+                ", btnText:"Подробнее", link:"blog.html" } ) }}
+            </div>
+            <div class="swiper-slide">
+                {{ event.create({ img: "img/about-11.jpg", date: "29 мая 2023",
+                title: "Квантовая механика в астрофизике", info: [ {
+                icon:"date", text:"15 мая 2023" }, { icon:"load",
+                text:"Сложность 1" } ], desc: "
+                <p>
+                    Астрономы обнаружили необычные явления на одной из лун
+                    Юпитера
+                </p>
+                ", btnText:"Подробнее", link:"blog.html" } ) }}
+            </div>
+        </div>
+    </div>
+    <div class="podcast-big _br">
+        <div class="podcast-big__bg-wrap">
+            <div class="video">
+                <button
+                    class="video__play js-open-video"
+                    data-src="./content/planetarium_full.mp4"
+                >
+                    <span>Play</span>
+                </button>
+
+                <div class="video__video">
+                    <video
+                        src="./content/planetarium.mp4"
+                        loop
+                        preload="metadata"
+                        muted
+                        poster="./content/video-planetarium-poster.webp"
+                    ></video>
+                </div>
+            </div>
+        </div>
+        <div class="podcast-big__bottom">
+            <a class="h1 podcast-big__title" href="blog.html"
+                >Необитаемый Марс и ракета российского стартапа</a
+            >
+            <div class="podcast-big__btns">
+                <a href="podcast.html" class="btn-border">Слушать подкаст</a>
+                <a href="podcasts.html" class="btn-border _white-style"
+                    >Все подкасты</a
+                >
+            </div>
+        </div>
+    </div>
+    <div class="slider-3 swiper js-trigger-animate">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                {{ event.create({ img: "img/about-9.jpg", date: "29 мая 2023",
+                title: "Венера: неожиданные открытия", info: [ { icon:"date",
+                text:"15 мая 2023" }, { icon:"load", text:"Сложность 1" } ],
+                desc: "
+                <p>
+                    Астрономы обнаружили необычные явления на одной из лун
+                    Юпитера
+                </p>
+                ", btnText:"Подробнее", link:"blog.html" } ) }}
+            </div>
+            <div class="swiper-slide">
+                {{ event.create({ img: "img/about-10.jpg", date: "29 мая 2023",
+                title: "Марс: обнаружены следы воды!", info: [ { icon:"date",
+                text:"15 мая 2023" }, { icon:"load", text:"Сложность 1" } ],
+                desc: "
+                <p>
+                    Астрономы обнаружили необычные явления на одной из лун
+                    Юпитера
+                </p>
+                ", btnText:"Подробнее", link:"blog.html" } ) }}
+            </div>
+            <div class="swiper-slide">
+                {{ event.create({ img: "img/about-11.jpg", date: "29 мая 2023",
+                title: "Квантовая механика в астрофизике", info: [ {
+                icon:"date", text:"15 мая 2023" }, { icon:"load",
+                text:"Сложность 1" } ], desc: "
+                <p>
+                    Астрономы обнаружили необычные явления на одной из лун
+                    Юпитера
+                </p>
+                ", btnText:"Подробнее", link:"blog.html" } ) }}
+            </div>
+        </div>
+    </div>
+    <div class="_br news-day">
+        <div class="news-day__row">
+            <div class="news-day__left">
+                <svg
+                    class="news-day__icon"
+                    viewBox="0 0 60 60"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <path
+                        d="M25.5 9C25.5 28.1282 27.753 32.247 34.5121 25.4878C27.753 32.247 31.8718 34.5 51 34.5C31.8718 34.5 27.753 36.753 34.5121 43.5121C27.753 36.753 25.5 40.8718 25.5 60C25.5 40.8718 23.247 36.753 16.4878 43.5121C23.247 36.753 19.1282 34.5 0 34.5C19.1282 34.5 23.247 32.247 16.4878 25.4878C23.247 32.247 25.5 28.1282 25.5 9Z"
+                        fill="white"
+                    />
+                    <path
+                        d="M50.5 0C50.5 7.1262 51.3394 8.66063 53.8575 6.14253C51.3394 8.66063 52.8738 9.5 60 9.5C52.8738 9.5 51.3394 10.3394 53.8575 12.8575C51.3394 10.3394 50.5 11.8738 50.5 19C50.5 11.8738 49.6606 10.3394 47.1425 12.8575C49.6606 10.3394 48.1262 9.5 41 9.5C48.1262 9.5 49.6606 8.66063 47.1425 6.14253C49.6606 8.66063 50.5 7.1262 50.5 0Z"
+                        fill="white"
+                    />
+                </svg>
+                <div class="news-day__content">
+                    <div class="h2">Астрономическая новость дня</div>
+                    <div class="h1">Сумерки в самуюкороткую ночь года</div>
+                    <div class="news-day__links">
+                        <a href="blog.html" class="btn-border _white-style"
+                            >Читать</a
+                        >
+                        <a href="blog.html" class="btn-border _white-style"
+                            >Ко всем астроновостям</a
+                        >
+                    </div>
+                </div>
+            </div>
+            <div class="news-day__img-wrap _br">
+                <img
+                    src="content/news-day.jpg"
+                    class="news-day__img _br"
+                    alt=""
+                />
+            </div>
+        </div>
+    </div>
+    <div class="events-grid">
+        {{ event.create({ img: "img/about-9.jpg", date: "29 мая 2023", title:
+        "Звёздная программа «Небо в движении»", info: [ { icon:"marker",
+        text:"Малый Звёздный зал" }, { icon:"time", text:"60 минут" } ], desc: "
+        <p>
+            Сами того не замечая, мы все время находимся в движении - даже,
+            когда стоим на месте. Стоит поднять голову и взглянуть на небо, как
+            мы заметим движение небесных объектов, звезд и планет. И даже наше
+            собственное!
+        </p>
+        ", btnText:"Купить билет от 750 ₽", link:"event.html" ,moreBtn:"true" }
+        ) }} {{ event.create({ img: "img/e-2.jpg", date: "29 мая 2023", title:
+        "Звёздная программа «Путеводные звезды»", info: [ { icon:"marker",
+        text:"Малый Звёздный зал" }, { icon:"time", text:"60 минут" } ], desc: "
+        <p>
+            Сами того не замечая, мы все время находимся в движении - даже,
+            когда стоим на месте. Стоит поднять голову и взглянуть на небо, как
+            мы заметим движение небесных объектов, звезд и планет.
+        </p>
+        ", btnText:"Купить билет от 750 ₽", link:"event.html" ,moreBtn:"true" }
+        ) }} {{ event.create({ img: "img/e-3.jpg", date: "29 мая 2023", title:
+        "Фильм «Динозавры. История выживших»", info: [ { icon:"marker",
+        text:"Малый Звёздный зал" }, { icon:"time", text:"60 минут" } ], desc: "
+        <p>
+            Как многие дети, Селеста очарована динозаврами. Однажды, когда она
+            готовилась к докладу об их вымирании, в её комнате появилось
+            волшебное и мудрое существо – Лунч. Он задал ей загадочный вопрос: а
+            что, если среди нас всё ещё есть динозавры?
+        </p>
+        ", btnText:"Купить билет от 750 ₽", link:"event.html" ,moreBtn:"true" }
+        ) }} {{ event.create({ img: "img/e-4.jpg", topTags: ["Эксклюзив",
+        "Создано студией планетария"], title: "Фильм «Буран. Освоение космоса»
+        ", info: [ { icon:"marker", text:"Малый Звёздный зал" }, { icon:"time",
+        text:"60 минут" } ], desc: "
+        <p>
+            Как человек покорял космос? Как менялись представления жителей Земли
+            об устройстве окружающего мира? Об этом и многом другом
+            рассказывается в фильме «Буран».
+        </p>
+        ", btnText:"Купить билет от 750 ₽", link:"event.html" ,moreBtn:"true" }
+        ) }} {{ event.create({ img: "img/e-5.jpg", topTags: ["Эксклюзив",
+        "Создано студией планетария"] , title: "Фильм «Буран. Освоение космоса»
+        ", info: [ { icon:"marker", text:"Малый Звёздный зал" }, { icon:"time",
+        text:"60 минут" } ], desc: "
+        <p>
+            Увлекательная звёздная программа о том, как меняется движение неба в
+            зависимости от места наблюдения.
+        </p>
+        ", btnText:"Купить билет от 750 ₽", link:"event.html" ,moreBtn:"true" }
+        ) }}
+        <div class="glossarii-preview _br">
+            <svg
+                class="glossarii-preview__icon"
+                viewBox="0 0 60 60"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+            >
+                <path
+                    d="M25.5 9C25.5 28.1282 27.753 32.247 34.5121 25.4878C27.753 32.247 31.8718 34.5 51 34.5C31.8718 34.5 27.753 36.753 34.5121 43.5121C27.753 36.753 25.5 40.8718 25.5 60C25.5 40.8718 23.247 36.753 16.4878 43.5121C23.247 36.753 19.1282 34.5 0 34.5C19.1282 34.5 23.247 32.247 16.4878 25.4878C23.247 32.247 25.5 28.1282 25.5 9Z"
+                    fill="white"
+                />
+                <path
+                    d="M50.5 0C50.5 7.1262 51.3394 8.66063 53.8575 6.14253C51.3394 8.66063 52.8738 9.5 60 9.5C52.8738 9.5 51.3394 10.3394 53.8575 12.8575C51.3394 10.3394 50.5 11.8738 50.5 19C50.5 11.8738 49.6606 10.3394 47.1425 12.8575C49.6606 10.3394 48.1262 9.5 41 9.5C48.1262 9.5 49.6606 8.66063 47.1425 6.14253C49.6606 8.66063 50.5 7.1262 50.5 0Z"
+                    fill="white"
+                />
+            </svg>
+            <div class="glossarii-preview__title h1">Абляция</div>
+            <div class="glossarii-preview__desc">
+                <p>
+                    процесс уноса массы с поверхности твёрдого тела потоком
+                    набегающего газа, сопровождаемый поглощением теплоты. Лежит
+                    в основе абляционной теплозащиты, предохраняя конструкцию от
+                    перегрева.
+                </p>
+            </div>
+            <div class="glossarii-preview__bottom">
+                <a
+                    class="btn-border _white-style glossarii-preview__link"
+                    href="glossarii.html"
+                >
+                    Перейти глоссарию
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="paginator">
+        <a href="#" class="paginator__prev"></a>
+        <a href="#" class="paginator__link _active">1</a>
+        <a href="#" class="paginator__link">2</a>
+        <a href="#" class="paginator__link">3</a>
+        <a href="#" class="paginator__link">4</a>
+        <a href="#" class="paginator__link">5</a>
+        <a href="#" class="paginator__link">6</a>
+        <a href="#" class="paginator__next"></a>
+    </div>
+</div>
+{% endblock %}
+
