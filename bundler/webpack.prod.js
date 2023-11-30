@@ -6,7 +6,7 @@ const HtmlBeautifyPlugin = require("@nurminen/html-beautify-webpack-plugin");
 module.exports = merge(commonConfiguration, {
     mode: "production",
     output: {
-        publicPath: "/planet/",
+        publicPath: "./",
     },
     plugins: [
         new CleanWebpackPlugin(),
@@ -23,4 +23,3 @@ module.exports = merge(commonConfiguration, {
         }),
     ],
 });
-
