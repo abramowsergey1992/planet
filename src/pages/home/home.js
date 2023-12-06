@@ -1,5 +1,6 @@
 import { GLOBALS } from '../../js/globals';
 import gsap from 'gsap';
+import Lottie from 'lottie-web';
 
 // Video
 if (!GLOBALS.mobile) {
@@ -104,3 +105,30 @@ document.querySelectorAll('.js-hp-promo-central').forEach(el => {
     container?.classList.remove('_show-sun', '_show-moon', '_show-earth');
     container?.classList.add(`_show-${mode}`);
 });
+
+
+// Lottie animation
+if (!GLOBALS.mobile) {
+    document.querySelectorAll('.js-lottie-hover').forEach(el => {
+        const container = el.querySelector('.js-lottie');
+        const animation = Lottie.loadAnimation({
+            container: container,
+            renderer: 'svg',
+            loop: true,
+            autoplay: false,
+            path: container.dataset.src
+        });
+
+        animation.addEventListener('data_ready', () => {
+            animation.goToAndStop(40, true);
+        });
+
+        el.addEventListener('mouseenter', () => {
+            animation.goToAndPlay(40, true);
+        });
+
+        el.addEventListener('mouseleave', () => {
+            animation.goToAndStop(40, true);
+        });
+    });
+}

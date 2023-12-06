@@ -288,15 +288,25 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        z-index: 2;
     }
 }
 
 .hp-program__tickets-sputnik {
-    width: 160px;
-    height: 160px;
+    height: 90%;
     position: absolute;
-    right: 20px;
-    top: 20px;
+    right: 3%;
+    top: 5%;
+    aspect-ratio: 1;
+
+    html.mobile & {
+        background: url('../../../static/img/comet.svg') no-repeat right top;
+        background-size: contain;
+        height: 80%;
+        right: 8%;
+        top: 10%;
+        opacity: 0.3;
+    }
 }
 
 .hp-program__events {

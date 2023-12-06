@@ -48,6 +48,7 @@
     },
     "dependencies": {
         "gsap": "^3.12.2",
+        "lottie-web": "^5.12.2",
         "scrollmagic": "^2.0.8",
         "slim-select": "^2.6.0",
         "swiper": "^8.4.7"

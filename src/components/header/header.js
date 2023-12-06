@@ -40,7 +40,7 @@ if (isMobile) {
         }
         header.classList.remove("_overlay-visible");
         document.body.classList.remove("_burger-menu-open");
-        document.querySelector(".main-menu__sub._active").classList.remove("_active");
+        document.querySelector(".main-menu__sub._active")?.classList.remove("_active");
         links.forEach((el) => {
             el.classList.remove("_active");
         });
