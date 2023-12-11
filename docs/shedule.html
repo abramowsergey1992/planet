@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="csrf-token" content="o2OxEzRnU9cBa11KOLKCKkKUWfTV6wup9GGSAtqp" />
-        <title>Планетарий</title>
+        <title>Расписание</title>
         <meta name="viewport" content="width=device-width,initial-scale=1" />
         <script>
             setTimeout(() => {
@@ -229,46 +229,408 @@
                 </div>
             </header>
             <div class="inner">
+                <ul class="breadcrumbs">
+                    <li><a href="home.html">Главная</a></li>
+                    <li>Расписание</li>
+                </ul>
                 <div class="top-row">
-                    <h1>Список страниц</h1>
+                    <h1>Расписание</h1>
+                </div><button class="btn-border filter-menu-open"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5 8L12.5 8M12.5 8C12.5 6.89543 13.3954 6 14.5 6C15.6046 6 16.5 6.89543 16.5 8M12.5 8C12.5 9.10457 13.3954 10 14.5 10C15.6046 10 16.5 9.10457 16.5 8M16.5 8L19 8M5 16L7.5 16M7.5 16C7.5 14.8954 8.39543 14 9.5 14C10.6046 14 11.5 14.8954 11.5 16M7.5 16C7.5 17.1046 8.39543 18 9.5 18C10.6046 18 11.5 17.1046 11.5 16M11.5 16H19" stroke="url(#Gradient)" stroke-width="1.4" />
+                    </svg> <span>Фильтры</span></button>
+                <div class="shedule-top">
+                    <div class="shedule-top__head">
+                        <div class="shedule-top__today">
+                            <div class="shedule-top__now-day">Сегодня, понедельник</div>
+                            <div class="shedule-top__date">
+                                <color>17 сентября</color>
+                            </div>
+                        </div>
+                        <div class="shedule-top__right">
+                            <ul class="shedule-top__legend">
+                                <li data-load="low"><span class="icon-person"></span> Утром свободно</li>
+                                <li data-load="middle"><span class="icon-persons"></span> Днем многолюдно</li>
+                                <li data-load="low"><span class="icon-person"></span> Вечером свободно</li>
+                            </ul>
+                            <div class="shedule-top__month">октябрь</div>
+                        </div>
+                    </div>
+                    <div class="shedule-top__body">
+                        <div class="shedule-top__days">
+                            <div class="shedule-top__day _active">
+                                <div class="shedule-top__day-name">пн</div><a href="shedule.html" class="shedule-top__day-number">17</a>
+                                <ul class="shedule-top__day-load">
+                                    <li data-load="low"></li>
+                                    <li data-load="middle"></li>
+                                    <li data-load="low"></li>
+                                </ul>
+                            </div>
+                            <div class="shedule-top__day _day-off">
+                                <div class="shedule-top__day-name">вт</div>
+                                <div class="shedule-top__day-number">18</div>
+                                <div class="shedule-top__weekend">выходной</div>
+                            </div>
+                            <div class="shedule-top__day">
+                                <div class="shedule-top__day-name">ср</div><a href="shedule.html" class="shedule-top__day-number">19</a>
+                                <ul class="shedule-top__day-load">
+                                    <li data-load="low"></li>
+                                    <li data-load="middle"></li>
+                                    <li data-load="low"></li>
+                                </ul>
+                            </div>
+                            <div class="shedule-top__day">
+                                <div class="shedule-top__day-name">чт</div><a href="shedule.html" class="shedule-top__day-number">20</a>
+                                <ul class="shedule-top__day-load">
+                                    <li data-load="low"></li>
+                                    <li data-load="middle"></li>
+                                    <li data-load="low"></li>
+                                </ul>
+                            </div>
+                            <div class="shedule-top__day">
+                                <div class="shedule-top__day-name">пт</div><a href="shedule.html" class="shedule-top__day-number">21</a>
+                                <ul class="shedule-top__day-load">
+                                    <li data-load="low"></li>
+                                    <li data-load="high"></li>
+                                    <li data-load="middle"></li>
+                                </ul>
+                            </div>
+                            <div class="shedule-top__day">
+                                <div class="shedule-top__day-name">
+                                    <color>сб</color>
+                                </div><a href="shedule.html" class="shedule-top__day-number">22</a>
+                                <ul class="shedule-top__day-load">
+                                    <li data-load="middle"></li>
+                                    <li data-load="high"></li>
+                                    <li data-load="middle"></li>
+                                </ul>
+                            </div>
+                            <div class="shedule-top__day">
+                                <div class="shedule-top__day-name">
+                                    <color>вс</color>
+                                </div><a href="shedule.html" class="shedule-top__day-number">23</a>
+                                <ul class="shedule-top__day-load">
+                                    <li data-load="middle"></li>
+                                    <li data-load="high"></li>
+                                    <li data-load="middle"></li>
+                                </ul>
+                            </div>
+                            <div class="shedule-top__day">
+                                <div class="shedule-top__day-name">пн</div><a href="shedule.html" class="shedule-top__day-number">24</a>
+                                <ul class="shedule-top__day-load">
+                                    <li data-load="low"></li>
+                                    <li data-load="high"></li>
+                                    <li data-load="low"></li>
+                                </ul>
+                            </div>
+                            <div class="shedule-top__day _day-off">
+                                <div class="shedule-top__day-name">вт</div>
+                                <div class="shedule-top__day-number">25</div>
+                                <div class="shedule-top__weekend">выходной</div>
+                            </div>
+                            <div class="shedule-top__day">
+                                <div class="shedule-top__day-name">пн</div><a href="shedule.html" class="shedule-top__day-number">26</a>
+                                <ul class="shedule-top__day-load">
+                                    <li data-load="low"></li>
+                                    <li data-load="high"></li>
+                                    <li data-load="low"></li>
+                                </ul>
+                            </div>
+                            <div class="shedule-top__day">
+                                <div class="shedule-top__day-name">чт</div><a href="shedule.html" class="shedule-top__day-number">27</a>
+                                <ul class="shedule-top__day-load">
+                                    <li data-load="low"></li>
+                                    <li data-load="middle"></li>
+                                    <li data-load="low"></li>
+                                </ul>
+                            </div>
+                            <div class="shedule-top__day">
+                                <div class="shedule-top__day-name">пт</div><a href="shedule.html" class="shedule-top__day-number">28</a>
+                                <ul class="shedule-top__day-load">
+                                    <li data-load="low"></li>
+                                    <li data-load="high"></li>
+                                    <li data-load="middle"></li>
+                                </ul>
+                            </div>
+                            <div class="shedule-top__day">
+                                <div class="shedule-top__day-name">
+                                    <color>сб</color>
+                                </div><a href="shedule.html" class="shedule-top__day-number">29</a>
+                                <ul class="shedule-top__day-load">
+                                    <li data-load="middle"></li>
+                                    <li data-load="high"></li>
+                                    <li data-load="middle"></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="text block">
-                    <ul>
-                        <li><a href="home.html">Главная</a></li>
-                        <li><a href="shedule.html">Расписание/a></a></li>
-                        <li><a href="404.html">404</a></li>
-                        <li><a href="contacts.html">Контакты</a></li>
-                        <li><a href="about.html">О планетарии</a></li>
-                        <li><a href="cafe.html">Кафе</a></li>
-                        <li><a href="history.html">История</a></li>
-                        <li><a href="private-events.html">Частные мероприятия</a></li>
-                        <li><a href="events.html">Мероприятия</a></li>
-                        <li><a href="excursions.html">Экскурсии</a></li>
-                        <li><a href="excursion.html">Экскурсия Детальная</a></li>
-                        <li><a href="lections.html">Курсы и лекции</a></li>
-                        <li><a href="lection.html">Курсы и лекции Детальная</a></li>
-                        <li><a href="afisha.html">Афиша</a></li>
-                        <li><a href="event.html">Афиша Детальная</a></li>
-                        <li><a href="visitor-special-needs.html">Для людей с особыми потребностями</a></li>
-                        <li><a href="exponats.html">Экспонаты</a></li>
-                        <li><a href="exponat.html">Экспонат Детальная</a></li>
-                        <li><a href="blogs.html">Научный блог</a></li>
-                        <li><a href="blogs-astro.html">Научный блог (Астрономические новости)</a></li>
-                        <li><a href="blog.html">Научный блог (Детальная)</a></li>
-                        <li><a href="shop.html">Магазин</a></li>
-                        <li><a href="vacancies.html">Вакансии</a></li>
-                        <li><a href="press.html">Пресса</a></li>
-                        <li><a href="sovet.html">Учёный совет</a></li>
-                        <li><a href="guides.html">Экскурсоводы</a></li>
-                        <li><a href="directors.html">Руководство Планетария</a></li>
-                        <li><a href="visitors.html">Посетителям</a></li>
-                        <li><a href="faq.html">Вопросы и ответы</a></li>
-                        <li><a href="legends.html">Легенды</a></li>
-                        <li><a href="legend.html">Легенда (детальная)</a></li>
-                        <li><a href="rules.html">Правила</a></li>
-                        <li><a href="rule.html">Правила (детальная)</a></li>
-                        <li><a href="ui.html">UI</a></li>
+                <div class="shedule-head">
+                    <div class="filter-popup">
+                        <div class="filter-popup__head">
+                            <div class="filter-popup__title h2">Фильтры</div><button class="filter-popup__close"><svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M13 13L27 27M13 27L27 13" stroke="#0F0F0F" stroke-width="1.6" />
+                                </svg></button>
+                        </div>
+                        <form action="json/events.json" method="POST" class="filter-popup__body">
+                            <div class="filter-popup__columns">
+                                <div class="filter-popup__block"><select name="" data-placehilder="for_whom" class="select">
+                                        <option value="Вариант 1">Вариант 1</option>
+                                        <option value="Вариант 2">Вариант 2</option>
+                                        <option value="Вариант 3">Вариант 3</option>
+                                        <option value="Вариант 4">Вариант 4</option>
+                                    </select></div>
+                                <div class="filter-popup__block"><select name="type" data-placehilder="Тип программы" class="select">
+                                        <option value="Экскурсии">Экскурсии</option>
+                                        <option value="Курсы и лекции">Курсы и лекции</option>
+                                        <option value="Фильмы">Фильмы</option>
+                                    </select></div>
+                                <div class="filter-popup__block"><select name="zal" data-placehilder="Зал" class="select">
+                                        <option value="Большой">Большой</option>
+                                        <option value="Малый">Малый</option>
+                                    </select></div>
+                            </div>
+                            <div class="filter-popup__btns"><button type="submit" class="filter-popup__sbmt">Применить</button></div>
+                        </form>
+                    </div>
+                    <ul class="shedule-files">
+                        <li><a href="#"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 15.64L15.7917 12.28M12 15.64L8.5 12.28M12 15.64V5M5 11.72V19H19V11.72" stroke="currentColor" stroke-width="1.4" />
+                                </svg> <span>Расписание с 23 по 30 сентября</span></a></li>
+                        <li><a href="#"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 15.64L15.7917 12.28M12 15.64L8.5 12.28M12 15.64V5M5 11.72V19H19V11.72" stroke="currentColor" stroke-width="1.4" />
+                                </svg> <span>Расписание на Октябрь 2023 года</span></a></li>
                     </ul>
+                </div>
+                <div class="block">
+                    <div class="shedule-items">
+                        <div class="shedule-item">
+                            <div>
+                                <div class="shedule-item__img-wrap _br">
+                                    <div class="shedule-item__img"><img src="img/gallery-1.jpg" alt="" /></div>
+                                    <ul class="shedule-item__img-tags">
+                                        <li class="_bg">Новинка</li>
+                                        <li>Эксклюзив</li>
+                                        <li>Создано студией планетария</li>
+                                    </ul>
+                                    <ul class="shedule-item__awards">
+                                        <li class="event-preview__award"><span class="shedule-item__award-top">ПОБЕДИТЕЛЬ</span> <span class="shedule-item__award-name">НАЗВАНИЕ КОНКУРСА В ТРИ СТРОЧКИ</span> <span class="shedule-item__award-year">2023</span></li>
+                                        <li class="event-preview__award"><span class="shedule-item__award-top">ПОБЕДИТЕЛЬ</span> <span class="shedule-item__award-name">НАЗВАНИЕ КОНКУРСА В ТРИ СТРОЧКИ</span> <span class="shedule-item__award-year">2023</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="shedule-item__content">
+                                <div class="h2 shedule-item__title">Фильм «Загадка Жизни»</div>
+                                <ul class="shedule-item__info">
+                                    <li><span class="icon-marker"></span> Малый Звёздный зал</li>
+                                    <li><span class="icon-person"></span> 6+</li>
+                                    <li><span class="icon-time"></span> Мультиязычный</li>
+                                    <li><span class="icon-time"></span> 60 минут</li>
+                                    <li><span class="icon-time"></span> 60 минут</li>
+                                </ul>
+                                <p>Увлекательная звёздная программа о том, как меняется движение неба в зависимости от места наблюдения.</p>
+                                <div class="shedule-item__shedule"><a href="#" class="h2 shedule-item__shedule-name">Фильм<br />«Загадка Жизни»</a>
+                                    <ul class="shedule-item__slots">
+                                        <li class="shedule-item__slot"><a href="#">09:00</a>
+                                            <p>от 800 ₽</p>
+                                        </li>
+                                        <li class="shedule-item__slot"><a href="#">10:00</a>
+                                            <p>от 800 ₽</p>
+                                        </li>
+                                        <li class="shedule-item__slot"><a href="#">11:00</a>
+                                            <p>от 800 ₽</p>
+                                        </li>
+                                        <li class="shedule-item__slot"><a href="#">12:00</a>
+                                            <p>от 800 ₽</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="shedule-item__shedule"><a href="#" class="h2 shedule-item__shedule-name">Звёздная программа<br />«Времена года. Лето»</a>
+                                    <ul class="shedule-item__slots">
+                                        <li class="shedule-item__slot"><a href="#">09:00</a>
+                                            <p>от 800 ₽</p>
+                                        </li>
+                                        <li class="shedule-item__slot"><a href="#">10:00</a>
+                                            <p>от 800 ₽</p>
+                                        </li>
+                                        <li class="shedule-item__slot"><a href="#">11:00</a>
+                                            <p>от 800 ₽</p>
+                                        </li>
+                                        <li class="shedule-item__slot"><a href="#">12:00</a>
+                                            <p>от 800 ₽</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="shedule-item">
+                            <div>
+                                <div class="shedule-item__img-wrap _br">
+                                    <div class="shedule-item__img"><img src="img/events.jpg" alt="" /></div>
+                                    <ul class="shedule-item__img-tags">
+                                        <li>Эксклюзив</li>
+                                        <li>Создано студией планетария</li>
+                                    </ul>
+                                    <ul class="shedule-item__awards">
+                                        <li class="event-preview__award"><span class="shedule-item__award-top">ПОБЕДИТЕЛЬ</span> <span class="shedule-item__award-name">НАЗВАНИЕ КОНКУРСА В ТРИ СТРОЧКИ</span> <span class="shedule-item__award-year">2023</span></li>
+                                        <li class="event-preview__award"><span class="shedule-item__award-top">ПОБЕДИТЕЛЬ</span> <span class="shedule-item__award-name">НАЗВАНИЕ КОНКУРСА В ТРИ СТРОЧКИ</span> <span class="shedule-item__award-year">2023</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="shedule-item__content">
+                                <div class="h2 shedule-item__title">Фильм «Обитаемая луна»</div>
+                                <ul class="shedule-item__info">
+                                    <li><span class="icon-marker"></span> Малый Звёздный зал</li>
+                                    <li><span class="icon-person"></span> 6+</li>
+                                    <li><span class="icon-time"></span> Мультиязычный</li>
+                                    <li><span class="icon-time"></span> 60 минут</li>
+                                    <li><span class="icon-time"></span> 60 минут</li>
+                                </ul>
+                                <p>Увлекательная звёздная программа о том, как меняется движение неба в зависимости от места наблюдения.</p>
+                                <div class="shedule-item__shedule">
+                                    <ul class="shedule-item__slots">
+                                        <li class="shedule-item__slot"><a href="#">09:00</a>
+                                            <p>от 800 ₽</p>
+                                        </li>
+                                        <li class="shedule-item__slot"><a href="#">10:00</a>
+                                            <p>от 800 ₽</p>
+                                        </li>
+                                        <li class="shedule-item__slot"><a href="#">11:00</a>
+                                            <p>от 800 ₽</p>
+                                        </li>
+                                        <li class="shedule-item__slot"><a href="#">12:00</a>
+                                            <p>от 800 ₽</p>
+                                        </li>
+                                        <li class="shedule-item__slot"><a href="#">13:00</a>
+                                            <p>от 800 ₽</p>
+                                        </li>
+                                        <li class="shedule-item__slot"><a href="#">14:00</a>
+                                            <p>от 800 ₽</p>
+                                        </li>
+                                        <li class="shedule-item__slot"><a href="#">15:00</a>
+                                            <p>от 800 ₽</p>
+                                        </li>
+                                        <li class="shedule-item__slot"><a href="#">17:00</a>
+                                            <p>от 800 ₽</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="shedule-item">
+                            <div>
+                                <div class="shedule-item__img-wrap _br">
+                                    <div class="shedule-item__img"><img src="img/gallery-3.jpg" alt="" /></div>
+                                    <ul class="shedule-item__img-tags">
+                                        <li>Эксклюзив</li>
+                                        <li>Создано студией планетария</li>
+                                    </ul>
+                                    <ul class="shedule-item__awards">
+                                        <li class="event-preview__award"><span class="shedule-item__award-top">ПОБЕДИТЕЛЬ</span> <span class="shedule-item__award-name">НАЗВАНИЕ КОНКУРСА В ТРИ СТРОЧКИ</span> <span class="shedule-item__award-year">2023</span></li>
+                                        <li class="event-preview__award"><span class="shedule-item__award-top">ПОБЕДИТЕЛЬ</span> <span class="shedule-item__award-name">НАЗВАНИЕ КОНКУРСА В ТРИ СТРОЧКИ</span> <span class="shedule-item__award-year">2023</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="shedule-item__content">
+                                <div class="h2 shedule-item__title">Звёздная программа «Небо в движении»</div>
+                                <ul class="shedule-item__info">
+                                    <li><span class="icon-marker"></span> Малый Звёздный зал</li>
+                                    <li><span class="icon-person"></span> 6+</li>
+                                    <li><span class="icon-time"></span> Мультиязычный</li>
+                                    <li><span class="icon-time"></span> 60 минут</li>
+                                    <li><span class="icon-time"></span> 60 минут</li>
+                                </ul>
+                                <p>Сами того не замечая, мы все время находимся в движении - даже, когда стоим на месте. Стоит поднять голову и взглянуть на небо, как мы заметим движение небесных объектов, звезд и планет. И даже наше собственное!</p>
+                                <div class="shedule-item__shedule">
+                                    <ul class="shedule-item__slots">
+                                        <li class="shedule-item__slot"><a href="#">09:00</a>
+                                            <p>от 800 ₽</p>
+                                        </li>
+                                        <li class="shedule-item__slot"><a href="#">10:00</a>
+                                            <p>от 800 ₽</p>
+                                        </li>
+                                        <li class="shedule-item__slot"><a href="#">11:00</a>
+                                            <p>от 800 ₽</p>
+                                        </li>
+                                        <li class="shedule-item__slot"><a href="#">12:00</a>
+                                            <p>от 800 ₽</p>
+                                        </li>
+                                        <li class="shedule-item__slot"><a href="#">13:00</a>
+                                            <p>от 800 ₽</p>
+                                        </li>
+                                        <li class="shedule-item__slot"><a href="#">14:00</a>
+                                            <p>от 800 ₽</p>
+                                        </li>
+                                        <li class="shedule-item__slot"><a href="#">15:00</a>
+                                            <p>от 800 ₽</p>
+                                        </li>
+                                        <li class="shedule-item__slot"><a href="#">17:00</a>
+                                            <p>от 800 ₽</p>
+                                        </li>
+                                        <li class="shedule-item__slot"><a href="#">19:00</a>
+                                            <p>от 800 ₽</p>
+                                        </li>
+                                        <li class="shedule-item__slot"><a href="#">20:00</a>
+                                            <p>от 800 ₽</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="shedule-item">
+                            <div>
+                                <div class="shedule-item__img-wrap _br">
+                                    <div class="shedule-item__img"><img src="img/excursions-5.jpg" alt="" /></div>
+                                    <ul class="shedule-item__img-tags">
+                                        <li>Эксклюзив</li>
+                                        <li>Создано студией планетария</li>
+                                    </ul>
+                                    <ul class="shedule-item__awards">
+                                        <li class="event-preview__award"><span class="shedule-item__award-top">ПОБЕДИТЕЛЬ</span> <span class="shedule-item__award-name">НАЗВАНИЕ КОНКУРСА В ТРИ СТРОЧКИ</span> <span class="shedule-item__award-year">2023</span></li>
+                                        <li class="event-preview__award"><span class="shedule-item__award-top">ПОБЕДИТЕЛЬ</span> <span class="shedule-item__award-name">НАЗВАНИЕ КОНКУРСА В ТРИ СТРОЧКИ</span> <span class="shedule-item__award-year">2023</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="shedule-item__content">
+                                <div class="h2 shedule-item__title">Фильм «Динозавры. История выживших»</div>
+                                <ul class="shedule-item__info">
+                                    <li><span class="icon-marker"></span> Малый Звёздный зал</li>
+                                    <li><span class="icon-person"></span> 6+</li>
+                                    <li><span class="icon-time"></span> Мультиязычный</li>
+                                    <li><span class="icon-time"></span> 60 минут</li>
+                                    <li><span class="icon-time"></span> 60 минут</li>
+                                </ul>
+                                <p>Как многие дети, Селеста очарована динозаврами. Однажды, когда она готовилась к докладу об их вымирании, в её комнате появилось волшебное и мудрое существо – Лунч. Он задал ей загадочный вопрос: а что, если среди нас всё ещё есть динозавры?</p>
+                                <div class="shedule-item__shedule">
+                                    <ul class="shedule-item__slots">
+                                        <li class="shedule-item__slot"><a href="#">09:00</a>
+                                            <p>от 800 ₽</p>
+                                        </li>
+                                        <li class="shedule-item__slot"><a href="#">10:00</a>
+                                            <p>от 800 ₽</p>
+                                        </li>
+                                        <li class="shedule-item__slot"><a href="#">11:00</a>
+                                            <p>от 800 ₽</p>
+                                        </li>
+                                        <li class="shedule-item__slot"><a href="#">12:00</a>
+                                            <p>от 800 ₽</p>
+                                        </li>
+                                        <li class="shedule-item__slot"><a href="#">13:00</a>
+                                            <p>от 800 ₽</p>
+                                        </li>
+                                        <li class="shedule-item__slot"><a href="#">14:00</a>
+                                            <p>от 800 ₽</p>
+                                        </li>
+                                        <li class="shedule-item__slot"><a href="#">15:00</a>
+                                            <p>от 800 ₽</p>
+                                        </li>
+                                        <li class="shedule-item__slot"><a href="#">17:00</a>
+                                            <p>от 800 ₽</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <footer class="footer">
