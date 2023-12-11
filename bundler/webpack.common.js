@@ -174,6 +174,13 @@ module.exports = {
             filename: "blog.html",
         }),
         new HtmlWebpackPlugin({
+            template: path.resolve(
+                __dirname,
+                "../src/pages/history/history.njk"
+            ),
+            filename: "history.html",
+        }),
+        new HtmlWebpackPlugin({
             template: path.resolve(__dirname, "../src/pages/blogs/blogs.njk"),
             filename: "blogs.html",
         }),
@@ -286,7 +293,7 @@ module.exports = {
                         loader: "file-loader",
                         options: {
                             outputPath: "assets/images/",
-                            publicPath: '../images/'
+                            publicPath: "../images/",
                         },
                     },
                 ],
