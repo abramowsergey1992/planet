@@ -1,0 +1,78 @@
+.p404 {
+    width: 100vw;
+    height: 100svh;
+    position: relative;
+    background: #e7e4e5;
+    overflow: hidden;
+    &__go-home {
+        padding: 12px 20px;
+        color: #fff;
+        background: var(--dark);
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 24px;
+        letter-spacing: -0.16px;
+        color: #fff;
+        position: absolute;
+        border-radius: 50px;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 70px;
+        @media (max-width: 1025px) {
+            bottom: 40px;
+        }
+        &:hover {
+            background: var(--gradient);
+        }
+    }
+    &__logo {
+        position: absolute;
+        top: 26px;
+        left: 50%;
+        z-index: 4;
+        transform: translateX(-50%);
+    }
+    &__bg-1,
+    &__bg-2 {
+        position: absolute;
+        width: 100%;
+        transform: translateY(-50%);
+        top: 50%;
+        min-width: 1600px;
+    }
+    &__ray {
+        position: absolute;
+        top: 0%;
+        left: 50%;
+        transform: translateX(-50%) rotate(10deg);
+        padding-top: 50svh;
+        width: 450px;
+        height: 100%;
+        img {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translateX(-50%);
+        }
+    }
+    &__content {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+    &__desc {
+        text-align: center;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 24px; /* 150% */
+        letter-spacing: -0.16px;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -00px;
+    }
+}
+

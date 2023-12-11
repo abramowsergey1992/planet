@@ -21,11 +21,13 @@ document.querySelectorAll(".filter-popup__block").forEach((el) => {
 });
 let filterPopup = document.querySelector(".filter-popup");
 document
-    .querySelector(".filter-menu-open")?.addEventListener("click", function () {
+    .querySelector(".filter-menu-open")
+    ?.addEventListener("click", function () {
         filterPopup.classList.add("_open");
     });
 document
-    .querySelector(".filter-popup__close")?.addEventListener("click", function () {
+    .querySelector(".filter-popup__close")
+    ?.addEventListener("click", function () {
         filterPopup.classList.remove("_open");
     });
 
@@ -36,7 +38,8 @@ let filter = document.querySelector("#afishafilter");
 const url = filter?.getAttribute("action");
 const method = filter?.getAttribute("method");
 document
-    .querySelector(".filter-popup__clear")?.addEventListener("click", function () {
+    .querySelector(".filter-popup__clear")
+    ?.addEventListener("click", function () {
         filter.querySelectorAll("input").forEach((item) => {
             item.checked = false;
         });
@@ -46,7 +49,6 @@ function render() {
         method: method,
         body: new FormData(filter),
         headers: {
-            "Content-Type": "application/json",
             "X-CSRF-TOKEN": document
                 .querySelector('meta[name="csrf-token"]')
                 .getAttribute("content"),
@@ -174,3 +176,4 @@ if (filter) {
         render();
     });
 }
+
