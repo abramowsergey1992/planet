@@ -1,6 +1,7 @@
 import { GLOBALS } from '../../js/globals';
 import gsap from 'gsap';
 import Lottie from 'lottie-web';
+import Swiper from "swiper/bundle";
 
 // Video
 if (!GLOBALS.mobile) {
@@ -132,3 +133,21 @@ if (!GLOBALS.mobile) {
         });
     });
 }
+
+
+// Blog slider
+document.querySelectorAll('.js-hp-blog-swiper').forEach((el) => {
+    new Swiper(el, {
+        slidesPerView: 1.33,
+        setWrapperSize: true,
+        spaceBetween: 12,
+        pagination: {
+            el: el.querySelector(".slider-3"),
+            type: "bullets",
+        },
+        breakpoints: {
+            600: { slidesPerView: 2, spaceBetween: 16 },
+            1024: { slidesPerView: 3 },
+        },
+    });
+});

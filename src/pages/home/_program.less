@@ -23,7 +23,6 @@
     }
 
     @media (max-width: @screen-s) {
-        grid-template-columns: 1fr;
         grid-gap: 12px;
     }
 }
@@ -42,6 +41,10 @@
         grid-column-end: 2;
         grid-row-start: 1;
         grid-row-end: 2;
+
+        @media (max-width: @screen-s) {
+            grid-column: span 2 !important;
+        }
     }
 
     &:nth-child(2) {
@@ -68,6 +71,10 @@
             grid-column-start: 1;
             grid-column-end: 3;
             grid-row-start: 3;
+        }
+
+        @media (max-width: @screen-s) {
+            grid-column: span 2 !important;
         }
     }
 }
@@ -157,6 +164,10 @@
     height: 100%;
     box-sizing: border-box;
     padding: 30px;
+
+    @media (max-width: @screen-s) {
+        padding: 20px;
+    }
 }
 
 .hp-program__tickets-title,
@@ -165,6 +176,10 @@
     font-size: 24px;
     font-weight: 500;
     font-family: Unbounded;
+
+    @media (max-width: @screen-s) {
+        font-size: 16px;
+    }
 }
 
 .hp-program__load {
@@ -174,6 +189,10 @@
     .hp-program__card-inner {
         display: flex;
         flex-direction: column;
+
+        @media (max-width: @screen-s) {
+            padding: 30px 20px;
+        }
     }
 }
 
@@ -289,6 +308,11 @@
         justify-content: center;
         align-items: center;
         z-index: 2;
+
+        @media (max-width: @screen-s) {
+            justify-content: flex-start;
+            align-items: flex-end;
+        }
     }
 }
 
@@ -299,6 +323,10 @@
     top: 5%;
     aspect-ratio: 1;
 
+    @media (max-width: @screen-s) {
+        height: 70%;
+    }
+
     html.mobile & {
         background: url('../../../static/img/comet.svg') no-repeat right top;
         background-size: contain;
@@ -306,6 +334,10 @@
         right: 8%;
         top: 10%;
         opacity: 0.3;
+
+        @media (max-width: @screen-s) {
+            height: 60%;
+        }
     }
 }
 
@@ -388,6 +420,7 @@
 
     @media (max-width: @screen-s) {
         padding-top: 128%;
+        padding-top: 0;
     }
 
     .hp-program__card-inner {
@@ -410,7 +443,13 @@
             padding-left: 20px;
             padding-right: 20px;
             padding-bottom: 30px;
+            position: relative;
+            min-height: 340px;
         }
+    }
+
+    .hp-program__program-title {
+        font-size: 24px;
     }
 }
 
@@ -425,6 +464,7 @@
 
     @media (max-width: @screen-s) {
         min-width: unset;
+        margin-top: 40px;
     }
 
     li {

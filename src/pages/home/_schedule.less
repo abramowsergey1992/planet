@@ -1,9 +1,5 @@
 .hp-schedule {
 
-    .swiper-slide:nth-child(3) ~ .swiper-slide {
-        display: none;
-    }
-
     .event-preview__info {
         display: flex;
     }
@@ -35,114 +31,13 @@
         }
     }
 
-    .swiper {
-        overflow: visible;
-
-        .swiper-slide {
-
-            &:nth-child(2) {
-                .event-preview,
-                .event-preview__img {
-                    transition-delay: 0.2s;
-                }
-            }
-    
-            &:nth-child(3) {
-                .event-preview,
-                .event-preview__img {
-                    transition-delay: 0.4s;
-                }
-            }
-        }
-    }
-
-    @media (min-width: 1025px) {
-
-        .swiper {
-            margin-top: 40px;
-        }
-
-        .swiper-wrapper {
-            width: 100% !important;
-            display: grid;
-            grid-gap: 45px 16px;
-            grid-template-columns: 1fr 1fr 1fr;
-        }
-
-        .swiper-slide {
-        
-            &:nth-child(1) {
-                width: 100% !important;
-                grid-column: span 3;
-
-                .event-preview {
-                    display: grid;
-                    grid-template-columns: repeat(6, 1fr);
-                    grid-gap: 5px 16px;
-                }
-
-                .event-preview__top {
-                    aspect-ratio: 2.74;
-                    grid-column: span 6;
-                    padding: 50px;
-                }
-
-                .event-preview__middle {
-                    grid-column: span 2;
-                }
-
-                .event-preview__bottom-wrap {
-                    grid-column: span 4;
-
-                    > :nth-child(1) {
-                        margin-top: 26px;
-                    }
-                }
-
-                .event-preview__awards {
-                    display: flex;
-                }
-
-                .event-preview__award {
-                    width: 150px;
-                    height: 108px;
-                }
-
-                .event-preview__award-top {
-                    font-size: 7.5px;
-                }
-
-                .event-preview__award-name {
-                    font-size: 8.8px;
-                }
-
-                .event-preview__award-year {
-                    font-size: 12px;
-                }
-            }
-
-            &:nth-child(2) {
-                width: 100% !important;
-                grid-column: span 2;
-
-                .event-preview__top {
-                    aspect-ratio: 1.82;
-                }
-            }
-
-            &:nth-child(3) {
-                width: 100% !important;
-            }
-        }
-    }
-
     @media (min-width: @screen-hp-large) {
 
-        .swiper-wrapper {
+        .hp-schedule__inner {
             grid-gap: 45px 22px;
         }
 
-        .swiper-slide {
+        .hp-shedule__item {
 
             &:nth-child(1) {
 
@@ -164,6 +59,116 @@
     @media (max-width: @screen-s) {
         .event-preview__top {
             aspect-ratio: 1.46;
+        }
+    }
+}
+
+.hp-schedule__inner {
+    display: grid;
+    margin-top: 40px;
+    display: grid;
+    grid-gap: 45px 16px;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    @media (max-width: 1024px) {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    @media (max-width: @screen-s) {
+        grid-gap: 40px;
+        grid-template-columns: 1fr;
+    }
+}
+
+.hp-shedule__item {
+
+    &:nth-child(2) {
+        .event-preview,
+        .event-preview__img {
+            transition-delay: 0.2s;
+        }
+    }
+
+    &:nth-child(3) {
+        .event-preview,
+        .event-preview__img {
+            transition-delay: 0.4s;
+        }
+    }
+
+    @media (min-width: 701px) {
+
+        &:nth-child(1) {
+            grid-column: span 3;
+
+            .event-preview__top {
+                aspect-ratio: 1.8;
+                grid-column: span 6;
+                padding: 50px;
+            }
+
+            .event-preview__awards {
+                display: flex;
+            }
+
+            .event-preview__award {
+                width: 150px;
+                height: 108px;
+            }
+
+            .event-preview__award-top {
+                font-size: 7.5px;
+            }
+
+            .event-preview__award-name {
+                font-size: 8.8px;
+            }
+
+            .event-preview__award-year {
+                font-size: 12px;
+            }
+        }
+
+        &:nth-child(2) {
+
+        }
+    }
+
+    @media (min-width: 1025px) {
+        &:nth-child(1) {
+            grid-column: span 3;
+
+            .event-preview {
+                display: grid;
+                grid-template-columns: repeat(6, 1fr);
+                grid-gap: 5px 16px;
+            }
+
+            .event-preview__top {
+                aspect-ratio: 2.74;
+                grid-column: span 6;
+                padding: 50px;
+            }
+
+            .event-preview__middle {
+                grid-column: span 2;
+            }
+
+            .event-preview__bottom-wrap {
+                grid-column: span 4;
+
+                > :nth-child(1) {
+                    margin-top: 26px;
+                }
+            }
+        }
+
+        &:nth-child(2) {
+            grid-column: span 2;
+
+            .event-preview__top {
+                aspect-ratio: 1.82;
+            }
         }
     }
 }
