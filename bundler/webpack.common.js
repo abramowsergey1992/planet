@@ -181,6 +181,10 @@ module.exports = {
             filename: "history.html",
         }),
         new HtmlWebpackPlugin({
+            template: path.resolve(__dirname, "../src/pages/404/404.njk"),
+            filename: "404.html",
+        }),
+        new HtmlWebpackPlugin({
             template: path.resolve(__dirname, "../src/pages/blogs/blogs.njk"),
             filename: "blogs.html",
         }),
