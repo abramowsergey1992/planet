@@ -10,7 +10,7 @@ module.exports = {
     entry: path.resolve(__dirname, "../src/js/index.js"),
     target: "web",
     output: {
-        filename: "assets/js/bundle.[contenthash].js",
+        filename: "assets/js/bundle.js",
         path: path.resolve(__dirname, "../docs"),
     },
     devtool: "source-map",
@@ -211,7 +211,7 @@ module.exports = {
         //     filename: 'styles.html'
         // }),
         new MiniCSSExtractPlugin({
-            filename: "assets/css/[name].[contenthash].css",
+            filename: "assets/css/[name].css",
         }),
 
         // Using svg symbols: <svg><use xlink:href="/img/symbols.svg#sym-name"></use></svg>
