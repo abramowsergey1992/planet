@@ -5,10 +5,10 @@ document.querySelectorAll(".select").forEach((select) => {
         select: select,
         settings: {
             showSearch: false,
+            placeholderText: select.dataset.placeholder,
         },
         events: {
             afterChange: (newVal) => {
-                console.log("ssss");
                 select.closest("form")?.dispatchEvent(new Event("change"));
             },
         },

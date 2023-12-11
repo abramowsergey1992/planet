@@ -31,6 +31,13 @@ module.exports = {
             filename: "home.html",
         }),
         new HtmlWebpackPlugin({
+            template: path.resolve(
+                __dirname,
+                "../src/pages/shedule/shedule.njk"
+            ),
+            filename: "shedule.html",
+        }),
+        new HtmlWebpackPlugin({
             template: path.resolve(__dirname, "../src/pages/ui/ui.njk"),
             filename: "ui.html",
         }),
