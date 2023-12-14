@@ -12,6 +12,7 @@ import "../pages/event/event.js";
 import "../pages/home/home.js";
 import "../pages/press/press.js";
 import "../pages/lection/lection.js";
+import "../pages/quiz/quiz.js";
 import "../pages/faq/faq.js";
 import "../pages/404/404.js";
 import "../pages/excursion/excursion.js";

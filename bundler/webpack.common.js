@@ -27,6 +27,24 @@ module.exports = {
             filename: "about.html",
         }),
         new HtmlWebpackPlugin({
+            template: path.resolve(
+                __dirname,
+                "../src/pages/quiz/quiz-detail.njk"
+            ),
+            filename: "quiz-detail.html",
+        }),
+        new HtmlWebpackPlugin({
+            template: path.resolve(__dirname, "../src/pages/quiz/quiz.njk"),
+            filename: "quiz.html",
+        }),
+        new HtmlWebpackPlugin({
+            template: path.resolve(
+                __dirname,
+                "../src/pages/quiz/quiz-result.njk"
+            ),
+            filename: "quiz-result.html",
+        }),
+        new HtmlWebpackPlugin({
             template: path.resolve(__dirname, "../src/pages/home/home.njk"),
             filename: "home.html",
         }),

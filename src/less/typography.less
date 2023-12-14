@@ -1,7 +1,13 @@
 body {
     font-family: Circe;
 }
-
+h1,
+.h1 {
+    & + h2,
+    & + .h2 {
+        margin-top: 0;
+    }
+}
 .h1-big {
     font-size: 400px;
     line-height: normal;

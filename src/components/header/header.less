@@ -11,6 +11,7 @@
     z-index: 100;
     .inner {
         background: #e7e4e5;
+        transition: background 0.3s;
         position: relative;
         z-index: 3;
     }
@@ -288,7 +289,6 @@
         }
     }
     &__sub-wrapper {
-        
         @media (min-width: 1201px) {
             position: relative;
             z-index: 1;
@@ -306,17 +306,13 @@
             box-sizing: border-box;
             visibility: hidden;
             will-change: transform;
-            transition: clip-path var(--anim-dur) var(--anim-fun) var(--anim-dur),
-                        visibility 0s linear calc(var(--anim-dur) * 2);
-            clip-path: polygon(
-                -50vw 0%,
-                150vw 0%,
-                150vw 0%,
-                -50vw 0%
-            );
+            transition: clip-path var(--anim-dur) var(--anim-fun)
+                    var(--anim-dur),
+                visibility 0s linear calc(var(--anim-dur) * 2);
+            clip-path: polygon(-50vw 0%, 150vw 0%, 150vw 0%, -50vw 0%);
 
             &:before {
-                content: '';
+                content: "";
                 display: block;
                 width: 100vw;
                 position: absolute;
@@ -332,15 +328,10 @@
                 visibility: visible;
                 z-index: 2;
                 transition: clip-path 0.3s;
-                clip-path: polygon(
-                    -50vw 0%,
-                    150vw 0%,
-                    150vw 100%,
-                    -50vw 100%
-                );
+                clip-path: polygon(-50vw 0%, 150vw 0%, 150vw 100%, -50vw 100%);
             }
         }
-        
+
         @media (max-width: 1200px) {
             display: none;
 
@@ -397,7 +388,7 @@
                 transition: color 0.2s ease;
 
                 html.desktop &:hover {
-                    color: #E65F1D;
+                    color: #e65f1d;
                 }
             }
             @media (max-width: 1200px) {
@@ -411,7 +402,7 @@
                     position: relative;
                     opacity: 0;
                     transition: opacity 0.2s ease-in-out,
-                                transform 0s linear 0.2s;
+                        transform 0s linear 0.2s;
 
                     &:nth-child(1) {
                         transform: translateY(var(--anim-y));
@@ -486,8 +477,7 @@
         @media (min-width: 1201px) {
             // transform: translateY(10px);
             opacity: 0;
-            transition: opacity 0.1s ease,
-                        transform 0s linear 0.1s;
+            transition: opacity 0.1s ease, transform 0s linear 0.1s;
 
             .main-menu__sub._active & {
                 transform: translateY(0);
@@ -572,12 +562,11 @@
     }
 
     .main-menu {
-
         &__sub {
-
             &:before {
                 background: var(--dark);
             }
         }
     }
 }
+

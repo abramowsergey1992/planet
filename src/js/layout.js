@@ -1,6 +1,18 @@
 document.querySelectorAll(".btn-border").forEach((el) => {
     el.innerHTML = `<span class="btn-border__content">${el.innerHTML}</span>`;
 });
+if (window.scrollY) {
+    document.body.classList.remove("_scroll-top");
+} else {
+    document.body.classList.add("_scroll-top");
+}
+document.addEventListener("scroll", function () {
+    if (window.scrollY > 50) {
+        document.body.classList.remove("_scroll-top");
+    } else {
+        document.body.classList.add("_scroll-top");
+    }
+});
 
 document.querySelectorAll("blockquote").forEach((el) => {
     el.classList.add("blockquote");
@@ -10,6 +22,22 @@ document.querySelectorAll(".icon-time").forEach((el) => {
     el.innerHTML = `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M12 6.85714V12L15.4286 15.4286M12 20C7.58172 20 4 16.4183 4 12C4 7.58172 7.58172 4 12 4C16.4183 4 20 7.58172 20 12C20 16.4183 16.4183 20 12 20Z" stroke="currentColor" stroke-width="1.4"/>
 </svg>
+`;
+});
+document.querySelectorAll(".icon-next").forEach((el) => {
+    el.innerHTML = `<svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            d="M12.9554 17L18 12M18 12L12.9554 6.99998M18 12H6"
+                            stroke="currentColor"
+                            stroke-width="1.4"
+                        />
+                    </svg>
 `;
 });
 document.querySelectorAll(".icon-marker").forEach((el) => {
@@ -63,7 +91,18 @@ document.querySelectorAll(".icon-load").forEach((el) => {
     el.innerHTML = `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M11.2 5V4.2H12.8V5H11.2ZM12.8 8.76923V9.56923H11.2V8.76923H12.8ZM11.2 15.2308V14.4308H12.8V15.2308H11.2ZM12.8 19V19.8H11.2V19H12.8ZM15.2308 12.7951H14.4308V11.1951H15.2308V12.7951ZM19 11.1951H19.8V12.7951H19V11.1951ZM5.00103 12.8L4.20103 12.801L4.19897 11.201L4.99897 11.2L5.00103 12.8ZM8.7682 11.1951L9.5682 11.1941L9.57026 12.7941L8.77026 12.7951L8.7682 11.1951ZM12.8 5V8.76923H11.2V5H12.8ZM12.8 15.2308V19H11.2V15.2308H12.8ZM15.2308 11.1951H19V12.7951H15.2308V11.1951ZM4.99897 11.2L8.7682 11.1951L8.77026 12.7951L5.00103 12.8L4.99897 11.2ZM17.9503 7.18107L14.7195 10.4118L13.5882 9.28047L16.8189 6.0497L17.9503 7.18107ZM7.18107 6.0497L10.4118 9.28047L9.28047 10.4118L6.0497 7.18107L7.18107 6.0497ZM16.8189 17.9503L13.5882 14.7195L14.7195 13.5882L17.9503 16.8189L16.8189 17.9503ZM10.4118 14.7195L7.18107 17.9503L6.0497 16.8189L9.28047 13.5882L10.4118 14.7195Z" fill="currentColor"/>
 </svg>
-
+`;
+});
+document.querySelectorAll(".icon-category").forEach((el) => {
+    el.innerHTML = `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M11.5 8H19.5M11.5 16H19.5M6 6H8C8.55228 6 9 6.44772 9 7V9C9 9.55228 8.55228 10 8 10H6C5.44772 10 5 9.55228 5 9V7C5 6.44772 5.44772 6 6 6ZM6 14H8C8.55228 14 9 14.4477 9 15V17C9 17.5523 8.55228 18 8 18H6C5.44772 18 5 17.5523 5 17V15C5 14.4477 5.44772 14 6 14Z" stroke="currentColor" stroke-width="1.4"/>
+</svg>
+`;
+});
+document.querySelectorAll(".icon-quest").forEach((el) => {
+    el.innerHTML = `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 15V12H13C14.6569 12 16 10.6569 16 9V8.8C16 7.2536 14.7464 6 13.2 6H12C10.3431 6 9 7.34315 9 9M11 18H13" stroke="currentColor" stroke-width="1.4"/>
+</svg>
 `;
 });
 document.querySelectorAll(".overfolow-x").forEach((el) => {

@@ -67,8 +67,9 @@
     <div class="event-preview__bottom-wrap">
         {{ item.desc | safe }}
         <div class="event-preview__bottom">
+            {% if item.btnText %}
             <a href="{{ item.link }}" class="btn-border">{{ item.btnText }}</a>
-            {% if item.moreBtn %}
+            {% endif %} {% if item.moreBtn %}
             <a href="{{ item.link }}" class="btn-link">Подробнее</a>
             {% endif %}
         </div>

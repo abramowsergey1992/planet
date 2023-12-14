@@ -1,0 +1,102 @@
+{% extends "pages/_includes/layout.njk" %} {% block title %}Квизы{% endblock %}
+{% block main %}
+
+{{
+    breadcrumbs.create(
+        {
+            items: [
+                {
+                    text: "Главная",
+                    href: "home.html"
+                }
+            ]
+        },
+        "Квизы"
+    )
+}}
+
+<h1>Квизы</h1>
+<div class="top-row">
+    <ul class="top-row__filters overfolow-x">
+        <li>
+            <a href="#" class="_active">Все квизы</a>
+        </li>
+        <li>
+            <a href="#">Для детей</a>
+        </li>
+        <li>
+            <a href="#">Для взрослых</a>
+        </li>
+        <li>
+            <a href="#">Научные квизы</a>
+        </li>
+        <li>
+            <a href="#">Научные квизы</a>
+        </li>
+    </ul>
+</div>
+<div class="block">
+    <div class="events-grid">
+        {{ event.create({ img: "img/e-1.jpg", title: "Открытие новой
+        экзопланеты!", info: [ { icon:"category", text:"Для детей" }, {
+        icon:"load", text:"Сложность 1" } , { icon:"quest", text:"Кол-во
+        вопросов" }], desc: "
+        <p>
+            Астрономы обнаружили потенциально обитаемую планету. Она вращается
+            вокруг красного карлика. Изучение продолжается.
+        </p>
+        ", btnText:"Подробнее", link:"quiz-detail.html" } ) }} {{ event.create({
+        img: "img/e-2.jpg", title: "Марс: обнаружены следы воды!", info: [ {
+        icon:"category", text:"Для детей" }, { icon:"load", text:"Сложность 1" }
+        , { icon:"quest", text:"Кол-во вопросов" }], desc: "
+        <p>
+            Астрономы обнаружили потенциально обитаемую планету. Она вращается
+            вокруг красного карлика. Изучение продолжается.
+        </p>
+        ", btnText:"Подробнее", link:"quiz-detail.html" } ) }} {{ event.create({
+        img: "img/e-3.jpg", title: "Открытие новой экзопланеты!", info: [ {
+        icon:"category", text:"Для детей" }, { icon:"load", text:"Сложность 1" }
+        , { icon:"quest", text:"Кол-во вопросов" }], desc: "
+        <p>
+            Астрономы обнаружили потенциально обитаемую планету. Она вращается
+            вокруг красного карлика. Изучение продолжается.
+        </p>
+        ", btnText:"Подробнее", link:"quiz-detail.html" } ) }} {{ event.create({
+        img: "img/e-1.jpg", title: "Открытие новой экзопланеты!", info: [ {
+        icon:"category", text:"Для детей" }, { icon:"load", text:"Сложность 1" }
+        , { icon:"quest", text:"Кол-во вопросов" }], desc: "
+        <p>
+            Астрономы обнаружили потенциально обитаемую планету. Она вращается
+            вокруг красного карлика. Изучение продолжается.
+        </p>
+        ", btnText:"Подробнее", link:"quiz-detail.html" } ) }} {{ event.create({
+        img: "img/e-2.jpg", title: "Марс: обнаружены следы воды!", info: [ {
+        icon:"category", text:"Для детей" }, { icon:"load", text:"Сложность 1" }
+        , { icon:"quest", text:"Кол-во вопросов" }], desc: "
+        <p>
+            Астрономы обнаружили потенциально обитаемую планету. Она вращается
+            вокруг красного карлика. Изучение продолжается.
+        </p>
+        ", btnText:"Подробнее", link:"quiz-detail.html" } ) }} {{ event.create({
+        img: "img/e-3.jpg", title: "Открытие новой экзопланеты!", info: [ {
+        icon:"category", text:"Для детей" }, { icon:"load", text:"Сложность 1" }
+        , { icon:"quest", text:"Кол-во вопросов" }], desc: "
+        <p>
+            Астрономы обнаружили потенциально обитаемую планету. Она вращается
+            вокруг красного карлика. Изучение продолжается.
+        </p>
+        ", btnText:"Подробнее", link:"quiz-detail.html" } ) }}
+    </div>
+    <div class="paginator">
+        <a href="#" class="paginator__prev"></a>
+        <a href="#" class="paginator__link _active">1</a>
+        <a href="#" class="paginator__link">2</a>
+        <a href="#" class="paginator__link">3</a>
+        <a href="#" class="paginator__link">4</a>
+        <a href="#" class="paginator__link">5</a>
+        <a href="#" class="paginator__link">6</a>
+        <a href="#" class="paginator__next"></a>
+    </div>
+</div>
+{% endblock %}
+
