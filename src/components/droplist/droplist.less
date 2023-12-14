@@ -1,0 +1,56 @@
+.droplist {
+    position: relative;
+    display: inline-block;
+}
+
+.droplist__drop {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: max(100%, 160px);
+    visibility: hidden;
+    padding-top: 10px;
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+    transition: opacity 0.3s ease,
+                transform 0.3s ease,
+                visibility 0s linear 0.3s;
+
+    html.desktop .droplist:hover &,
+    html.desktop .droplist:focus-within &,
+    html.mobile .droplist._is-active & {
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+        transition: opacity 0.3s ease,
+                    transform 0.3s ease;
+    }
+}
+
+.droplist__list {
+    list-style: none;
+    display: block;
+    padding: 8px 0;
+    background: #fff;
+    border-radius: 20px;
+    margin: 0;
+
+    li {
+        display: block;
+        padding: 6px 15px;
+        font-size: 16px;
+        line-height: 1.5;
+        font-weight: bold;
+    }
+
+    a {
+        color: var(--dark);
+        display: block;
+
+        html.desktop &:hover {
+            color: var(--link);
+        }
+    }
+}

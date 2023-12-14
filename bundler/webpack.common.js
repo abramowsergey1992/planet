@@ -231,6 +231,10 @@ module.exports = {
             template: path.resolve(__dirname, "../src/pages/afisha/afisha.njk"),
             filename: "afisha.html",
         }),
+        new HtmlWebpackPlugin({
+            template: path.resolve(__dirname, "../src/pages/podcast/podcast.njk"),
+            filename: "podcast.html",
+        }),
         // new HtmlWebpackPlugin({
         //     template: path.resolve(__dirname, '../src/pages/styles/styles.njk'),
         //     filename: 'styles.html'

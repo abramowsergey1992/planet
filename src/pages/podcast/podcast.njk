@@ -1,0 +1,128 @@
+{% extends "pages/_includes/layout.njk" %} {% block title %}Подкаст{%
+endblock %} {% block bodyclass %}page-podcast theme-dark{%
+endblock %} {% block main %}
+
+{{
+    breadcrumbs.create(
+        {
+            items: [
+                {
+                    text: "Главная",
+                    href: "home.html"
+                },
+                {
+                    text: "Научный блог",
+                    href: "home.html"
+                },
+                {
+                    text: "Подкасты",
+                    href: "podcasts.html"
+                },
+                {
+                    text: "Одиночные подкасты",
+                    href: "podcasts.html"
+                }
+            ]
+        },
+        "Экзопланеты: Проксима Центавра b"
+    )
+}}
+
+<div class="top-row">
+    <h1>Экзопланеты: Проксима Центавра b</h1>
+</div>
+
+<div class="podcast-player">
+    <div class="podcast-player__widget">
+        <iframe frameborder="0" style="border:none;width:100%;height:210px;" width="100%" height="210" src="https://music.yandex.ru/iframe/track/102733713/12405512"></iframe>
+    </div>
+
+    <div class="podcast-player__droplist">
+        <div class="droplist js-droplist">
+            <button class="btn-border js-droplist-trigger">Другие платформы</button>
+            <div class="droplist__drop">
+                <ul class="droplist__list">
+                    <li><a href="https://www.apple.com/itunes/" target="_blank">iTunes</a></li>
+                    <li><a href="https://spotify.com/" target="_blank">Spotify</a></li>
+                    <li><a href="https://castbox.fm/" target="_blank">Castbox</a></li>
+                    <li><a href="https://www.youtube.com/" target="_blank">Youtube</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="content-inner">
+    <div class="content-inner__main">
+        <div class="text block">
+            <h2>О выпуске</h2>
+            <p>В первом выпуске подкаста «Загадочные миры: Экзопланеты» мы отправимся на путешествие к ближайшей к нам звезде, Проксиме Центавра. Мы углубимся в изучение одной из самых замечательных и близких к нам экзопланет — Проксимы Центавра b. Подробно расскажем об её открытии, физических характеристиках, и возможности наличия жизни на этой удивительной экзопланете. Мы поделимся последними данными и теориями о том, что этот отдаленный мир может предложить человечеству.</p>
+            <blockquote>Планетарий превратился из оптического прибора в купольный театр, воссоздающий космические сцены с помощью передовой техники</blockquote>
+            <p>Во втором абзаце мы углубимся в анализ научных исследований и миссий, предназначенных для изучения Проксимы Центавра b. Обсудим потенциальные миссии и технологии, которые могут помочь нам лучше понять эту экзопланету и её потенциальную роль в будущем космическом исследовании. Не упустите шанс узнать о возможной роли этой экзопланеты в будущем космической экспансии человечества!</p>
+            <img src="./content/podcast.jpg" alt="" />
+        </div>
+    </div>
+</div>
+
+<div class="white-block">
+    <div class="block another-programs">
+        <div class="h1">Другие одиночные подкасты</div>
+        <div class="slider-3 swiper js-trigger-animate">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    {{ event.create(
+                        {
+                            img: "img/about-9.jpg",
+                            title: "Необитаемый Марс и ракета российского стартапа",
+                            info: [
+                                {
+                                    icon: "date",
+                                    text: "15 мая 2023"
+                                },
+                                { icon:"time", text:"60 минут" }
+                            ],
+                            desc: "",
+                            link:"event.html"
+                        }
+                    ) }}
+                </div>
+                <div class="swiper-slide">
+                    {{ event.create(
+                        {
+                            img: "img/about-10.jpg",
+                            title: "Астрономия в годы войны",
+                            info: [
+                                {
+                                    icon: "date",
+                                    text: "13 мая 2023"
+                                },
+                                { icon:"time", text:"45 минут" }
+                            ],
+                            desc: "",
+                            link:"event.html"
+                        }
+                    ) }}
+                </div>
+                <div class="swiper-slide">
+                    {{ event.create(
+                        {
+                            img: "img/about-11.jpg",
+                            title: "Сказки о небе. Происхождение Луны",
+                            info: [
+                                {
+                                    icon: "date",
+                                    text: "14 мая 2023"
+                                },
+                                { icon:"time", text:"50 минут" }
+                            ],
+                            desc: "",
+                            link:"event.html"
+                        }
+                    ) }}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
