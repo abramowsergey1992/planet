@@ -493,23 +493,24 @@
             color: var(--link);
         }
     }
-    &__slot {
-        a {
-            display: block;
-            padding: 8px 12px;
-            border-radius: 50px;
-            background: #fff;
-            font-size: 14px;
-            font-style: normal;
-            font-weight: 700;
-            line-height: 20px;
-            margin: 0 0 10px 0;
-            letter-spacing: -0.14px;
-            &:hover {
-                background: var(--gradient);
-                color: #fff;
-            }
+    &__slot-buy {
+        display: block;
+        padding: 8px 12px;
+        border-radius: 50px;
+        background: #fff;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 20px;
+        margin: 0 0 10px 0;
+        letter-spacing: -0.14px;
+        border: 0 solid;
+        &:hover {
+            background: var(--gradient);
+            color: #fff;
         }
+    }
+    &__slot {
         p {
             font-size: 14px;
             font-style: normal;
@@ -523,6 +524,92 @@
         @media (max-width: 992px) {
             padding-top: 0;
         }
+    }
+}
+.shedule-popup {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 333;
+    display: none;
+    transition: opacity 0.3s;
+    &._display {
+        display: block;
+    }
+    &._animate {
+        opacity: 1;
+    }
+    &__overlay {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.8);
+    }
+    &__close {
+        position: absolute;
+        right: 5px;
+        top: 5px;
+        width: 25px;
+        height: 25px;
+        background: transparent;
+        border: 0 solid;
+        cursor: pointer;
+        z-index: 100;
+        &:hover {
+            &::after,
+            &::before {
+                background: var(--link);
+            }
+        }
+        &::after,
+        &::before {
+            height: 100%;
+            width: 4px;
+            left: 50%;
+            display: block;
+            content: "";
+            margin-left: -2px;
+            background: #fff;
+            border-radius: 2px;
+            top: 0px;
+            position: absolute;
+        }
+        &::after {
+            transform: rotate(-45deg);
+        }
+        &::before {
+            transform: rotate(45deg);
+        }
+    }
+    &__content {
+        position: relative;
+        z-index: 4;
+        width: 100%;
+        height: calc(100%);
+        background: #fff;
+        iframe {
+            position: absolute;
+            width: 100%;
+            left: 0;
+            top: 0;
+            height: 100%;
+        }
+    }
+    &__flex {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 30px;
     }
 }
 
