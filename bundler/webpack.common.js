@@ -34,6 +34,10 @@ module.exports = {
             filename: "quiz-detail.html",
         }),
         new HtmlWebpackPlugin({
+            template: path.resolve(__dirname, "../src/pages/shems/shems.njk"),
+            filename: "shems.html",
+        }),
+        new HtmlWebpackPlugin({
             template: path.resolve(__dirname, "../src/pages/quiz/quiz.njk"),
             filename: "quiz.html",
         }),
