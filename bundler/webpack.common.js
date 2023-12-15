@@ -240,13 +240,17 @@ module.exports = {
             filename: "podcasts.html",
         }),
         new HtmlWebpackPlugin({
+            template: path.resolve(__dirname, "../src/pages/podcasts/podcasts-single.njk"),
+            filename: "podcasts-single.html",
+        }),
+        new HtmlWebpackPlugin({
+            template: path.resolve(__dirname, "../src/pages/podcasts/podcasts-serial.njk"),
+            filename: "podcasts-serial.html",
+        }),
+        new HtmlWebpackPlugin({
             template: path.resolve(__dirname, "../src/pages/podcast/podcast.njk"),
             filename: "podcast.html",
         }),
-        // new HtmlWebpackPlugin({
-        //     template: path.resolve(__dirname, '../src/pages/styles/styles.njk'),
-        //     filename: 'styles.html'
-        // }),
         new MiniCSSExtractPlugin({
             filename: "assets/css/[name].css",
         }),

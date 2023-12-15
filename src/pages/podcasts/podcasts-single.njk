@@ -1,0 +1,127 @@
+{% extends "pages/_includes/layout.njk" %} {% block title %}Одиночные подкасты{%
+endblock %} {% block bodyclass %}page-podcasts{%
+endblock %} {% block main %}
+
+{{
+    breadcrumbs.create(
+        {
+            items: [
+                {
+                    text: "Главная",
+                    href: "home.html"
+                },
+                {
+                    text: "Научный блог",
+                    href: "blogs.html"
+                },
+                {
+                    text: "Подкасты",
+                    href: "podcasts.html"
+                }
+            ]
+        },
+        "Одиночные подкасты"
+    )
+}}
+
+<div class="top-row">
+    <h1>Одиночные Подкасты</h1>
+</div>
+
+<div class="block">
+    <div class="events-grid">
+        {{ event.create(
+            {
+                img: "img/about-9.jpg",
+                title: "Необитаемый Марс и ракета российского стартапа",
+                info: [
+                    {
+                        icon: "date",
+                        text: "15 мая 2023"
+                    },
+                    { icon:"time", text:"60 минут" }
+                ],
+                desc: "",
+                link:"event.html"
+            }
+        ) }}
+        {{ event.create(
+            {
+                img: "img/about-10.jpg",
+                title: "Астрономия в годы войны",
+                info: [
+                    {
+                        icon: "date",
+                        text: "13 мая 2023"
+                    },
+                    { icon:"time", text:"45 минут" }
+                ],
+                desc: "",
+                link:"event.html"
+            }
+        ) }}
+        {{ event.create(
+            {
+                img: "img/about-11.jpg",
+                title: "Сказки о небе. Происхождение Луны",
+                info: [
+                    {
+                        icon: "date",
+                        text: "14 мая 2023"
+                    },
+                    { icon:"time", text:"50 минут" }
+                ],
+                desc: "",
+                link:"event.html"
+            }
+        ) }}
+        {{ event.create(
+            {
+                img: "img/about-5.jpg",
+                title: "На краю Вселенной",
+                info: [
+                    {
+                        icon: "date",
+                        text: "15 мая 2023"
+                    },
+                    { icon:"time", text:"60 минут" }
+                ],
+                desc: "",
+                link:"event.html"
+            }
+        ) }}
+        {{ event.create(
+            {
+                img: "img/about-6.jpg",
+                title: "Астрономические открытия",
+                info: [
+                    {
+                        icon: "date",
+                        text: "13 мая 2023"
+                    },
+                    { icon:"time", text:"45 минут" }
+                ],
+                desc: "",
+                link:"event.html"
+            }
+        ) }}
+        {{ cardPreview.create({ 
+            img: "podcast-external.jpg", 
+            link: "https://www.apple.com/itunes/", 
+            title: "Подписывайся в Apple Podcast, чтобы не пропустить новые выпуски" }) 
+        }}
+    </div>
+
+    <div class="paginator">
+        <a href="#" class="paginator__prev"></a>
+        <a href="#" class="paginator__link _active">1</a>
+        <a href="#" class="paginator__link">2</a>
+        <a href="#" class="paginator__link">3</a>
+        <a href="#" class="paginator__link">4</a>
+        <a href="#" class="paginator__link">5</a>
+        <a href="#" class="paginator__link">6</a>
+        <a href="#" class="paginator__next"></a>
+    </div>
+</div>
+
+{% endblock %}
