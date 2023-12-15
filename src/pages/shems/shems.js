@@ -6,6 +6,12 @@ document.querySelectorAll(".shema-page ").forEach((el) => {
         slidesPerView: 1,
         setWrapperSize: true,
         allowTouchMove: false,
+        autoHeight: true,
+        breakpoints: {
+            800: {
+                autoHeight: false,
+            },
+        },
     });
 
     el.querySelectorAll(".shema-navs button").forEach((filter) => {

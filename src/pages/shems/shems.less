@@ -1,13 +1,55 @@
+.shema-page {
+    &__legends {
+        margin-top: 16px;
+        background: #fff;
+        padding: 40px 30px;
+        list-style: none;
+        display: grid;
+        grid-template-columns: auto auto auto auto auto auto;
+        gap: 20px;
+        @media (max-width: 1200px) {
+            grid-template-columns: auto auto auto auto;
+        }
+        @media (max-width: 830px) {
+            grid-template-columns: auto auto auto;
+        }
+        @media (max-width: 700px) {
+            grid-template-columns: 1fr 1fr;
+        }
+        @media (max-width: 550px) {
+            grid-template-columns: 1fr;
+        }
+        li {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 15px;
+            font-weight: 700;
+            line-height: 24px; /* 150% */
+            letter-spacing: -0.16px;
+        }
+    }
+}
 .shema {
     background: #fff;
     .swiper-slide {
         padding: 16px;
+        height: auto;
+        @media (max-width: 880px) {
+            height: inherit;
+        }
     }
     &__row {
         display: grid;
         grid-template-columns: 2fr 1fr;
         gap: 20px;
         min-height: calc(100vh - 400px);
+        @media (max-width: 1100px) {
+            grid-template-columns: auto 400px;
+        }
+        @media (max-width: 880px) {
+            grid-template-columns: 1fr;
+        }
     }
     &__svg-wrap {
         display: flex;
@@ -16,6 +58,12 @@
         justify-content: center;
         svg {
             max-width: 673.83px;
+            @media (max-width: 880px) {
+                height: 330px;
+                width: 673px;
+                max-width: 100%;
+                object-fit: cover;
+            }
             [data-room] {
                 transition: opacity 0.5s;
                 opacity: 0;
@@ -28,6 +76,9 @@
     &__svg-legends {
         background: #e7e4e5;
         padding: 40px;
+        @media (max-width: 600px) {
+            padding: 30px 16px;
+        }
         .h2,
         h2 {
             margin-top: auto;
