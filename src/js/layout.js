@@ -105,6 +105,9 @@ document.querySelectorAll(".icon-quest").forEach((el) => {
 </svg>
 `;
 });
+document.querySelectorAll(".icon-headphones").forEach((el) => {
+    el.innerHTML = `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M18 14H17C16.4477 14 16 14.4477 16 15V18C16 18.5523 16.4477 19 17 19H18C18.5523 19 19 18.5523 19 18V15C19 14.4477 18.5523 14 18 14ZM18 14V11C18 7.68629 15.3137 5 12 5C8.68629 5 6 7.68629 6 11V14M6 14H7C7.55228 14 8 14.4477 8 15V18C8 18.5523 7.55228 19 7 19H6C5.44772 19 5 18.5523 5 18V15C5 14.4477 5.44772 14 6 14Z" stroke="currentColor" stroke-width="1.6"/></svg> `;
+});
 document.querySelectorAll(".overfolow-x").forEach((el) => {
     el.innerHTML = `<div class="overfolow-x__scroll"><div><div class="overfolow-x__size">${el.innerHTML}</div></div></div>
     <div class="overfolow-x__prev"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11.0446 17L6 12M6 12L11.0446 6.99998M6 12H18" stroke="currentColor" stroke-width="1.4"/></svg></div>
@@ -146,4 +149,3 @@ document.querySelectorAll(".overfolow-x").forEach((el) => {
     });
     rescroll();
 });
-

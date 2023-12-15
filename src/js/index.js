@@ -23,6 +23,7 @@ import "../pages/afisha/afisha.js";
 import "../pages/contacts/contacts.js";
 import "../pages/vacancies/vacancies.js";
 import "../pages/history/history.js";
+import "../pages/podcasts/podcasts.js";
 
 // Must be the last
 import "../components/preloader/preloader.js";

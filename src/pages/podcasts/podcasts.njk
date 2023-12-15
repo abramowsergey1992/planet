@@ -1,0 +1,271 @@
+{% extends "pages/_includes/layout.njk" %} {% block title %}Подкасты{%
+endblock %} {% block bodyclass %}page-podcasts{%
+endblock %} {% block main %}
+
+{{
+    breadcrumbs.create(
+        {
+            items: [
+                {
+                    text: "Главная",
+                    href: "home.html"
+                },
+                {
+                    text: "Научный блог",
+                    href: "home.html"
+                }
+            ]
+        },
+        "Подкасты"
+    )
+}}
+
+<div class="top-row">
+    <h1>Подкасты</h1>
+</div>
+<h2 class="h2">Новые подкасты</h2>
+<div class="podcasts-recent">
+    {%
+        set recent = [
+            {
+                'title': 'Сумерки в самую короткую ночь года',
+                'episode': '14',
+                'days': '2',
+                'img': 'img/about-10.jpg'
+            },
+            {
+                'title': 'Теория большого взрыва',
+                'episode': '3',
+                'days': '5',
+                'img': 'img/about-9.jpg'
+            },
+            {
+                'title': 'Что мы знаем о кометах?',
+                'episode': '14',
+                'days': '2',
+                'img': 'img/about-11.jpg'
+            }
+        ]
+    %}
+
+    <div class="swiper js-podcasts-recent">
+        <div class="swiper-wrapper">  
+            {% for item in recent %}
+                <div class="swiper-slide">
+                    <a class="podcast-recent" href="podcast.html">
+                        <div class="podcast-recent__inner">
+                            <div class="podcast-recent__img">
+                                <div class="podcast-recent__img-inner" style="background-image: url('{{ item.img }}')"></div>
+                                <div class="podcast-recent__play"></div>
+                            </div>
+                            <div class="podcast-recent__content">
+                                <div class="podcast-recent__title">{{ item.title }}</div>
+                                <div class="podcast-recent__content-bottom">
+                                    <div class="podcast-recent__episode">{{ item.episode }} выпуск</div>
+                                    <div class="podcast-recent__date">Обновлено: {{ item.days }} дн назад</div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+<div class="top-row">
+    <h2 class="h1">Одиночные подкасты</h2>
+    <a href="podcasts-single.html">Все одиночные подкасты</a>
+</div>
+
+<div class="block">
+    <div class="events-grid">
+        {{ event.create(
+            {
+                img: "img/about-9.jpg",
+                title: "Необитаемый Марс и ракета российского стартапа",
+                info: [
+                    {
+                        icon: "date",
+                        text: "15 мая 2023"
+                    },
+                    { icon:"time", text:"60 минут" }
+                ],
+                desc: "",
+                link:"event.html"
+            }
+        ) }}
+        {{ event.create(
+            {
+                img: "img/about-10.jpg",
+                title: "Астрономия в годы войны",
+                info: [
+                    {
+                        icon: "date",
+                        text: "13 мая 2023"
+                    },
+                    { icon:"time", text:"45 минут" }
+                ],
+                desc: "",
+                link:"event.html"
+            }
+        ) }}
+        {{ event.create(
+            {
+                img: "img/about-11.jpg",
+                title: "Сказки о небе. Происхождение Луны",
+                info: [
+                    {
+                        icon: "date",
+                        text: "14 мая 2023"
+                    },
+                    { icon:"time", text:"50 минут" }
+                ],
+                desc: "",
+                link:"event.html"
+            }
+        ) }}
+        {{ event.create(
+            {
+                img: "img/about-5.jpg",
+                title: "На краю Вселенной",
+                info: [
+                    {
+                        icon: "date",
+                        text: "15 мая 2023"
+                    },
+                    { icon:"time", text:"60 минут" }
+                ],
+                desc: "",
+                link:"event.html"
+            }
+        ) }}
+        {{ event.create(
+            {
+                img: "img/about-6.jpg",
+                title: "Астрономические открытия",
+                info: [
+                    {
+                        icon: "date",
+                        text: "13 мая 2023"
+                    },
+                    { icon:"time", text:"45 минут" }
+                ],
+                desc: "",
+                link:"event.html"
+            }
+        ) }}
+        {{ cardPreview.create({ 
+            img: "podcast-external.jpg", 
+            link: "https://www.apple.com/itunes/", 
+            title: "Подписывайся в Apple Podcast, чтобы не пропустить новые выпуски" }) 
+        }}
+    </div>
+
+    <div class="podcasts-link-all">
+        <a href="podcasts-single.html">Все одиночные подкасты</a>
+    </div>
+
+    <div class="top-row">
+        <h2 class="h1">Серийные подкасты</h2>
+        <a href="podcasts-serial.html">Все серийные подкасты</a>
+    </div>
+
+    <div class="events-grid">
+        {{ event.create(
+            {
+                img: "img/about-9.jpg",
+                title: "Необитаемый Марс и ракета российского стартапа",
+                info: [
+                    { icon: "date", text: "15 мая 2023" },
+                    { icon:"time", text:"60 минут" },
+                    { icon: "headphones", text: "11 выпуск" }
+                ],
+                desc: "",
+                link:"event.html"
+            }
+        ) }}
+        {{ event.create(
+            {
+                img: "img/about-10.jpg",
+                title: "Астрономия в годы войны",
+                info: [
+                    { icon: "date", text: "13 мая 2023" },
+                    { icon:"time", text:"45 минут" },
+                    { icon: "headphones", text: "11 выпуск" }
+                ],
+                desc: "",
+                link:"event.html"
+            }
+        ) }}
+        {{ event.create(
+            {
+                img: "img/about-11.jpg",
+                title: "Сказки о небе. Происхождение Луны",
+                info: [
+                    { icon: "date", text: "14 мая 2023" },
+                    { icon:"time", text:"50 минут" },
+                    { icon: "headphones", text: "11 выпуск" }
+                ],
+                desc: "",
+                link:"event.html"
+            }
+        ) }}
+        {{ event.create(
+            {
+                img: "img/about-5.jpg",
+                title: "На краю Вселенной",
+                info: [
+                    { icon: "date", text: "15 мая 2023" },
+                    { icon:"time", text:"60 минут" },
+                    { icon: "headphones", text: "11 выпуск" }
+                ],
+                desc: "",
+                link:"event.html"
+            }
+        ) }}
+        {{ event.create(
+            {
+                img: "img/about-6.jpg",
+                title: "Астрономические открытия",
+                info: [
+                    { icon: "date", text: "13 мая 2023" },
+                    { icon:"time", text:"45 минут" },
+                    { icon: "headphones", text: "11 выпуск" }
+                ],
+                desc: "",
+                link:"event.html"
+            }
+        ) }}
+        {{ event.create(
+            {
+                img: "img/about-7.jpg",
+                title: "Тунгусский феномен",
+                info: [
+                    { icon: "date", text: "13 мая 2023" },
+                    { icon:"time", text:"45 минут" },
+                    { icon: "headphones", text: "11 выпуск" }
+                ],
+                desc: "",
+                link:"event.html"
+            }
+        ) }}
+    </div>
+
+    <div class="podcasts-link-all">
+        <a href="podcasts-single.html">Все серийные подкасты</a>
+    </div>
+
+    <div class="paginator">
+        <a href="#" class="paginator__prev"></a>
+        <a href="#" class="paginator__link _active">1</a>
+        <a href="#" class="paginator__link">2</a>
+        <a href="#" class="paginator__link">3</a>
+        <a href="#" class="paginator__link">4</a>
+        <a href="#" class="paginator__link">5</a>
+        <a href="#" class="paginator__link">6</a>
+        <a href="#" class="paginator__next"></a>
+    </div>
+</div>
+
+{% endblock %}
