@@ -29,6 +29,10 @@
     &__title {
         margin-top: 7px;
         margin-bottom: 7px;
+        .color();
+        color: var(--dark);
+        -webkit-text-fill-color: unset;
+        transition: color 0.2s ease;
     }
     
     html.desktop & {
@@ -38,7 +42,7 @@
             }
 
             .news-card__title {
-                .color();
+                color: transparent
             }
         }
     }

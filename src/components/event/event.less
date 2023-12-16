@@ -47,6 +47,10 @@
     &__title {
         margin-top: 16px;
         margin-bottom: 16px;
+        .color();
+        color: var(--dark);
+        -webkit-text-fill-color: unset;
+        transition: color 0.2s ease;
     }
     &__bottom {
         display: flex;
@@ -258,6 +262,11 @@
             .v-hidden();
         }
     }
+    .btn-link {
+        color: var(--dark);
+        .color();
+        -webkit-text-fill-color: unset;
+    }
 }
 
 html.desktop .event-preview__hover-link:hover {
@@ -269,13 +278,13 @@ html.desktop .event-preview__hover-link:hover {
 
     ~ .event-preview__middle {
         .event-preview__title {
-            .color();
+            color: transparent;
         }
     }
 
     ~ .event-preview__bottom-wrap {
         .btn-link {
-            .color();
+            color: transparent;
         }
     }
 }
