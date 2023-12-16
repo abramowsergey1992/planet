@@ -300,18 +300,18 @@
                             </div>
                         </div>
                         <div class="footer__right">
-                            <form action="#" method="post" class="footer__subs">
+                            <form action="./json/form.json" method="post" class="footer__subs js-form" autocomplete="off">
                                 <div class="footer__title">ПОДПИШИТЕСЬ НА НОВОСТИ</div>
                                 <div class="footer__subs-bg">
-                                    <div class="footer__subs-row"><input class="footer__subs-mail" type="email" placeholder="Электронная почта" name="mail" /> <button class="footer__subs-btn" type="submit"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M20 20L15.4286 15.4286M10.8571 17.7143C7.07005 17.7143 4 14.6442 4 10.8571C4 7.07005 7.07005 4 10.8571 4C14.6442 4 17.7143 7.07005 17.7143 10.8571C17.7143 14.6442 14.6442 17.7143 10.8571 17.7143Z" stroke="currentColor" stroke-width="1.4" />
-                                            </svg></button></div>
-                                </div><label class="footer__subs-agree"><input type="checkbox" name="agree" />
-                                    <div class="footer__subs-agree-indicator"></div>
-                                    <div class="footer__subs-agree-text">Подписываясь на рассылку вы соглашаетесь <a href="#">
-                                            <color>с&nbsp;политикой обработки персональных данных</color>
-                                        </a></div>
-                                </label>
+                                    <div class="footer__subs-row"><input class="footer__subs-mail" type="email" placeholder="Электронная почта" name="mail" required /> <button class="footer__subs-btn js-form-submit" type="submit"><svg>
+                                                <use xlink:href="./img/symbols.svg#sym-icon-send"></use>
+                                            </svg> <span>Отправить</span></button></div>
+                                </div><label class="footer__subs-agree"><input type="checkbox" name="agree" required /> <span class="footer__subs-agree-indicator"></span> <span class="footer__subs-agree-text">Подписываясь на рассылку, вы соглашаетесь <a href="/policy" target="_blank"><span>с&nbsp;политикой обработки персональных данных</span></a></span></label>
+                                <div class="footer__subs-message">
+                                    <div class="footer__subs-message-inner">
+                                        <div class="footer__subs-message-text js-form-msg-text"></div><button class="btn js-form-ok" type="button"><span>ОК</span></button>
+                                    </div>
+                                </div>
                             </form>
                             <ul class="footer__socials">
                                 <li><a href="#"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -9,6 +9,7 @@ import "../components/gallerySlider/gallerySlider.js";
 import "../components/sliders/sliders.js";
 import "../components/video-popup/video-popup.js";
 import "../components/droplist/droplist.js";
+import "../components/form/form.js";
 import "../pages/event/event.js";
 import "../pages/home/home.js";
 import "../pages/press/press.js";
