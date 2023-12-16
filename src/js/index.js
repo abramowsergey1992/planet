@@ -12,6 +12,7 @@ import "../components/droplist/droplist.js";
 import "../pages/event/event.js";
 import "../pages/home/home.js";
 import "../pages/press/press.js";
+import "../pages/glosarii/glosarii.js";
 import "../pages/lection/lection.js";
 import "../pages/quiz/quiz.js";
 import "../pages/shedule/shedule.js";

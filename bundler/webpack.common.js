@@ -60,6 +60,13 @@ module.exports = {
             filename: "shedule.html",
         }),
         new HtmlWebpackPlugin({
+            template: path.resolve(
+                __dirname,
+                "../src/pages/glosarii/glosarii.njk"
+            ),
+            filename: "glosarii.html",
+        }),
+        new HtmlWebpackPlugin({
             template: path.resolve(__dirname, "../src/pages/ui/ui.njk"),
             filename: "ui.html",
         }),
@@ -236,19 +243,31 @@ module.exports = {
             filename: "afisha.html",
         }),
         new HtmlWebpackPlugin({
-            template: path.resolve(__dirname, "../src/pages/podcasts/podcasts.njk"),
+            template: path.resolve(
+                __dirname,
+                "../src/pages/podcasts/podcasts.njk"
+            ),
             filename: "podcasts.html",
         }),
         new HtmlWebpackPlugin({
-            template: path.resolve(__dirname, "../src/pages/podcasts/podcasts-single.njk"),
+            template: path.resolve(
+                __dirname,
+                "../src/pages/podcasts/podcasts-single.njk"
+            ),
             filename: "podcasts-single.html",
         }),
         new HtmlWebpackPlugin({
-            template: path.resolve(__dirname, "../src/pages/podcasts/podcasts-serial.njk"),
+            template: path.resolve(
+                __dirname,
+                "../src/pages/podcasts/podcasts-serial.njk"
+            ),
             filename: "podcasts-serial.html",
         }),
         new HtmlWebpackPlugin({
-            template: path.resolve(__dirname, "../src/pages/podcast/podcast.njk"),
+            template: path.resolve(
+                __dirname,
+                "../src/pages/podcast/podcast.njk"
+            ),
             filename: "podcast.html",
         }),
         new MiniCSSExtractPlugin({
