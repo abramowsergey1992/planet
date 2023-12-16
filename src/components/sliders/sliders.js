@@ -8,7 +8,7 @@ document.querySelectorAll(".slider-3").forEach((el) => {
         setWrapperSize: true,
         spaceBetween: 12,
         pagination: {
-            el: el.querySelector(".slider-3"),
+            el: el.querySelector(".slider-3__pagi"),
             type: "bullets",
         },
         breakpoints: {
