@@ -1,7 +1,7 @@
 .rules-grid {
     margin-bottom: 84px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 22px;
     @media (max-width: 1600px) {
         gap: 16px;
@@ -9,9 +9,13 @@
     @media (max-width: 992px) {
         gap: 12px;
     }
+    @media (max-width: 1600px) {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
     @media (max-width: 890px) {
         grid-template-columns: 1fr 1fr;
     }
+
     @media (max-width: 600px) {
         grid-template-columns: 1fr;
     }
