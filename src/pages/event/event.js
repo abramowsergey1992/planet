@@ -32,7 +32,9 @@ document.querySelectorAll(".awards-slider").forEach((el) => {
             type: "bullets",
         },
         breakpoints: {
-            900: { spaceBetween: 16, slidesPerView: 4 },
+            1024: { spaceBetween: 16, slidesPerView: 2 },
+            1130: { spaceBetween: 16, slidesPerView: 3 },
+            1400: { spaceBetween: 16, slidesPerView: 4 },
         },
     });
 });
