@@ -1,0 +1,134 @@
+{% extends "pages/_includes/layout.njk" %} {% block title %}Поиск{%
+endblock %} {% block bodyclass %}page-search{%
+endblock %} {% block main %}
+
+{{
+    breadcrumbs.create(
+        {
+            items: [
+                {
+                    text: "Главная",
+                    href: "home.html"
+                }
+            ]
+        },
+        "Поиск"
+    )
+}}
+
+<div class="block">
+    <form
+        action="search-result.html"
+        method="GET"
+        class="search-form"
+    >
+        <input
+            type="text"
+            name="query"
+            maxlength="32"
+            placeholder="Начните поиск"
+            class="search-form__field"
+            required
+            value="земля"
+        />
+
+        <input type="hidden" name="category" />
+
+        <button type="submit" class="search-form__submit">
+            <svg>
+                <use xlink:href="./img/symbols.svg#sym-search"></use>
+            </svg>
+            <span>Искать</span>
+        </button>
+    </form>
+
+    <div class="search-result">
+        <div class="search-result__filter">
+            <ul class="search-result__filter-list">
+                <li>
+                    <a href="search-result.html?query=земля" class="_is-active">
+                        <span>Все</span>
+                        <span>16</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="search-result.html?query=земля&category=excursions">
+                        Экскурсии
+                        <span>2</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="search-result.html?query=земля&category=events">
+                        События
+                        <span>3</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="search-result.html?query=земля&category=news">
+                        Астрономические новости
+                        <span>10</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="search-result.html?query=земля&category=rules">
+                        Правила
+                        <span>1</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="search-result__items">
+            {% set result = [
+                {
+                    'tag': 'Экскурсии',
+                    'title': 'Фильм «Рождение планеты Земля»',
+                    'text': 'Впервые в России для широкого зрителя в течение продолжительного времени будет показываться полнокупольный фильм, который подробно и зрелищно рассказывает о возникновении Земли. Зрители увидят весь процесс формирования планеты – от ее зарождения до возникновения на ней жизни'
+                },
+                {
+                    'tag': 'Правила',
+                    'title': 'Правила покупки и возврата билетов на занятия циклов Популярной астрономии для начинающих, купленных в рамках абонемента'
+                },
+                {
+                    'tag': 'События',
+                    'title': 'Фильм «Обитаемая луна» + звёздная программа на выбор',
+                    'text': 'Новая звездная программа производства студии Московского Планетария станет вашей «путеводной звездой» в мир астронавигации. Вместе с любознательным сыном космонавта и его бабушкой, вы увидите, что ночью на небе разворачивается настоящая звездная карта, с помощью которой издревле находили дорогу путешественники. Она сопровождала мореходов, указывала путь первооткрывателям континентов и не утратила актуальности сегодня, ведь звезды и созвездия помогают ориентироваться космонавтам на орбите.'
+                },
+                {
+                    'tag': 'Астрономические новости',
+                    'title': 'Венера: неожиданные открытия',
+                    'text': 'Астрономы обнаружили необычные явления на одной из лун Юпитера'
+                },
+                {
+                    'tag': 'Экскурсии',
+                    'title': 'Фильм «Рождение планеты Земля»',
+                    'text': 'Впервые в России для широкого зрителя в течение продолжительного времени будет показываться полнокупольный фильм, который подробно и зрелищно рассказывает о возникновении Земли. Зрители увидят весь процесс формирования планеты – от ее зарождения до возникновения на ней жизни'
+                }
+            ] %}
+
+            {% for item in result %}
+                <div class="search-item">
+                    <div class="search-item__tag">{{ item.tag }}</div>
+                    <div class="search-item__title">
+                        <a href="event.html">{{ item.title }}</a>
+                    </div>
+                    {% if item.text %}
+                        <div class="search-item__text">{{ item.text }}</div>
+                    {% endif %}
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="paginator">
+        <a href="#" class="paginator__prev"></a>
+        <a href="#" class="paginator__link _active">1</a>
+        <a href="#" class="paginator__link">2</a>
+        <a href="#" class="paginator__link">3</a>
+        <a href="#" class="paginator__link">4</a>
+        <a href="#" class="paginator__link">5</a>
+        <a href="#" class="paginator__link">6</a>
+        <a href="#" class="paginator__next"></a>
+    </div>
+</div>
+
+{% endblock %}

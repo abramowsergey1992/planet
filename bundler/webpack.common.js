@@ -270,6 +270,18 @@ module.exports = {
             ),
             filename: "podcast.html",
         }),
+        new HtmlWebpackPlugin({
+            template: path.resolve(__dirname, "../src/pages/search/search.njk"),
+            filename: "search.html",
+        }),
+        new HtmlWebpackPlugin({
+            template: path.resolve(__dirname, "../src/pages/search/search-result.njk"),
+            filename: "search-result.html",
+        }),
+        new HtmlWebpackPlugin({
+            template: path.resolve(__dirname, "../src/pages/search/search-empty.njk"),
+            filename: "search-empty.html",
+        }),
         new MiniCSSExtractPlugin({
             filename: "assets/css/[name].css",
         }),

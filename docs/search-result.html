@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="csrf-token" content="o2OxEzRnU9cBa11KOLKCKkKUWfTV6wup9GGSAtqp" />
-        <title>Планетарий</title>
+        <title>Поиск</title>
         <meta name="viewport" content="width=device-width,initial-scale=1" />
         <script>
             setTimeout(() => {
@@ -17,7 +17,7 @@
         <link href="./assets/css/main.css" rel="stylesheet">
     </head>
 
-    <body class=""><svg width="0" height="0" style="position: absolute" xmlns="http://www.w3.org/2000/svg" fill="none">
+    <body class="page-search"><svg width="0" height="0" style="position: absolute" xmlns="http://www.w3.org/2000/svg" fill="none">
             <defs>
                 <linearGradient id="Gradient" x1="-5.74979" y1="13.797" x2="47.7914" y2="17.0622" gradientUnits="userSpaceOnUse">
                     <stop stop-color="#FB8129" />
@@ -230,59 +230,52 @@
                 </div>
             </header>
             <div class="inner">
-                <div class="top-row">
-                    <h1>Список страниц</h1>
-                </div>
-                <div class="text block">
-                    <ul>
-                        <li><a href="home.html">Главная</a></li>
-                        <li><a href="shedule.html">Расписание</a></li>
-                        <li><a href="quiz.html">Квизы</a></li>
-                        <li><a href="quiz-detail.html">Квиз</a></li>
-                        <li><a href="quiz-result.html">Квиз (Результат)</a></li>
-                        <li><a href="shems.html">Схемы</a></li>
-                        <li><a href="glosarii.html">Глоссарий</a></li>
-                        <li><a href="shedule.html">Расписание</a></li>
-                        <li><a href="404.html">404</a></li>
-                        <li><a href="contacts.html">Контакты</a></li>
-                        <li><a href="about.html">О планетарии</a></li>
-                        <li><a href="cafe.html">Кафе</a></li>
-                        <li><a href="history.html">История</a></li>
-                        <li><a href="private-events.html">Частные мероприятия</a></li>
-                        <li><a href="events.html">Мероприятия</a></li>
-                        <li><a href="excursions.html">Экскурсии</a></li>
-                        <li><a href="excursion.html">Экскурсия Детальная</a></li>
-                        <li><a href="lections.html">Курсы и лекции</a></li>
-                        <li><a href="lection.html">Курсы и лекции Детальная</a></li>
-                        <li><a href="afisha.html">Афиша</a></li>
-                        <li><a href="event.html">Афиша Детальная</a></li>
-                        <li><a href="visitor-special-needs.html">Для людей с особыми потребностями</a></li>
-                        <li><a href="exponats.html">Экспонаты</a></li>
-                        <li><a href="exponat.html">Экспонат Детальная</a></li>
-                        <li><a href="blogs.html">Научный блог</a></li>
-                        <li><a href="blogs-astro.html">Научный блог (Астрономические новости)</a></li>
-                        <li><a href="blog.html">Научный блог (Детальная)</a></li>
-                        <li><a href="shop.html">Магазин</a></li>
-                        <li><a href="vacancies.html">Вакансии</a></li>
-                        <li><a href="press.html">Пресса</a></li>
-                        <li><a href="sovet.html">Учёный совет</a></li>
-                        <li><a href="guides.html">Экскурсоводы</a></li>
-                        <li><a href="directors.html">Руководство Планетария</a></li>
-                        <li><a href="visitors.html">Посетителям</a></li>
-                        <li><a href="faq.html">Вопросы и ответы</a></li>
-                        <li><a href="legends.html">Легенды</a></li>
-                        <li><a href="legend.html">Легенда (детальная)</a></li>
-                        <li><a href="rules.html">Правила</a></li>
-                        <li><a href="rule.html">Правила (детальная)</a></li>
-                        <li><a href="podcasts.html">Подкасты</a></li>
-                        <li><a href="podcasts-single.html">Подкасты одиночные</a></li>
-                        <li><a href="podcasts-serial.html">Подкасты серийные</a></li>
-                        <li><a href="podcast.html">Подкаст (детальная)</a></li>
-                        <li><a href="search.html">Поиск</a></li>
-                        <li><a href="search-result.html">Поиск (результат)</a></li>
-                        <li><a href="search-empty.html">Поиск (ничего не найдено)</a></li>
-                        <li><a href="ui.html">UI</a></li>
-                    </ul>
+                <ul class="breadcrumbs">
+                    <li><a href="home.html">Главная</a></li>
+                    <li>Поиск</li>
+                </ul>
+                <div class="block">
+                    <form action="search-result.html" class="search-form"><input name="query" maxlength="32" placeholder="Начните поиск" class="search-form__field" required value="земля" /> <input type="hidden" name="category" /> <button type="submit" class="search-form__submit"><svg>
+                                <use xlink:href="./img/symbols.svg#sym-search"></use>
+                            </svg> <span>Искать</span></button></form>
+                    <div class="search-result">
+                        <div class="search-result__filter">
+                            <ul class="search-result__filter-list">
+                                <li><a href="search-result.html?query=земля" class="_is-active"><span>Все</span> <span>16</span></a></li>
+                                <li><a href="search-result.html?query=земля&category=excursions">Экскурсии <span>2</span></a></li>
+                                <li><a href="search-result.html?query=земля&category=events">События <span>3</span></a></li>
+                                <li><a href="search-result.html?query=земля&category=news">Астрономические новости <span>10</span></a></li>
+                                <li><a href="search-result.html?query=земля&category=rules">Правила <span>1</span></a></li>
+                            </ul>
+                        </div>
+                        <div class="search-result__items">
+                            <div class="search-item">
+                                <div class="search-item__tag">Экскурсии</div>
+                                <div class="search-item__title"><a href="event.html">Фильм «Рождение планеты Земля»</a></div>
+                                <div class="search-item__text">Впервые в России для широкого зрителя в течение продолжительного времени будет показываться полнокупольный фильм, который подробно и зрелищно рассказывает о возникновении Земли. Зрители увидят весь процесс формирования планеты – от ее зарождения до возникновения на ней жизни</div>
+                            </div>
+                            <div class="search-item">
+                                <div class="search-item__tag">Правила</div>
+                                <div class="search-item__title"><a href="event.html">Правила покупки и возврата билетов на занятия циклов Популярной астрономии для начинающих, купленных в рамках абонемента</a></div>
+                            </div>
+                            <div class="search-item">
+                                <div class="search-item__tag">События</div>
+                                <div class="search-item__title"><a href="event.html">Фильм «Обитаемая луна» + звёздная программа на выбор</a></div>
+                                <div class="search-item__text">Новая звездная программа производства студии Московского Планетария станет вашей «путеводной звездой» в мир астронавигации. Вместе с любознательным сыном космонавта и его бабушкой, вы увидите, что ночью на небе разворачивается настоящая звездная карта, с помощью которой издревле находили дорогу путешественники. Она сопровождала мореходов, указывала путь первооткрывателям континентов и не утратила актуальности сегодня, ведь звезды и созвездия помогают ориентироваться космонавтам на орбите.</div>
+                            </div>
+                            <div class="search-item">
+                                <div class="search-item__tag">Астрономические новости</div>
+                                <div class="search-item__title"><a href="event.html">Венера: неожиданные открытия</a></div>
+                                <div class="search-item__text">Астрономы обнаружили необычные явления на одной из лун Юпитера</div>
+                            </div>
+                            <div class="search-item">
+                                <div class="search-item__tag">Экскурсии</div>
+                                <div class="search-item__title"><a href="event.html">Фильм «Рождение планеты Земля»</a></div>
+                                <div class="search-item__text">Впервые в России для широкого зрителя в течение продолжительного времени будет показываться полнокупольный фильм, который подробно и зрелищно рассказывает о возникновении Земли. Зрители увидят весь процесс формирования планеты – от ее зарождения до возникновения на ней жизни</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="paginator"><a href="#" class="paginator__prev"></a> <a href="#" class="paginator__link _active">1</a> <a href="#" class="paginator__link">2</a> <a href="#" class="paginator__link">3</a> <a href="#" class="paginator__link">4</a> <a href="#" class="paginator__link">5</a> <a href="#" class="paginator__link">6</a> <a href="#" class="paginator__next"></a></div>
                 </div>
             </div>
             <footer class="footer">

@@ -1,0 +1,50 @@
+{% extends "pages/_includes/layout.njk" %} {% block title %}Поиск{%
+endblock %} {% block bodyclass %}page-search{%
+endblock %} {% block main %}
+
+{{
+    breadcrumbs.create(
+        {
+            items: [
+                {
+                    text: "Главная",
+                    href: "home.html"
+                }
+            ]
+        },
+        "Поиск"
+    )
+}}
+
+<div class="block">
+    <form
+        action="search-result.html"
+        method="GET"
+        class="search-form"
+    >
+        <input
+            type="text"
+            name="query"
+            maxlength="32"
+            placeholder="Начните поиск"
+            class="search-form__field"
+            required
+            value="земля"
+        />
+
+        <input type="hidden" name="category" />
+
+        <button type="submit" class="search-form__submit">
+            <svg>
+                <use xlink:href="./img/symbols.svg#sym-search"></use>
+            </svg>
+            <span>Искать</span>
+        </button>
+    </form>
+
+    <div class="search-empty">
+        <div class="h1">Увы, по&nbsp;вашему запросу ничего не&nbsp;найдено</div>
+    </div>
+</div>
+
+{% endblock %}
