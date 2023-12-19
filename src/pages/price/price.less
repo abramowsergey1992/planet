@@ -1,0 +1,153 @@
+.price-form {
+    background: #fff;
+    padding: 60px 30px;
+    margin-bottom: 60px;
+    h2,
+    .h2 {
+        margin-top: 0;
+    }
+    &__form {
+        display: flex;
+        flex-direction: row;
+    }
+    &__left {
+        display: flex;
+        flex-direction: row;
+        gap: 16px;
+        align-items: center;
+    }
+}
+
+.price-table {
+    margin-bottom: 40px;
+    h2,
+    .h2 {
+        margin-bottom: 20px;
+    }
+    &__wrap {
+        padding-left: var(--inner-padding);
+        padding-right: var(--inner-padding);
+        margin-left: calc(-1 * var(--inner-padding));
+        margin-right: calc(-1 * var(--inner-padding));
+        overflow-x: auto;
+        margin-bottom: 30px;
+        @media (max-width: 992px) {
+            padding-left: 0;
+            padding-right: 0;
+        }
+        td {
+            vertical-align: top;
+        }
+        &::-webkit-scrollbar {
+            width: 0;
+            height: 0;
+        }
+        table {
+            &._column-4 {
+                tbody td {
+                    min-width: 140px;
+                }
+            }
+            &:not(._column-4) {
+                td:first-child {
+                    min-width: 360px;
+                }
+                td:last-child {
+                    min-width: initial;
+                    white-space: nowrap;
+                }
+            }
+            td {
+                font-size: 16px;
+            }
+            width: 100%;
+            tbody {
+                td {
+                    min-width: 300px;
+                    padding: 10px;
+                    padding-top: 20px;
+                    padding-bottom: 0;
+                    &:first-child {
+                        padding-left: 30px;
+                        border-radius: 50px 0 0 50px;
+                        @media (max-width: 992px) {
+                            padding-left: 24px;
+                        }
+                        @media (max-width: 700px) {
+                            padding-left: 12px;
+                        }
+                    }
+                    &:last-child {
+                        padding-right: 30px;
+                        border-radius: 0 50px 50px 0;
+                        @media (max-width: 992px) {
+                            padding-right: 24px;
+                        }
+                        @media (max-width: 700px) {
+                            padding-right: 12px;
+                        }
+                    }
+                }
+            }
+            thead {
+                td {
+                    padding: 10px;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 700;
+                    background: #fff;
+                    letter-spacing: -0.16px;
+                    line-height: 24px;
+                    white-space: nowrap;
+                    &:first-child {
+                        padding-left: 30px;
+                        border-radius: 50px 0 0 50px;
+                        @media (max-width: 992px) {
+                            padding-left: 24px;
+                        }
+                        @media (max-width: 700px) {
+                            padding-left: 12px;
+                        }
+                    }
+                    &:last-child {
+                        padding-right: 30px;
+                        border-radius: 0 50px 50px 0;
+                        @media (max-width: 992px) {
+                            padding-right: 24px;
+                        }
+                        @media (max-width: 700px) {
+                            padding-right: 12px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.attention {
+    background: #fff;
+    padding: 50px 30px;
+    @media (max-width: 700px) {
+        padding: 40px 20px;
+    }
+    .h2,
+    h2 {
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
+    p {
+        max-width: 1400px;
+        margin-top: 0;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        a {
+            text-decoration: underline;
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+}
+

@@ -250,6 +250,10 @@ module.exports = {
             filename: "podcasts.html",
         }),
         new HtmlWebpackPlugin({
+            template: path.resolve(__dirname, "../src/pages/price/price.njk"),
+            filename: "price.html",
+        }),
+        new HtmlWebpackPlugin({
             template: path.resolve(
                 __dirname,
                 "../src/pages/podcasts/podcasts-single.njk"
@@ -275,11 +279,17 @@ module.exports = {
             filename: "search.html",
         }),
         new HtmlWebpackPlugin({
-            template: path.resolve(__dirname, "../src/pages/search/search-result.njk"),
+            template: path.resolve(
+                __dirname,
+                "../src/pages/search/search-result.njk"
+            ),
             filename: "search-result.html",
         }),
         new HtmlWebpackPlugin({
-            template: path.resolve(__dirname, "../src/pages/search/search-empty.njk"),
+            template: path.resolve(
+                __dirname,
+                "../src/pages/search/search-empty.njk"
+            ),
             filename: "search-empty.html",
         }),
         new MiniCSSExtractPlugin({
