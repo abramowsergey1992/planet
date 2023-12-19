@@ -71,7 +71,8 @@ html._is-preloaded {
     }
 
     .hp-promo__title span,
-    .hp-promo__subtitle span {
+    .hp-promo__subtitle span,
+    .hp-promo__buy-ticket {
         opacity: 1 !important;
         transform: translateY(0) !important;
     }
@@ -111,6 +112,17 @@ html._is-preloaded {
     @media (max-width: @screen-l) {
         transform: translateY(20px);
     }
+
+    @media (max-width: @screen-s) {
+        transform: translateY(15px);
+    }
+}
+
+.hp-promo__buy-ticket {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1.8s var(--preloader-animation-f) 4.6s,
+                transform 1.8s var(--preloader-animation-f) 4.6s;
 
     @media (max-width: @screen-s) {
         transform: translateY(15px);
