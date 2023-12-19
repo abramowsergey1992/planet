@@ -89,8 +89,10 @@
         padding-top: 20px;
         display: flex;
         flex-direction: row;
-        flex-wrap: wrap;
         align-items: center;
+        @media (max-width: 1000px) {
+            flex-wrap: wrap;
+        }
         @media (max-width: 700px) {
             display: none;
             border-top: 0px solid #cfcfcf;
@@ -107,6 +109,10 @@
         flex-direction: row;
         flex-wrap: wrap;
         list-style: none;
+        @media (max-width: 1000px) {
+            width: 100%;
+            margin-bottom: 20px;
+        }
         @media (max-width: 700px) {
             display: none;
         }
@@ -137,8 +143,7 @@
     &__send {
         margin-left: auto;
         .btn-border__content {
-            background: #fff;
+            // background: #fff;
         }
     }
 }
-
