@@ -125,3 +125,29 @@
     }
 }
 
+.attention {
+    background: #fff;
+    padding: 50px 30px;
+    @media (max-width: 700px) {
+        padding: 40px 20px;
+    }
+    .h2,
+    h2 {
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
+    p {
+        max-width: 1400px;
+        margin-top: 0;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        a {
+            text-decoration: underline;
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+}
+
