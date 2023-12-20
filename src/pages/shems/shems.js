@@ -26,23 +26,19 @@ document.querySelectorAll(".shema-page ").forEach((el) => {
     });
 });
 
-document.querySelectorAll(".shema__svg-legend").forEach((legeng) => {
+document.querySelectorAll("[data-room]").forEach((legeng) => {
     legeng.addEventListener("mouseover", function () {
         document
-            .querySelectorAll(
-                `.shema__svg-wrap [data-room='${legeng.dataset.room}']`
-            )
+            .querySelectorAll(`[data-room='${legeng.dataset.room}']`)
             .forEach((svg) => {
-                svg.classList.add("_visible");
+                svg.classList.add("_active");
             });
     });
     legeng.addEventListener("mouseout", function () {
         document
-            .querySelectorAll(
-                `.shema__svg-wrap [data-room='${legeng.dataset.room}']`
-            )
+            .querySelectorAll(`[data-room='${legeng.dataset.room}']`)
             .forEach((svg) => {
-                svg.classList.remove("_visible");
+                svg.classList.remove("_active");
             });
     });
 });

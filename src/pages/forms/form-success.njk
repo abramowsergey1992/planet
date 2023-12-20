@@ -1,0 +1,35 @@
+{% extends "pages/_includes/layout.njk" %} {% block title %}Как стать
+партнёром{% endblock %} {% block main %}
+
+{{
+    breadcrumbs.create(
+        {
+            items: [
+                {
+                    text: "Главная",
+                    href: "home.html"
+                },
+                {
+                    text: "Оформление заявки",
+                    href: "home.html"
+                }
+            ]
+        },
+        "Заявка успешно отправлена"
+    )
+}}
+<div class="form-success block">
+    <div class="text">
+        <h1>Заявка успешно отправлена</h1>
+        <p>
+            Мы свяжемся с вами <color>в течение 2 рабочих дней </color><br />
+            по телефону <a href="tel:+79999999999">+7 999 999-99-99</a> или по
+            электронной почте <a href="mailto:mail@mail.ru">mail@mail.ru</a>
+        </p>
+
+        <img class="form-success__img" src="content/form-s.svg" alt="" />
+    </div>
+</div>
+
+{% endblock %}
+

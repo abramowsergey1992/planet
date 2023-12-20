@@ -1,3 +1,10 @@
+import IMask from "imask";
+
+document.querySelectorAll("._mask-phone").forEach((el) => {
+    IMask(el, {
+        mask: "+{7} (000) 000-00-00",
+    });
+});
 document.querySelectorAll(".btn-border").forEach((el) => {
     el.innerHTML = `<span class="btn-border__content">${el.innerHTML}</span>`;
 });
@@ -91,7 +98,6 @@ export function renderSvgIcons(container) {
     </svg>
     `;
     });
-    
     container.querySelectorAll(".icon-heart").forEach((el) => {
         el.innerHTML = `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M17.9645 12.0355L12 18L6.03553 12.0355C5.37249 11.3725 5 10.4732 5 9.53553C5 7.58291 6.58291 6 8.53553 6C9.47322 6 10.3725 6.37249 11.0355 7.03553L12 8L12.9645 7.03553C13.6275 6.37249 14.5268 6 15.4645 6C17.4171 6 19 7.58291 19 9.53553C19 10.4732 18.6275 11.3725 17.9645 12.0355Z" stroke="currentColor" stroke-width="1.4"/>

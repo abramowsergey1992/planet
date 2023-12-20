@@ -1,0 +1,62 @@
+.feeback {
+    h2,
+    .h2 {
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+    &__row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        @media (max-width: 992px) {
+            gap: 50px;
+            grid-template-columns: 1fr;
+        }
+        form {
+            max-width: 560px;
+            .form-item + .checkbox {
+                margin-top: 30px;
+            }
+            .btn-border {
+                margin-top: 20px;
+            }
+        }
+    }
+}
+
+.form-success {
+    text-align: center;
+    .text {
+        margin-left: auto;
+        margin-right: auto;
+
+        p {
+            @media (max-width: 992px) {
+                font-size: 16px;
+            }
+        }
+    }
+
+    &__img {
+        margin-top: 50px;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        max-width: 100%;
+    }
+}
+.feedback-link {
+    margin: 40px 0;
+    a {
+        font-family: Unbounded;
+        font-size: 24px;
+        text-decoration: underline;
+        @media (max-width: 992px) {
+            font-size: 20px;
+        }
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+

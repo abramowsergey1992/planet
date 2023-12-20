@@ -28,6 +28,8 @@ import "../pages/contacts/contacts.js";
 import "../pages/vacancies/vacancies.js";
 import "../pages/history/history.js";
 import "../pages/podcasts/podcasts.js";
+import "../pages/forms/partner-form.js";
+import "../pages/forms/press-form.js";
 
 // Must be the last
 import "../components/preloader/preloader.js";
