@@ -52,7 +52,7 @@ if (document.querySelector(".header")) {
 
     links.forEach((el) => {
         el.addEventListener("click", function (event) {
-            event.preventDefault();
+            // event.preventDefault();
 
             if (!isMobile && window.innerWidth > 1200) {
                 return;
@@ -121,4 +121,3 @@ if (document.querySelector(".header")) {
         updateClock();
     }
 }
-

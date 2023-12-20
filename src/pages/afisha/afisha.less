@@ -196,6 +196,17 @@
 .filter-menu-open {
     width: 100%;
     margin-bottom: 22px;
+    color: var(--orange);
+
+    .btn-border__content {
+        color: currentColor;
+    }
+
+    svg {
+        path {
+            stroke: currentColor;
+        }
+    }
 }
 @media (min-width: 1024px) {
     .filter-menu-open,
@@ -204,4 +215,3 @@
         display: none;
     }
 }
-
