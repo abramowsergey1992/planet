@@ -64,10 +64,20 @@
                 max-width: 100%;
                 object-fit: cover;
             }
+            path,
+            rect,
+            circle {
+                &:not([data-room]) {
+                    pointer-events: none;
+                }
+            }
             [data-room] {
                 transition: opacity 0.5s;
                 opacity: 0;
-                &._visible {
+                &:hover {
+                    opacity: 1 !important;
+                }
+                &._active {
                     opacity: 1;
                 }
             }
@@ -87,6 +97,7 @@
     &__svg-legend {
         font-size: 16px;
         margin-bottom: 20px;
+        &._active,
         &:hover {
             .shema__svg-legend-name {
                 text-decoration: none;
