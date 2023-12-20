@@ -20,15 +20,14 @@
 <div id="afisha-template">
     {{
         event.create({
-            img: "_",
+            img: "",
             topTags: ["_"],
             bottomTags: [{ icon: "marker", class: "_bg", text: "_" }],
             awards: [{ top: "_", text: "_", year: "_" }],
             title: "_",
-            info: [{ icon: "marker", text: "_" }],
             desc: "_",
             btnText: "_",
-            link: "_",
+            link: "",
             moreBtn: "true"
         })
     }}
@@ -72,7 +71,7 @@
                 </button>
             </div>
             <form
-                action="json/events.json"
+                action="json/excursions.json"
                 method="POST"
                 id="afishafilter"
                 class="filter-popup__body"
@@ -165,39 +164,37 @@
     </div>
     <div class="afisha__grid" id="afishalist">
         {{ event.create({ img: "img/excursions-1.jpg", title: "Обзорные
-        экскурсии в музее «Урании»", info: [ { icon:"marker", text:"Малый
-        Звёздный зал" }, { icon:"time", text:"60 минут" } ], desc: "
+        экскурсии в музее «Урании»", desc: "
         <p>Обзорная экскурсия по классическому музею Урании</p>
-        ", btnText:"Подробнее", link:"event.html" } ) }} {{ event.create({ img:
+        ", btnText:"Подробнее", link:"event.html" } ) }}
+        {{ event.create({ img:
         "img/excursions-2.jpg", title: "Тематические экскурсии в музее
-        «Урании»", info: [ { icon:"marker", text:"Малый Звёздный зал" }, {
-        icon:"time", text:"60 минут" } ], desc: "
+        «Урании»", desc: "
         <p>
             Тематические школьные экскурсии в соответствии со школьными
             программами в музее Урании
         </p>
-        ", btnText:"Подробнее", link:"event.html" } ) }} {{ event.create({ img:
+        ", btnText:"Подробнее", link:"event.html" } ) }}
+        {{ event.create({ img:
         "img/excursions-3.jpg", title: "Тематические экскурсии в музее
-        «Лунариум»", info: [ { icon:"marker", text:"Малый Звёздный зал" }, {
-        icon:"time", text:"60 минут" } ], desc: "
+        «Лунариум»", desc: "
         <p>
             Тематические школьные экскурсии в соответствии со школьными
             программами в интерактивном пространства «Лунариум»
         </p>
-        ", btnText:"Подробнее", link:"event.html" } ) }} {{ event.create({ img:
+        ", btnText:"Подробнее", link:"event.html" } ) }}
+        {{ event.create({ img:
         "img/excursions-4.jpg", topTags: ["Эксклюзив", "Создано студией
         планетария"], bottomTags:[ { text:"6+" }, { text:"Мультиязычный" }, {
         icon:"time", text:"46 минут" }, { icon:"marker", text:"Большой Звёздный
-        зал" } ] , title: "Обзорные экскурсиив музее «Лунариум» ", info: [ {
-        icon:"marker", text:"Малый Звёздный зал" }, { icon:"time", text:"60
-        минут" } ], desc: "
+        зал" } ] , title: "Обзорные экскурсиив музее «Лунариум» ", desc: "
         <p>Обзорная экскурсия в интерактивном пространства «Лунариум»</p>
-        ", btnText:"Подробнее", link:"event.html" } ) }} {{ event.create({ img:
+        ", btnText:"Подробнее", link:"event.html" } ) }}
+        {{ event.create({ img:
         "img/excursions-5.jpg", topTags: ["Эксклюзив", "Создано студией
         планетария"], bottomTags:[ { text:"6+" }, { text:"Мультиязычный" }, {
         icon:"time", text:"46 минут" }, { icon:"marker", text:"Большой Звёздный
-        зал" } ] , title: "Звездный классик ", info: [ { icon:"marker",
-        text:"Малый Звёздный зал" }, { icon:"time", text:"60 минут" } ], desc: "
+        зал" } ] , title: "Звездный классик ", desc: "
         <p>
             Экскурсия по классическому музею Урании (Зал №1, Зал №2), просмотр
             программы в Большом Звездном зале
@@ -206,8 +203,7 @@
         "img/excursions-6.jpg", topTags: ["Эксклюзив", "Создано студией
         планетария"], bottomTags:[ { text:"6+" }, { text:"Мультиязычный" }, {
         icon:"time", text:"46 минут" }, { icon:"marker", text:"Большой Звёздный
-        зал" } ] , title: "Интерактив» ", info: [ { icon:"marker", text:"Малый
-        Звёздный зал" }, { icon:"time", text:"60 минут" } ], desc: "
+        зал" } ] , title: "Интерактив» ", desc: "
         <p>
             Увлекательная звёздная программа о том, как меняется движение неба в
             зависимости от места наблюдения.
@@ -228,4 +224,3 @@
     </div>
 </div>
 {% endblock %}
-
