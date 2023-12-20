@@ -280,11 +280,21 @@
     .icon-person,
     .icon-heart,
     .icon-time,
+    .icon-language,
     .icon-marker {
         line-height: 0;
     }
     &__title {
+        display: inline-block;
         margin-top: 0;
+        .color();
+        color: var(--dark);
+        -webkit-text-fill-color: unset;
+        transition: color 0.2s ease;
+
+        html.desktop &:hover {
+            color: transparent;
+        }
     }
     &__info {
         display: flex;
@@ -356,13 +366,8 @@
                 padding: 6px 12px;
             }
             &._bg {
+                background: var(--gradient);
                 box-shadow: none;
-                backdrop-filter: none;
-                background: linear-gradient(
-                    71deg,
-                    #7849a9 3.41%,
-                    #6e7ed6 99.53%
-                );
             }
         }
     }
@@ -533,13 +538,16 @@
     width: 100%;
     height: 100%;
     z-index: 333;
-    display: none;
     transition: opacity 0.3s;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.1s ease,
+                visibility 0s linear 0.1s;
+
     &._display {
-        display: block;
-    }
-    &._animate {
+        visibility: visible;
         opacity: 1;
+        transition: opacity 0.3s ease;
     }
     &__overlay {
         position: absolute;
@@ -547,14 +555,14 @@
         top: 0;
         width: 100%;
         height: 100%;
-        background: rgba(0, 0, 0, 0.8);
+        background: rgba(0, 0, 0, 0.7);
     }
     &__close {
         position: absolute;
-        right: 5px;
-        top: 5px;
-        width: 25px;
-        height: 25px;
+        right: 0;
+        top: 0;
+        width: 40px;
+        height: 40px;
         background: transparent;
         border: 0 solid;
         cursor: pointer;
@@ -562,21 +570,22 @@
         &:hover {
             &::after,
             &::before {
-                background: var(--link);
+                background: #fff;
             }
         }
         &::after,
         &::before {
-            height: 100%;
-            width: 4px;
+            height: 30px;
+            width: 2px;
             left: 50%;
             display: block;
             content: "";
-            margin-left: -2px;
-            background: #fff;
-            border-radius: 2px;
-            top: 0px;
+            margin-left: -1px;
+            margin-top: -15px;
+            background: var(--link);
+            top: 50%;
             position: absolute;
+            transition: all 0.2s ease;
         }
         &::after {
             transform: rotate(-45deg);
@@ -591,6 +600,7 @@
         width: 100%;
         height: calc(100%);
         background: #fff;
+        pointer-events: auto;
         iframe {
             position: absolute;
             width: 100%;
@@ -609,6 +619,11 @@
         flex-direction: row;
         align-items: center;
         justify-content: center;
-        padding: 30px;
+        padding: 40px;
+        pointer-events: none;
+
+        @media (max-width: @screen-m) {
+            padding: 40px 20px;
+        }
     }
 }

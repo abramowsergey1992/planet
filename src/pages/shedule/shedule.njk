@@ -190,9 +190,10 @@ endblock %} {% block main %}
             </button>
         </div>
         <form
-            action="json/events.json"
+            action="json/shedule.json"
             method="POST"
             class="filter-popup__body"
+            id="shedulefilter"
         >
             <div class="filter-popup__columns">
                 <div class="filter-popup__block">
@@ -228,6 +229,38 @@ endblock %} {% block main %}
             </div>
         </form>
     </div>
+    {% raw %}
+    <template id="sheduletemplate">
+        <div class="shedule-item">
+            <div>
+                <div class="shedule-item__img-wrap _br">
+                    <div class="shedule-item__img">
+                        {% img %}
+                    </div>
+                    <ul class="shedule-item__img-tags">
+                        {% tags %}
+                    </ul>
+                    
+                    <ul class="shedule-item__awards">
+                        {% awards %}
+                    </ul>
+                </div>
+            </div>
+            <div class="shedule-item__content">
+                <a class="h2 shedule-item__title" href="{% link %}">{% title %}</a>
+                <ul class="shedule-item__info">
+                    {% info %}
+                </ul>
+                {% desc %}
+                <div class="shedule-item__shedule">
+                    <ul class="shedule-item__slots">
+                        {% slots %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </template>
+    {% endraw %}
     <ul class="shedule-files">
         <li>
             <a href="#">
@@ -274,145 +307,7 @@ endblock %} {% block main %}
     </div>
 </div>
 <div class="block">
-    <div class="shedule-items">
-        <div class="shedule-item">
-            <div>
-                <div class="shedule-item__img-wrap _br">
-                    <div class="shedule-item__img">
-                        <img src="img/gallery-1.jpg" alt="" />
-                    </div>
-                    <ul class="shedule-item__img-tags">
-                        <li class="_bg">Новинка</li>
-                        <li>Эксклюзив</li>
-                        <li>Создано студией планетария</li>
-                    </ul>
-                    <ul class="shedule-item__awards">
-                        <li class="event-preview__award">
-                            <span class="shedule-item__award-top"
-                                >ПОБЕДИТЕЛЬ</span
-                            >
-                            <span class="shedule-item__award-name"
-                                >НАЗВАНИЕ КОНКУРСА В ТРИ СТРОЧКИ</span
-                            >
-                            <span class="shedule-item__award-year">2023</span>
-                        </li>
-                        <li class="event-preview__award">
-                            <span class="shedule-item__award-top"
-                                >ПОБЕДИТЕЛЬ</span
-                            >
-                            <span class="shedule-item__award-name"
-                                >НАЗВАНИЕ КОНКУРСА В ТРИ СТРОЧКИ</span
-                            >
-                            <span class="shedule-item__award-year">2023</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="shedule-item__content">
-                <div class="h2 shedule-item__title">Фильм «Загадка Жизни»</div>
-                <ul class="shedule-item__info">
-                    <li>
-                        <span class="icon-marker"></span> Малый Звёздный зал
-                    </li>
-                    <li><span class="icon-person"></span> 6+</li>
-                    <li><span class="icon-time"></span> Мультиязычный</li>
-                    <li><span class="icon-time"></span> 60 минут</li>
-                    <li><span class="icon-time"></span> 60 минут</li>
-                </ul>
-                <p>
-                    Увлекательная звёздная программа о том, как меняется
-                    движение неба в зависимости от места наблюдения.
-                </p>
-                <div class="shedule-item__shedule">
-                    <a href="#" class="h2 shedule-item__shedule-name"
-                        >Фильм <br />
-                        «Загадка Жизни»</a
-                    >
-                    <ul class="shedule-item__slots">
-                        <li class="shedule-item__slot">
-                            <button
-                                class="shedule-item__slot-buy"
-                                data_ticket_system_id="600461"
-                            >
-                                09:00
-                            </button>
-                            <p>от 800 ₽</p>
-                        </li>
-                        <li class="shedule-item__slot">
-                            <button
-                                class="shedule-item__slot-buy"
-                                data_ticket_system_id="600461"
-                            >
-                                10:00
-                            </button>
-                            <p>от 800 ₽</p>
-                        </li>
-                        <li class="shedule-item__slot">
-                            <button
-                                class="shedule-item__slot-buy"
-                                data_ticket_system_id="600461"
-                            >
-                                11:00
-                            </button>
-                            <p>от 800 ₽</p>
-                        </li>
-                        <li class="shedule-item__slot">
-                            <button
-                                class="shedule-item__slot-buy"
-                                data_ticket_system_id="600461"
-                            >
-                                12:00
-                            </button>
-                            <p>от 800 ₽</p>
-                        </li>
-                    </ul>
-                </div>
-                <div class="shedule-item__shedule">
-                    <a href="#" class="h2 shedule-item__shedule-name"
-                        >Звёздная программа <br />
-                        «Времена года. Лето»
-                    </a>
-                    <ul class="shedule-item__slots">
-                        <li class="shedule-item__slot">
-                            <button
-                                class="shedule-item__slot-buy"
-                                data_ticket_system_id="600461"
-                            >
-                                09:00
-                            </button>
-                            <p>от 800 ₽</p>
-                        </li>
-                        <li class="shedule-item__slot">
-                            <button
-                                class="shedule-item__slot-buy"
-                                data_ticket_system_id="600461"
-                            >
-                                10:00
-                            </button>
-                            <p>от 800 ₽</p>
-                        </li>
-                        <li class="shedule-item__slot">
-                            <button
-                                class="shedule-item__slot-buy"
-                                data_ticket_system_id="600461"
-                            >
-                                11:00
-                            </button>
-                            <p>от 800 ₽</p>
-                        </li>
-                        <li class="shedule-item__slot">
-                            <button
-                                class="shedule-item__slot-buy"
-                                data_ticket_system_id="600461"
-                            >
-                                12:00
-                            </button>
-                            <p>от 800 ₽</p>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+    <div class="shedule-items" id="shedulelist">
         <div class="shedule-item">
             <div>
                 <div class="shedule-item__img-wrap _br">
@@ -446,14 +341,13 @@ endblock %} {% block main %}
                 </div>
             </div>
             <div class="shedule-item__content">
-                <div class="h2 shedule-item__title">Фильм «Обитаемая луна»</div>
+                <a class="h2 shedule-item__title" href="event.html">Фильм «Обитаемая луна»</a>
                 <ul class="shedule-item__info">
                     <li>
                         <span class="icon-marker"></span> Малый Звёздный зал
                     </li>
                     <li><span class="icon-person"></span> 6+</li>
-                    <li><span class="icon-time"></span> Мультиязычный</li>
-                    <li><span class="icon-time"></span> 60 минут</li>
+                    <li><span class="icon-language"></span> Мультиязычный</li>
                     <li><span class="icon-time"></span> 60 минут</li>
                 </ul>
                 <p>
@@ -571,16 +465,15 @@ endblock %} {% block main %}
                 </div>
             </div>
             <div class="shedule-item__content">
-                <div class="h2 shedule-item__title">
+                <a class="h2 shedule-item__title" href="event.html">
                     Звёздная программа «Небо в движении»
-                </div>
+                </a>
                 <ul class="shedule-item__info">
                     <li>
                         <span class="icon-marker"></span> Малый Звёздный зал
                     </li>
                     <li><span class="icon-person"></span> 6+</li>
-                    <li><span class="icon-time"></span> Мультиязычный</li>
-                    <li><span class="icon-time"></span> 60 минут</li>
+                    <li><span class="icon-language"></span> Мультиязычный</li>
                     <li><span class="icon-time"></span> 60 минут</li>
                 </ul>
                 <p>
@@ -718,16 +611,15 @@ endblock %} {% block main %}
                 </div>
             </div>
             <div class="shedule-item__content">
-                <div class="h2 shedule-item__title">
+                <a class="h2 shedule-item__title" href="event.html">
                     Фильм «Динозавры. История выживших»
-                </div>
+                </a>
                 <ul class="shedule-item__info">
                     <li>
                         <span class="icon-marker"></span> Малый Звёздный зал
                     </li>
                     <li><span class="icon-person"></span> 6+</li>
-                    <li><span class="icon-time"></span> Мультиязычный</li>
-                    <li><span class="icon-time"></span> 60 минут</li>
+                    <li><span class="icon-language"></span> Мультиязычный</li>
                     <li><span class="icon-time"></span> 60 минут</li>
                 </ul>
                 <p>
@@ -818,4 +710,3 @@ endblock %} {% block main %}
     </div>
 </div>
 {% endblock %}
-
