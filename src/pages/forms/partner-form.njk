@@ -1,0 +1,147 @@
+{% extends "pages/_includes/layout.njk" %} {% block title %}Как стать
+партнёром{% endblock %} {% block main %}
+
+{{
+    breadcrumbs.create(
+        {
+            items: [
+                {
+                    text: "Главная",
+                    href: "home.html"
+                },
+                {
+                    text: "Партнёры Планетария",
+                    href: "home.html"
+                }
+            ]
+        },
+        "Как стать партнёром"
+    )
+}}
+<div class="top-row">
+    <h1>Как стать партнёром</h1>
+</div>
+<div class="white-block">
+    <div class="feeback block">
+        <div class="feeback__row">
+            <div class="feeback__left">
+                <h2 class="">Свяжитесь с нами</h2>
+                <form action="form-success.html" method="GET" id="partner-form">
+                    <label class="form-item">
+                        <input
+                            id="partner-form__name"
+                            type="text"
+                            name="name"
+                            placeholder="ФИО"
+                        />
+                    </label>
+                    <label class="form-item">
+                        <input
+                            id="partner-form__number"
+                            type="text"
+                            name="number"
+                            placeholder="№ или название школы"
+                        />
+                    </label>
+                    <label class="form-item">
+                        <input
+                            class="_mask-phone"
+                            id="partner-form__phone"
+                            type="text"
+                            name="phone"
+                            placeholder="Телефон для связи"
+                        />
+                    </label>
+                    <label class="form-item">
+                        <input
+                            id="partner-form__email"
+                            type="text"
+                            name="email"
+                            placeholder="Email"
+                        />
+                    </label>
+                    <label class="checkbox">
+                        <input
+                            type="checkbox"
+                            id="partner-form__agree"
+                            name="agree"
+                            placeholder=""
+                        />
+                        <span class="checkbox__indicator"></span>
+                        <div class="checkbox__text">
+                            Согласен(а) на обработку моих
+                            <a href="#"> персональных данных</a>
+                        </div>
+                    </label>
+                    <label class="checkbox">
+                        <input
+                            type="checkbox"
+                            id="partner-form__subscribe"
+                            name="subscribe"
+                            placeholder=""
+                        />
+                        <span class="checkbox__indicator"></span>
+                        <div class="checkbox__text">
+                            Согласен(а) получать новости и спецпредложения
+                        </div>
+                    </label>
+                    <button class="btn-border" type="submit">
+                        Оставить заявку
+                    </button>
+                </form>
+            </div>
+            <div class="feeback__left">
+                <div class="text">
+                    <h2>Московский планетарий</h2>
+                    <p>
+                        Московский Планетарий — это многофункциональный
+                        комплекс, сочетающий в себе научно-просветительский,
+                        образовательный ресурс и центр семейного досуга,
+                        ориентированный на разные возрастные группы посетителей.
+                        Из года в год Ваша поддержка позволяет нам расширять
+                        горизонты возможностей комплекса: создавать
+                        научно-популярные программы, организовывать новые
+                        экспозиции и выставки, проводить уникальные акции. Мы
+                        приглашаем к сотрудничеству всех, кто любит и ценит
+                        волшебный Мир Звезд и кому небезразлична судьба науки о
+                        Космосе в России.
+                    </p>
+
+                    <p>
+                        Вместе мы сможем объединить усилия и реализовать в
+                        Планетарии оригинальные проекты мирового уровня.
+                    </p>
+
+                    <h2>Рекламные возможности Планетария</h2>
+                    <p>
+                        Планетарий сегодня, реализуя основную миссию —
+                        «популяризация естественно-научных знаний», — стремится
+                        наладить взаимовыгодные отношения с деловым сообществом
+                        на высоком профессиональном уровне. Все наши партнеры и
+                        спонсоры получают уникальный пакет привилегий,
+                        включающий большой спектр рекламных и PR-возможностей.
+                    </p>
+                    <h2>Пакет индивидуальных привилегий</h2>
+                    <ul>
+                        <li>
+                            Упоминание компании-спонсора в наружной рекламе
+                            (различные носители)
+                        </li>
+                        <li>
+                            Выражение признательности спонсору на
+                            пресс-конференциях
+                        </li>
+                        <li>
+                            Размещение информации о спонсоре на официальном
+                            сайте и в печатной продукции Планетария (афиши,
+                            буклеты, программы, флаеры и т.д.)
+                        </li>
+                        <li>Приглашения на мероприятия и закрытые показы</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+

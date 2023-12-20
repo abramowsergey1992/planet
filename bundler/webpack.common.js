@@ -26,6 +26,7 @@ module.exports = {
             template: path.resolve(__dirname, "../src/pages/about/about.njk"),
             filename: "about.html",
         }),
+
         new HtmlWebpackPlugin({
             template: path.resolve(
                 __dirname,
@@ -259,6 +260,48 @@ module.exports = {
                 "../src/pages/podcasts/podcasts-single.njk"
             ),
             filename: "podcasts-single.html",
+        }),
+        new HtmlWebpackPlugin({
+            template: path.resolve(
+                __dirname,
+                "../src/pages/forms/form-success.njk"
+            ),
+            filename: "form-success.html",
+        }),
+        new HtmlWebpackPlugin({
+            template: path.resolve(
+                __dirname,
+                "../src/pages/forms/partner-form.njk"
+            ),
+            filename: "partner-form.html",
+        }),
+        new HtmlWebpackPlugin({
+            template: path.resolve(
+                __dirname,
+                "../src/pages/forms/events-form.njk"
+            ),
+            filename: "events-form.html",
+        }),
+        new HtmlWebpackPlugin({
+            template: path.resolve(
+                __dirname,
+                "../src/pages/forms/lection-form.njk"
+            ),
+            filename: "lection-form.html",
+        }),
+        new HtmlWebpackPlugin({
+            template: path.resolve(
+                __dirname,
+                "../src/pages/forms/press-form.njk"
+            ),
+            filename: "press-form.html",
+        }),
+        new HtmlWebpackPlugin({
+            template: path.resolve(
+                __dirname,
+                "../src/pages/forms/partner-form.njk"
+            ),
+            filename: "partner-form.html",
         }),
         new HtmlWebpackPlugin({
             template: path.resolve(

@@ -48,6 +48,8 @@
     },
     "dependencies": {
         "gsap": "^3.12.2",
+        "imask": "^7.2.1",
+        "just-validate": "^4.3.0",
         "lottie-web": "^5.12.2",
         "scrollmagic": "^2.0.8",
         "slim-select": "^2.6.0",

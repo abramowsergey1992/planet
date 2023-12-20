@@ -1,3 +1,10 @@
+import IMask from "imask";
+
+document.querySelectorAll("._mask-phone").forEach((el) => {
+    IMask(el, {
+        mask: "+{7} (000) 000-00-00",
+    });
+});
 document.querySelectorAll(".btn-border").forEach((el) => {
     el.innerHTML = `<span class="btn-border__content">${el.innerHTML}</span>`;
 });
@@ -149,3 +156,4 @@ document.querySelectorAll(".overfolow-x").forEach((el) => {
     });
     rescroll();
 });
+

@@ -1,0 +1,140 @@
+{% extends "pages/_includes/layout.njk" %} {% block title %}Пресс-служба{%
+endblock %} {% block main %}
+
+{{
+    breadcrumbs.create(
+        {
+            items: [
+                {
+                    text: "Главная",
+                    href: "home.html"
+                },
+                {
+                    text: "О планетарии",
+                    href: "home.html"
+                }
+            ]
+        },
+        "Пресс-служба"
+    )
+}}
+<div class="top-row">
+    <h1>Пресс-служба</h1>
+</div>
+<div class="white-block">
+    <div class="feeback block">
+        <div class="feeback__row">
+            <div class="feeback__left">
+                <h2 class="">Свяжитесь с нами</h2>
+                <form action="form-success.html" method="GET" id="press-form">
+                    <label class="form-item">
+                        <input
+                            id="press-form__name"
+                            type="text"
+                            name="name"
+                            placeholder="ФИО"
+                        />
+                    </label>
+                    <label class="form-item">
+                        <input
+                            id="press-form__number"
+                            type="text"
+                            name="number"
+                            placeholder="№ или название школы"
+                        />
+                    </label>
+                    <label class="form-item">
+                        <input
+                            class="_mask-phone"
+                            id="press-form__phone"
+                            type="text"
+                            name="phone"
+                            placeholder="Телефон для связи"
+                        />
+                    </label>
+                    <label class="form-item">
+                        <input
+                            id="press-form__email"
+                            type="text"
+                            name="email"
+                            placeholder="Email"
+                        />
+                    </label>
+                    <label class="checkbox">
+                        <input
+                            type="checkbox"
+                            id="press-form__agree"
+                            name="agree"
+                            placeholder=""
+                        />
+                        <span class="checkbox__indicator"></span>
+                        <div class="checkbox__text">
+                            Согласен(а) на обработку моих
+                            <a href="#"> персональных данных</a>
+                        </div>
+                    </label>
+                    <label class="checkbox">
+                        <input
+                            type="checkbox"
+                            id="press-form__subscribe"
+                            name="subscribe"
+                            placeholder=""
+                        />
+                        <span class="checkbox__indicator"></span>
+                        <div class="checkbox__text">
+                            Согласен(а) получать новости и спецпредложения
+                        </div>
+                    </label>
+                    <button class="btn-border" type="submit">
+                        Оставить заявку
+                    </button>
+                </form>
+            </div>
+            <div class="feeback__left">
+                <div class="text">
+                    <h2>Информация для представителей СМИ</h2>
+                    <p>
+                        Уважаемые коллеги! Чтобы организовать съемки или
+                        интервью на территории Планетария, необходимо
+                        предварительно прислать запрос на редакционном или
+                        фирменном бланке.
+                    </p>
+                    <h2>В запросе необходимо:</h2>
+                    <ul>
+                        <li>указать тематику публикации или сюжета;</li>
+                        <li>сформулировать список вопросов;</li>
+                        <li>в теме письма указать : Запрос съемок;</li>
+                        <li>
+                            предоставить контактные данные редакции и
+                            корреспондента
+                        </li>
+                    </ul>
+                    <div class="feedback-link">
+                        <p>
+                            Запрос направляется по электронной почте в
+                            пресс-службу Планетария:
+                        </p>
+                        <p>
+                            <a href="mailto:press@planetarium-moscow.ru"
+                                ><color>press@planetarium-moscow.ru</color></a
+                            >
+                        </p>
+                    </div>
+                    <div class="feedback-link">
+                        <p>
+                            Ознакомиться с вышедшими публикациями и
+                            видеосюжетами можно в разделе
+                        </p>
+                        <p>
+                            <a href="mailto:press@planetarium-moscow.ru"
+                                ><color>«Пресса о Планетарии»</color></a
+                            >
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
