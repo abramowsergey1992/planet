@@ -52,11 +52,11 @@ if (document.querySelector(".header")) {
 
     links.forEach((el) => {
         el.addEventListener("click", function (event) {
-            // event.preventDefault();
-
             if (!isMobile && window.innerWidth > 1200) {
                 return;
             }
+
+            event.preventDefault();
 
             if (el.classList.contains("_active")) {
                 links.forEach((el) => {
