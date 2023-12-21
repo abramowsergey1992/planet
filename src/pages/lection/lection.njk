@@ -1,6 +1,6 @@
 {% extends "pages/_includes/layout.njk" %} {% block title %}Звёздный классик {%
-endblock %} {% block main %}
-
+endblock %} {% block main %} {% include 'components/video-popup/video-popup.njk'
+%}
 {{
     breadcrumbs.create(
         {
@@ -684,5 +684,5 @@ endblock %} {% block main %}
         </div>
     </div>
 </div>
-{% include 'components/video-popup/video-popup.njk' %} {% endblock %}
 
+{% endblock %}
