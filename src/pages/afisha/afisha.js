@@ -127,7 +127,7 @@ function render() {
                             );
                         });
                     }
-                    if (item.awards) {
+                    if (item.awards && awards) {
                         awards.innerHTML = "";
                         item.awards.forEach((award) => {
                             awards.insertAdjacentHTML(
@@ -139,9 +139,9 @@ function render() {
                             );
                         });
                     } else {
-                        awards.remove();
+                        awards?.remove();
                     }
-                    if (item.info) {
+                    if (item.info && info) {
                         info.innerHTML = "";
                         item.info.forEach((el) => {
                             awards.insertAdjacentHTML(
@@ -154,7 +154,7 @@ function render() {
                             );
                         });
                     } else {
-                        info.remove();
+                        info?.remove();
                     }
 
                     list.appendChild(clone);
@@ -176,4 +176,3 @@ if (filter) {
         render();
     });
 }
-
