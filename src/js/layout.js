@@ -5,6 +5,11 @@ document.querySelectorAll("._mask-phone").forEach((el) => {
         mask: "+{7} (000) 000-00-00",
     });
 });
+document.querySelectorAll("._mask-date").forEach((el) => {
+    IMask(el, {
+        mask: "00.00.0000",
+    });
+});
 document.querySelectorAll(".btn-border").forEach((el) => {
     el.innerHTML = `<span class="btn-border__content">${el.innerHTML}</span>`;
 });
@@ -164,3 +169,4 @@ export function renderSvgIcons(container) {
 }
 
 renderSvgIcons(document);
+

@@ -1,0 +1,165 @@
+{% extends "pages/_includes/layout.njk" %} {% block title %}Заявка на проведение
+онлайн лекции{% endblock %} {% block main %}
+
+{{
+    breadcrumbs.create(
+        {
+            items: [
+                {
+                    text: "Главная",
+                    href: "home.html"
+                },
+                {
+                    text: "Расписание",
+                    href: "home.html"
+                },
+                {
+                    text: "Цикл лекций Звездные уроки",
+                    href: "home.html"
+                }
+            ]
+        },
+        "Заявка на мероприятие"
+    )
+}}
+<div class="top-row">
+    <h1>Заявка на проведение онлайн лекции</h1>
+</div>
+<div class="white-block">
+    <div class="feeback block">
+        <div class="feeback__row2">
+            <div class="feeback__left">
+                <p>Название лекции</p>
+                <h3 class="">
+                    «Учебные лекции по астрономии для учеников 9-11 классов»
+                </h3>
+                <p>Ваши данные</p>
+                <form action="form-success.html" method="GET" id="lection-form">
+                    <label class="form-item">
+                        <input
+                            id="lection-form__name"
+                            type="text"
+                            name="name"
+                            placeholder="ФИО"
+                        />
+                    </label>
+                    <label class="form-item">
+                        <input
+                            id="lection-form__number"
+                            type="text"
+                            name="date"
+                            placeholder="№ или название школы"
+                        />
+                    </label>
+                    <div class="radio-row" id="class-group">
+                        <div class="radio-row__label">Класс</div>
+                        <div class="radio-row__row">
+                            <label class="radio">
+                                <input type="radio" name="class" value="3-4" />
+                                <span class="radio__indicator"></span>
+                                <span class="radio__text">3-4</span>
+                            </label>
+                            <label class="radio">
+                                <input type="radio" name="class" value="5-6" />
+                                <span class="radio__indicator"></span>
+                                <span class="radio__text">5-6</span>
+                            </label>
+                            <label class="radio">
+                                <input type="radio" name="class" value="7-8" />
+                                <span class="radio__indicator"></span>
+                                <span class="radio__text">7-8</span>
+                            </label>
+                            <label class="radio">
+                                <input type="radio" name="class" value="9-10" />
+                                <span class="radio__indicator"></span>
+                                <span class="radio__text">9-11</span>
+                            </label>
+                            <label class="radio">
+                                <input type="radio" name="class" value="9-11" />
+                                <span class="radio__indicator"></span>
+                                <span class="radio__text">9-11</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-item-row-two">
+                        <label class="form-item">
+                            <input
+                                class="_mask-date"
+                                id="lection-form__date"
+                                type="text"
+                                name="date"
+                                placeholder="Выберите желаемую дату"
+                            />
+                        </label>
+                        <label class="form-item">
+                            <input
+                                class="_mask-phone"
+                                id="lection-form__phone"
+                                type="text"
+                                name="phone"
+                                placeholder="Телефон для связи"
+                            />
+                        </label>
+                    </div>
+                    <div class="form-item-row-two">
+                        <label class="form-item">
+                            <input
+                                id="lection-form__count"
+                                type="text"
+                                name="count"
+                                placeholder="Количество слушателей"
+                            />
+                        </label>
+                        <label class="form-item">
+                            <input
+                                id="lection-form__email"
+                                type="text"
+                                name="email"
+                                placeholder="Email"
+                            />
+                        </label>
+                    </div>
+                    <label class="checkbox">
+                        <input
+                            type="checkbox"
+                            id="lection-form__agree"
+                            name="agree"
+                            placeholder=""
+                        />
+                        <span class="checkbox__indicator"></span>
+                        <div class="checkbox__text">
+                            Согласен(а) на обработку моих
+                            <a href="#"> персональных данных</a>
+                        </div>
+                    </label>
+                    <label class="checkbox">
+                        <input
+                            type="checkbox"
+                            id="lection-form__subscribe"
+                            name="subscribe"
+                            placeholder=""
+                        />
+                        <span class="checkbox__indicator"></span>
+                        <div class="checkbox__text">
+                            Согласен(а) получать новости и спецпредложения
+                        </div>
+                    </label>
+                    <button class="btn-border" type="submit">
+                        Оставить заявку
+                    </button>
+                </form>
+            </div>
+            <div class="feeback__right">
+                <div class="feeback__badge _br">
+                    <p>
+                        Стоимость <br />
+                        лекции
+                    </p>
+                    <p>4 000₽</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+

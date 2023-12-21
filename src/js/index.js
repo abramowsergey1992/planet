@@ -30,6 +30,8 @@ import "../pages/history/history.js";
 import "../pages/podcasts/podcasts.js";
 import "../pages/forms/partner-form.js";
 import "../pages/forms/press-form.js";
+import "../pages/forms/event-form.js";
+import "../pages/forms/lection-form.js";
 
 // Must be the last
 import "../components/preloader/preloader.js";

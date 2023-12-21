@@ -1,9 +1,10 @@
 import JustValidate from "just-validate";
-if (document.querySelector("#partner-form")) {
-    const validator = new JustValidate("#partner-form");
+if (document.querySelector("#lection-form")) {
+    const validator = new JustValidate("#lection-form");
 
     validator
-        .addField("#partner-form__name", [
+        .addRequiredGroup("#class-group")
+        .addField("#lection-form__name", [
             {
                 rule: "required",
             },
@@ -12,18 +13,28 @@ if (document.querySelector("#partner-form")) {
                 value: 2,
             },
         ])
-        .addField("#partner-form__number", [
+        .addField("#lection-form__date", [
             {
                 rule: "required",
             },
         ])
-        .addField("#partner-form__phone", [
+        .addField("#lection-form__count", [
+            {
+                rule: "required",
+            },
+        ])
+        .addField("#lection-form__number", [
+            {
+                rule: "required",
+            },
+        ])
+        .addField("#lection-form__phone", [
             {
                 rule: "required",
             },
         ])
 
-        .addField("#partner-form__email", [
+        .addField("#lection-form__email", [
             {
                 rule: "required",
             },
@@ -31,13 +42,13 @@ if (document.querySelector("#partner-form")) {
                 rule: "email",
             },
         ])
-        .addField("#partner-form__agree", [
+        .addField("#lection-form__agree", [
             {
                 rule: "required",
             },
         ]);
+
     validator.onSuccess((event) => {
         event.currentTarget.submit();
     });
 }
-

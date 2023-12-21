@@ -36,5 +36,8 @@ if (document.querySelector("#press-form")) {
                 rule: "required",
             },
         ]);
-}
 
+    validator.onSuccess((event) => {
+        event.currentTarget.submit();
+    });
+}

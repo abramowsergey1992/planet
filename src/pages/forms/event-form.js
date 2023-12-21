@@ -1,9 +1,9 @@
 import JustValidate from "just-validate";
-if (document.querySelector("#partner-form")) {
-    const validator = new JustValidate("#partner-form");
+if (document.querySelector("#event-form")) {
+    const validator = new JustValidate("#event-form");
 
     validator
-        .addField("#partner-form__name", [
+        .addField("#event-form__name", [
             {
                 rule: "required",
             },
@@ -12,18 +12,18 @@ if (document.querySelector("#partner-form")) {
                 value: 2,
             },
         ])
-        .addField("#partner-form__number", [
+        .addField("#event-form__date", [
             {
                 rule: "required",
             },
         ])
-        .addField("#partner-form__phone", [
+        .addField("#event-form__phone", [
             {
                 rule: "required",
             },
         ])
 
-        .addField("#partner-form__email", [
+        .addField("#event-form__email", [
             {
                 rule: "required",
             },
@@ -31,13 +31,13 @@ if (document.querySelector("#partner-form")) {
                 rule: "email",
             },
         ])
-        .addField("#partner-form__agree", [
+        .addField("#event-form__agree", [
             {
                 rule: "required",
             },
         ]);
+
     validator.onSuccess((event) => {
         event.currentTarget.submit();
     });
 }
-
