@@ -10,7 +10,7 @@ blocks.forEach((block) => {
         offset:
             top -
             document.querySelector(".header").offsetHeight -
-            (window.innerWidth >= 1300 ? 30 : 0),
+            (window.innerWidth >= 1300 ? 30 : -5),
     })
         .setPin(block.querySelector(".anchor-block__list"))
         // .addIndicators({ name: "1 (duration: 300)" })
