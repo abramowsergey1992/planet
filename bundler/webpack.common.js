@@ -269,6 +269,10 @@ module.exports = {
             filename: "form-success.html",
         }),
         new HtmlWebpackPlugin({
+            template: path.resolve(__dirname, "../src/pages/zal/zal.njk"),
+            filename: "zal.html",
+        }),
+        new HtmlWebpackPlugin({
             template: path.resolve(
                 __dirname,
                 "../src/pages/forms/partner-form.njk"

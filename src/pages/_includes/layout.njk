@@ -1,9 +1,9 @@
-{% import "components/breadcrumbs/breadcrumbs.njk" as breadcrumbs %}
-{% import "components/gallerySlider/gallerySlider.njk" as gallerySlider %} 
-{% import "components/persona/persona.njk" as persona %} 
-{% import "components/event/event.njk" as event %}
-{% import "components/news-card/news-card.njk" as newsCard %}
-{% import "components/card-preview/card-preview.njk" as cardPreview %}
+{% import "components/breadcrumbs/breadcrumbs.njk" as breadcrumbs %} {% import
+"components/gallerySlider/gallerySlider.njk" as gallerySlider %} {% import
+"components/persona/persona.njk" as persona %} {% import
+"components/event/event.njk" as event %} {% import
+"components/news-card/news-card.njk" as newsCard %} {% import
+"components/card-preview/card-preview.njk" as cardPreview %}
 <!DOCTYPE html>
 <html lang="ru">
     <head>
@@ -40,8 +40,9 @@
         <div class="wrap-page">
             {% include 'components/header/header.njk' %}
             <div class="inner">{% block main %}{% endblock %}</div>
-            {% include 'components/footer/footer.njk' %}
-            {% include 'components/notifications/notifications.njk' %}
+            {% include 'components/footer/footer.njk' %} {% include
+            'components/notifications/notifications.njk' %}
         </div>
     </body>
 </html>
+
